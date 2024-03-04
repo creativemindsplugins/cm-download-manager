@@ -1,0 +1,54 @@
+<div class="topicTblWrapper">
+    <table class="topicTbl" style="position:relative">
+        <thead>
+            <tr>
+                <th><?php _e('Topic', 'cm-download-manager'); ?></th>
+                <th><?php _e('Posts', 'cm-download-manager'); ?></th>
+                <th><?php _e('Last Poster', 'cm-download-manager'); ?></th>
+                <th><?php _e('Updated', 'cm-download-manager'); ?></th>
+            </tr>
+        </thead>
+        <tbody id="threadsContainer">
+            <?php
+            do_action('CMDM_show_support_threads_list', $items);
+            ?>
+        </tbody>
+    </table>
+</div>
+<?php
+$perPage = 10;
+$pages = ceil($total / $perPage);
+$currentPage = 1;
+?>
+<div class="paging" data-pages="<?php echo $pages;?>" data-permalink="<?php echo esc_attr(get_the_permalink($downloadId));?>">
+    <a href="#prev" class="prev">&laquo;</a>
+    <a href="#page-1" class="currentPage" data-page="1">1</a>
+    <?php for($i = 2; $i <= $pages; $i++): ?>
+        <a href="#page-<?php echo $i; ?>" data-page="<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
+    <a href="#next" class="next">&raquo;</a></div>
+<!--/paging -->
+
+<?php
+if( is_user_logged_in())
+{
+    ?>
+    <div class="boxWhite694">
+        <form id="addThreadForm" action="<?php the_permalink($downloadId); ?>topic/add" method="post" style="position:relative">
+            <h5><?php _e('Leave your comment/question', 'cm-download-manager'); ?></h5>
+            <ul class="CMDM_error" style="display:none"></ul>
+            <ul class="notes">
+                <li><?php _e('Allow markup for Title', 'cm-download-manager'); ?>: <?php echo esc_attr(implode(', ', CMDM_BaseController::ALLOWED_TITLE_TAGS)) ?></li>
+                <li><?php _e('Allow markup for Description', 'cm-download-manager'); ?>: <?php echo esc_attr(implode(', ', CMDM_BaseController::ALLOWED_CONTENT_TAGS)) ?></li>
+            </ul>
+            <input type="text" name="thread_title" placeholder="<?php _e('Title', 'cm-download-manager'); ?>" autocomplete="off" required="required"/><br />
+            <textarea name="thread_comment" cols="" rows="" placeholder="<?php _e('What is your comment about?"', 'cm-download-manager'); ?>" required="required"></textarea>
+            <label><input name="thread_notify" type="checkbox" value="1"/>
+            <?php _e('Notify me of follow', 'cm-download-manager'); ?></label>
+            <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cmdm_topic_add')); ?>" />
+            <input type="hidden" name="cmdm_ajaxurl" value="<?php echo esc_attr(admin_url('admin-ajax.php')); ?>" />
+            <input type="hidden" name="post_id" value="<?php echo $downloadId; ?>" />
+            <button class="butPost"><?php _e('Post', 'cm-download-manager'); ?> &gt;</button>
+        </form>
+    </div>
+<?php } ?>

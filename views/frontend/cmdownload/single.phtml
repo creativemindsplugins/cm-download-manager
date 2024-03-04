@@ -1,0 +1,93 @@
+<?php
+if( !isset($_GET['ajax']) ):
+    get_header();
+endif;
+?><div class="CMDM site-content"><?php
+if( have_posts() ):
+    while(have_posts()):
+        the_post();
+        $download = CMDM_GroupDownloadPage::getInstance(get_the_id());
+        ?>
+            <div class="CMDM-app" id="<?php echo get_the_id(); ?>">
+            	<h2><?php the_title(); ?></h2>
+                
+                <!--/h2 -->
+                <div class="main">
+                
+	                <div class="backtolib"><a href="<?php echo esc_attr(home_url('/cmdownloads')); ?>">&laquo;&nbsp;<?php
+	                	_e('Back to All Downloads', 'cm-download-manager'); ?></a></div>
+	                <div class="rating"><?php do_action('CMDM_show_rating', get_the_id()); ?></div>
+                	
+                	<?php CMDM_display_sidebar(CMDM_CmdownloadController::AREA_SINGLE_TOP); ?>
+                	
+                    <?php
+                        $screenshotsV2 = $download->getScreenshotsV2();
+                        if ( empty($screenshotsV2) ) {
+                            // migrate screenshots from previous version to v2
+                            $screenshots = $download->getScreenshots();
+                            if($screenshots && is_array($screenshots)) {
+                                $download->migrateOldScreenshotsToV2($screenshots);
+                            }
+                            $screenshotsV2 = $download->getScreenshotsV2();
+                        }
+                    ?>
+                    <div class="screenshots-wrapper">
+                        <div class="items screenshots-list">
+                            <?php
+                            if( !empty($screenshotsV2) ):
+                                foreach($screenshotsV2 as $screenshotId): 
+                                    $src = wp_get_attachment_image_url($screenshotId, 'medium');
+                                    $src = $src ? $src : CMDM_get_default_screenshot();
+                                ?>
+                                    <div><img id="<?php echo $screenshotId; ?>" src="<?php echo $src;?>" alt="Screenshot" /></div>
+                                <?php
+                                endforeach;
+                            else:
+                                ?>
+                                <div><img src="<?php echo esc_attr(CMDM_get_default_screenshot()); ?>" height="300" alt="Screenshot" /> </div>
+                            <?php
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+
+                    <?php CMDM_display_sidebar(CMDM_CmdownloadController::AREA_SINGLE_SCREENSHOTS_BELOW); ?>
+
+                    <!-- tabs -->
+                    <ul class="tabNav">
+                        <li class="on"><a href="#description"><?php _e('Description', 'cm-download-manager'); ?></a></li>
+                        <?php if ( CMDM_GroupDownloadPage::showSupport() ): ?>
+                            <li><a href="#support"><?php _e('Support', 'cm-download-manager'); ?></a></li>
+                        <?php endif; ?>
+                    </ul>
+                    <div class="boxGrey724">
+                        <div class="tabItem">
+                            <?php the_content(); ?>
+
+                        </div>
+                        <?php if ( CMDM_GroupDownloadPage::showSupport() ): ?>
+                            <div class="tabItem tabItemSupport"><?php do_action('CMDM_show_support', get_the_id()); ?></div>
+                        <?php endif; ?>
+                    </div>
+                    <!--/tabs -->
+                    
+                    <?php CMDM_display_sidebar(CMDM_CmdownloadController::AREA_SINGLE_BOTTOM); ?>
+                    
+                </div>
+                <!--/main -->
+                <div class="aside">
+                    <?php dynamic_sidebar(CMDM_CmdownloadController::AREA_SIDEBAR); ?>
+	            </div>
+                <!--/aside -->
+                <div class="clear"></div>
+            </div>
+            <!-- javascript coding -->
+            <?php
+        endwhile;
+    endif;
+    ?>
+</div>
+<?php
+if ( !isset($_GET['ajax']) ) {
+	get_footer();
+}

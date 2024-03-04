@@ -1,0 +1,25 @@
+/*
+   For Wp Uploder Form Element
+*/
+.media-modal h1:before, .media-modal h2:before{content:none !important;}
+.media-modal button.media-menu-item{color:#000;}
+.media-frame select{min-height: 30px; height: 30px;}
+.cmdm-wp-uploader-wrapper ul{margin: 0; padding: 0; list-style: none;}
+.cmdm-wp-uploader-wrapper img.cmdm-thumbnail{width: 70px; height: auto;}
+
+.CMDM .CMDM-edit-form table .cmdm-wp-uploader-wrapper ul{
+	display: block;
+}
+.cmdm-wp-uploader-wrapper ul li{
+	display: inline-block;
+	position: relative;
+}
+.cmdm-wp-uploader-wrapper .cmdm-remove-image-button{
+	background-color: rgba(255, 255, 255, .7); 
+	color: red;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 0;
+}
