@@ -1,0 +1,508 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Download Manager v1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-06 08:56+0100\n"
+"PO-Revision-Date: 2018-04-04 21:12+0200\n"
+"Last-Translator: roberto <roberto@latinosparis.com>\n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ cm-download-manager
+#: lib/controllers/BaseController.php:454
+msgid "You have to be logged in to see this page"
+msgstr "Spiacente devi essere loggato per visualizzare questa pagina!"
+
+#: lib/controllers/BaseController.php:454
+msgid "Log in"
+msgstr "Accedi"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:384
+#, php-format
+msgid "\"%s\" has been succesfully added"
+msgstr "“%s” è stato aggiunto con successo"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:384
+msgid "View"
+msgstr "Mostra"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:387
+msgid "There was an error while adding new element"
+msgstr "C’è stato un errore aggiungendo un nuovo elemento"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:418
+#, php-format
+msgid "\"%s\" has been succesfully updated"
+msgstr "“%s” è stato aggiornato con successo"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:483
+msgid "You are not allowed to delete this element"
+msgstr "Non sei autorizzato ad eliminare questo elemento."
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:488
+#, php-format
+msgid "\"%s\" has been succesfully deleted"
+msgstr "“%s” è stato eliminato con successo"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:490
+#, php-format
+msgid "There was an error while deleting \"%s\""
+msgstr "C’è stato un errore eliminando “%s”"
+
+#: lib/controllers/CmdownloadController.php:508
+#: lib/controllers/CmdownloadController.php:530
+msgid "You are not allowed to change status of this element"
+msgstr "Non vi è permesso cambiare lo stato di questo elemento"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:512
+#, php-format
+msgid "\"%s\" has been succesfully published"
+msgstr "\"%s\" è stato pubblicato con successo"
+
+# @ cm-download-manager
+#: lib/controllers/CmdownloadController.php:534
+#, php-format
+msgid "\"%s\" has been succesfully unpublished"
+msgstr "\"%s\" è stato rimosso dalla pubblicazione"
+
+#: lib/controllers/CmdownloadController.php:550
+msgid "POST exceeded maximum allowed size."
+msgstr "POST eccede la grandezza massima permessa"
+
+#: lib/controllers/CmdownloadController.php:564
+msgid "There is no error, the file uploaded with success"
+msgstr "Nessun errore, file caricato con successo"
+
+#: lib/controllers/CmdownloadController.php:565
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Il file caricato supera la direttiva upload_max_filesize in php.ini"
+
+#: lib/controllers/CmdownloadController.php:566
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+"Il file caricato supera la direttiva MAX_FILE_SIZE che è stata specificata "
+"nel modulo HTML"
+
+#: lib/controllers/CmdownloadController.php:567
+msgid "The uploaded file was only partially uploaded"
+msgstr "Il file caricato è stato caricato solo parzialmente"
+
+#: lib/controllers/CmdownloadController.php:568
+msgid "No file was uploaded"
+msgstr "Nessun file è stato caricato"
+
+#: lib/controllers/CmdownloadController.php:569
+msgid "Missing a temporary folder"
+msgstr "Manca una cartella temporanea"
+
+#: lib/controllers/CmdownloadController.php:591
+msgid "File exceeds the maximum allowed size"
+msgstr "Il file supera la dimensione massima consentita"
+
+#: lib/controllers/CmdownloadController.php:605
+msgid "Invalid file name"
+msgstr "Nome del file non valido"
+
+#: lib/controllers/CmdownloadController.php:612
+msgid "File with this name already exists"
+msgstr "Il file con questo nome esiste già"
+
+#: lib/controllers/CmdownloadController.php:627
+msgid "Invalid file extension"
+msgstr "Estensione del file non valida"
+
+#: lib/helpers/Form/Element.php:22
+#, php-format
+msgid "%s is required"
+msgstr "%s è richiesto"
+
+#: lib/helpers/Form/Element/PLUploader.php:39
+#, php-format
+msgid "%s needs to be uploaded"
+msgstr "%s deve essere caricato"
+
+#: lib/helpers/Form/Element/PLUploader.php:128
+msgid "Completed"
+msgstr "Completato"
+
+#: lib/helpers/Form/Element/PLUploader.php:131
+msgid "Upload failed"
+msgstr "Upload fallito"
+
+#: lib/helpers/Form/Element/PLUploader.php:177
+msgid "Upload"
+msgstr "Caricare"
+
+#: lib/models/GroupDownloadPage.php:185
+msgid "not published"
+msgstr "non pubblicato"
+
+#: lib/models/GroupDownloadPage.php:187
+msgid "published"
+msgstr "pubblicato"
+
+#: lib/models/SupportThread.php:64
+msgid "some time ago"
+msgstr "un po’ di tempo fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:67
+#, php-format
+msgid "1 second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "1 secondo fa"
+msgstr[1] "%d secondi fa"
+msgstr[2] "%d secondi fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:72
+#, php-format
+msgid "1 minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "1 minuto fa"
+msgstr[1] "%d minuti fa"
+msgstr[2] "%d minuti fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:78
+#, php-format
+msgid "1 hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "1 ora fa"
+msgstr[1] "%d ore fa"
+msgstr[2] "%d ore fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:84
+#, php-format
+msgid "1 day ago"
+msgid_plural "%d days ago"
+msgstr[0] "ieri"
+msgstr[1] "il ya %d giorni fa"
+msgstr[2] "il ya %d jours"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:90
+#, php-format
+msgid "1 week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "una settimana fa"
+msgstr[1] "%d settimane fa"
+msgstr[2] "%d settimane fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:96
+#, php-format
+msgid "1 month ago"
+msgid_plural "%d months ago"
+msgstr[0] "un mese fa"
+msgstr[1] "%d mesi fa"
+msgstr[2] "%d mesi fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:103
+#, php-format
+msgid "1 year ago"
+msgid_plural "%d years ago"
+msgstr[0] "un anno fa"
+msgstr[1] "%d anni fa"
+msgstr[2] "%d anni fa"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:252 lib/models/SupportThread.php:287
+msgid "Content cannot be empty"
+msgstr "Il contenuto non può essere vuoto"
+
+# @ cm-download-manager
+#: lib/models/SupportThread.php:285
+msgid "Title cannot be empty"
+msgstr "Titolo non può essere vuoto"
+
+#: lib/models/forms/AddDownloadForm.php:20
+#: views/frontend/cmdownload/dashboard.phtml:10
+#: views/frontend/cmdownload/meta/support.phtml:41
+msgid "Title"
+msgstr "Titolo"
+
+#: lib/models/forms/AddDownloadForm.php:25
+#: views/frontend/cmdownload/meta/details.phtml:6
+msgid "Version"
+msgstr "Versione"
+
+#: lib/models/forms/AddDownloadForm.php:30
+msgid "File"
+msgstr "Documento"
+
+# @ cm-download-manager
+#: lib/models/forms/AddDownloadForm.php:31
+msgid "Allowed extensions"
+msgstr "Estensioni autorizzate\t"
+
+#: lib/models/forms/AddDownloadForm.php:36
+msgid "Category (max. 3)"
+msgstr "Categorie (max. 3)"
+
+# @ cm-download-manager
+#: lib/models/forms/AddDownloadForm.php:42
+#: views/frontend/cmdownload/single.phtml:50
+msgid "Description"
+msgstr "Descrizione"
+
+#: lib/models/forms/AddDownloadForm.php:48
+msgid "Screenshots"
+msgstr "Cattura schermo"
+
+#: lib/models/forms/AddDownloadForm.php:49
+#, php-format
+msgid "(Max. %d, Size: H: %dpx W: %dpx)"
+msgstr "(Max. %d, Dimensioni: H : %dpx W : %dpx)"
+
+#: lib/models/forms/AddDownloadForm.php:55
+msgid "Images"
+msgstr "Images"
+
+#: lib/models/forms/AddDownloadForm.php:62
+msgid "Admin Recommended"
+msgstr "Amministratore raccomandato"
+
+#: lib/models/forms/AddDownloadForm.php:67
+msgid "Notify me on new support topics"
+msgstr "Avvisami su nuovi argomenti di supporto"
+
+#: lib/models/forms/AddDownloadForm.php:71
+msgid "Update"
+msgstr "Aggiorna"
+
+#: lib/models/forms/AddDownloadForm.php:71
+msgid "Add"
+msgstr "Aggiungi"
+
+# @ cm-download-manager
+#: views/frontend/error.phtml:8
+msgid "Go back to previous page"
+msgstr "Ritornare alla pagina precedente"
+
+#: views/frontend/cmdownload/categories.phtml:4
+#: views/frontend/cmdownload/index.phtml:57
+msgid "All Downloads"
+msgstr "Tutti i Downloads"
+
+#: views/frontend/cmdownload/dashboard.phtml:6
+msgid "Add new"
+msgstr "Aggiungi nuovo"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/dashboard.phtml:11
+msgid "Status"
+msgstr "Status"
+
+#: views/frontend/cmdownload/dashboard.phtml:12
+#: views/frontend/cmdownload/index.phtml:77
+#: views/frontend/cmdownload/meta/details.phtml:8
+#: views/frontend/cmdownload/meta/menu-item.phtml:2
+msgid "Downloads"
+msgstr "Downloads"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/dashboard.phtml:13
+msgid "Actions"
+msgstr "Azioni"
+
+#: views/frontend/cmdownload/dashboard.phtml:18
+msgid "You haven't added any downloads yet"
+msgstr "Non avete aggiunto ancora alcun documento"
+
+#: views/frontend/cmdownload/dashboard.phtml:30
+msgid "Unpublish"
+msgstr "Non pubblicato"
+
+#: views/frontend/cmdownload/dashboard.phtml:34
+msgid "Publish"
+msgstr "Pubblicato"
+
+#: views/frontend/cmdownload/dashboard.phtml:38
+#: views/frontend/cmdownload/meta/edit-link.phtml:1
+msgid "Edit"
+msgstr "Modifica"
+
+#: views/frontend/cmdownload/dashboard.phtml:39
+msgid "Are you sure you want to delete?"
+msgstr "Sicuro di cancellare?"
+
+#: views/frontend/cmdownload/dashboard.phtml:39
+msgid "Delete"
+msgstr "Cancellare"
+
+#: views/frontend/cmdownload/index.phtml:22
+msgid "Manage my Downloads"
+msgstr "Gestione Downloads"
+
+#: views/frontend/cmdownload/index.phtml:55
+msgid "Search Results for"
+msgstr "Risultati della ricerca: "
+
+#: views/frontend/cmdownload/index.phtml:73
+#, php-format
+msgid "Showing %d-%d of %d"
+msgstr "%d-%d di %d"
+
+#: views/frontend/cmdownload/index.phtml:77
+#: views/frontend/cmdownload/meta/download-form.phtml:12
+msgid "Download"
+msgstr "Scarica"
+
+#: views/frontend/cmdownload/index.phtml:77
+msgid "Info"
+msgstr "Info"
+
+#: views/frontend/cmdownload/index.phtml:99
+msgid "No results has been found"
+msgstr "Nessun risultato"
+
+#: views/frontend/cmdownload/single.phtml:11
+#: views/frontend/cmdownload/thread.phtml:11
+msgid "Back to All Downloads"
+msgstr "Ritorna a tutti i Download"
+
+#: views/frontend/cmdownload/single.phtml:51
+msgid "Support"
+msgstr "Supporto"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:30
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:7
+msgid "RESOLVED"
+msgstr "RISOLTO"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:31
+msgid "Back to Support Page"
+msgstr "Ritorno alla pagina di supporto"
+
+#: views/frontend/cmdownload/thread.phtml:57
+#: views/frontend/cmdownload/meta/details.phtml:4
+msgid "Author"
+msgstr "Autore"
+
+#: views/frontend/cmdownload/thread.phtml:74
+msgid "Leave your comment"
+msgstr "Lasciate un commento"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:77
+#: views/frontend/cmdownload/meta/support.phtml:38
+msgid "Allow markup"
+msgstr "Permettere i markup"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:78
+#: views/frontend/cmdownload/meta/support.phtml:39
+msgid "Wrap your code using"
+msgstr "Incapsulate il codice usando"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:80
+msgid "What is your comment about?"
+msgstr "Qual’è il vostro commento?"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:83
+#: views/frontend/cmdownload/meta/support.phtml:45
+msgid "Notify me of follow"
+msgstr "Notificami in caso"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/thread.phtml:86
+msgid "Mark this topic as resolved"
+msgstr "Segna l’argomento come risolto"
+
+#: views/frontend/cmdownload/thread.phtml:87
+#: views/frontend/cmdownload/meta/support.phtml:46
+msgid "Post"
+msgstr "Invia"
+
+#: views/frontend/cmdownload/meta/details.phtml:2
+msgid "Download Info"
+msgstr "Info di download"
+
+#: views/frontend/cmdownload/meta/details.phtml:9
+#, php-format
+msgid "1 Download"
+msgid_plural "%d Downloads"
+msgstr[0] "1 Download"
+msgstr[1] "%d Download"
+msgstr[2] "%d Download"
+
+#: views/frontend/cmdownload/meta/details.phtml:10
+#: views/frontend/cmdownload/meta/support.phtml:8
+msgid "Updated"
+msgstr "Aggiornato"
+
+#: views/frontend/cmdownload/meta/details.phtml:15
+msgid "Recommended"
+msgstr "Consigliato"
+
+#: views/frontend/cmdownload/meta/menu-item.phtml:1
+msgid "My Downloads"
+msgstr "I miei download"
+
+#: views/frontend/cmdownload/meta/rating.phtml:8
+#, php-format
+msgid "%d Stars"
+msgstr "%d Stelle"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/meta/rating.phtml:30
+msgid "Thanks for rating!"
+msgstr "Grazie della vostra valutazione\t"
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:17
+msgid "No topics"
+msgstr "Senza argomenti"
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:18
+msgid "would you like to create one?"
+msgstr "Volete crearne una?"
+
+#: views/frontend/cmdownload/meta/support.phtml:5
+msgid "Topic"
+msgstr "Argomento"
+
+#: views/frontend/cmdownload/meta/support.phtml:6
+msgid "Posts"
+msgstr "articoli"
+
+#: views/frontend/cmdownload/meta/support.phtml:7
+msgid "Last Poster"
+msgstr "Ultimo post di"
+
+#: views/frontend/cmdownload/meta/support.phtml:35
+msgid "Leave your comment/question"
+msgstr "Lasciate un commento / domanda"
+
+# @ cm-download-manager
+#: views/frontend/cmdownload/meta/support.phtml:42
+msgid "What is your comment about?\""
+msgstr "Qual’è il vostro commento?"

@@ -1,0 +1,606 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-27 16:00+0200\n"
+"PO-Revision-Date: 2019-11-27 15:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_n;esc_html;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: lang\n"
+"X-Poedit-SearchPathExcluded-1: views/resources\n"
+
+#: lib/controllers/BaseController.php:633
+msgid "You have to be logged in to see this page"
+msgstr ""
+
+#: lib/controllers/BaseController.php:634
+msgid "Log in"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:578
+#, php-format
+msgid "\"%s\" has been succesfully added"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:580
+msgid "View"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:584
+msgid "There was an error while adding new element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:630
+#, php-format
+msgid "\"%s\" has been succesfully updated"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:635
+msgid "There was an error while editing element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:715
+msgid "You are not allowed to delete this element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:721
+#, php-format
+msgid "\"%s\" has been succesfully deleted"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:722
+#, php-format
+msgid "There was an error while deleting \"%s\""
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:746
+#: lib/controllers/CmdownloadController.php:776
+msgid "You are not allowed to change status of this element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:752
+#, php-format
+msgid "\"%s\" has been succesfully published"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:782
+#, php-format
+msgid "\"%s\" has been succesfully unpublished"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:801
+msgid "POST exceeded maximum allowed size."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:815
+msgid "There is no error, the file uploaded with success"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:816
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:817
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:818
+msgid "The uploaded file was only partially uploaded"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:819
+msgid "No file was uploaded"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:820
+msgid "Missing a temporary folder"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:850
+msgid "File exceeds the maximum allowed size"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:866
+msgid "Invalid file name"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:892
+msgid "Invalid file extension"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:962
+msgid "CM Download Manager: you have to define at least one category."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:964
+msgid "Go to Categories"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:983
+msgid ""
+"CM Download Manager: to protect your upload directory please create the "
+"following .htaccess file."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:984
+msgid "More"
+msgstr ""
+
+#: lib/helpers/Form/Element.php:22
+#, php-format
+msgid "%s is required"
+msgstr ""
+
+#: lib/helpers/Form/Element/PLUploader.php:40
+#, php-format
+msgid "%s needs to be uploaded"
+msgstr ""
+
+#: lib/helpers/Form/Element/PLUploader.php:202
+msgid "Select files"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:200
+msgid "not published"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:201
+msgid "published"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:352
+msgid "File upload failed!"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:488
+msgid "Error while getting wp_upload_dir():"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:498
+msgid "Script couldn't create the upload folder:"
+msgstr ""
+
+#: lib/models/SupportThread.php:65
+msgid "some time ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:68
+msgid "1 second ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:73
+msgid "1 minute ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:79
+msgid "1 hour ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:85
+msgid "1 day ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:91
+msgid "1 week ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:97
+msgid "1 month ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:104
+msgid "1 year ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:253 lib/models/SupportThread.php:288
+msgid "Content cannot be empty"
+msgstr ""
+
+#: lib/models/SupportThread.php:286
+msgid "Title cannot be empty"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:21
+#: views/frontend/cmdownload/dashboard.phtml:10
+#: views/frontend/cmdownload/meta/support.phtml:45
+msgid "Title"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:27
+#: views/frontend/cmdownload/meta/details.phtml:10
+msgid "Version"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:33
+msgid "File"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:34
+msgid "Allowed extensions"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:39
+msgid "Category (max. 3)"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:45
+#: views/frontend/cmdownload/single.phtml:56
+msgid "Description"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:51
+msgid "Screenshots"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:52
+#, php-format
+msgid "(Max. %d, Size: H: %dpx W: %dpx)"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:57
+msgid "Images"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:65
+msgid "Admin Recommended"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:70
+msgid "Notify me on new support topics"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:74
+msgid "Update"
+msgstr ""
+
+#: lib/models/forms/AddDownloadForm.php:74
+msgid "Add"
+msgstr ""
+
+#: package/cminds-api.php:303
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: package/cminds-api.php:307
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\" "
+"target=\"_blank\">download now</a>."
+msgstr ""
+
+#: package/cminds-api.php:434
+msgid "active"
+msgstr ""
+
+#: package/cminds-api.php:435
+msgid "Deactivate License"
+msgstr ""
+
+#: package/cminds-api.php:439
+msgid "Activate License"
+msgstr ""
+
+#: package/cminds-api.php:822 package/cminds-api.php:879
+#: package/cminds-api.php:920 package/cminds-api.php:947
+msgid "Error: There is a problem with connection to licensing server."
+msgstr ""
+
+#: package/cminds-free.php:77
+msgid "CreativeMinds WordPress News"
+msgstr ""
+
+#: package/cminds-free.php:98
+msgid "cminds.com"
+msgstr ""
+
+#: package/cminds-free.php:98 package/cminds-free.php:106
+#: package/cminds-free.php:114
+msgid "(opens in a new window)"
+msgstr ""
+
+#: package/cminds-free.php:106
+msgid "CM WordPress Plugins"
+msgstr ""
+
+#: package/cminds-free.php:114
+msgid "99+ WordPress Plugins Bundle"
+msgstr ""
+
+#: package/cminds-free.php:694
+msgid "Visit plugin site"
+msgstr ""
+
+#: package/cminds-free.php:721 package/cminds-free.php:857
+msgid "User Guide"
+msgstr ""
+
+#: package/cminds-free.php:723
+msgid "Upgrade&nbsp;➤"
+msgstr ""
+
+#: package/cminds-free.php:730
+msgid "License"
+msgstr ""
+
+#: package/cminds-free.php:840
+msgid "About"
+msgstr ""
+
+#: package/cminds-free.php:849
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: package/cminds-free.php:1058
+msgid "Share your Appreciation"
+msgstr ""
+
+#: package/cminds-free.php:1061
+msgid "Submit a review"
+msgstr ""
+
+#: package/cminds-free.php:1066
+msgid "Tweet"
+msgstr ""
+
+#: package/cminds-free.php:1070
+msgid "Stay Up-to-Date"
+msgstr ""
+
+#: package/cminds-free.php:1071
+msgid "Follow @CMPLUGINS"
+msgstr ""
+
+#: package/cminds-free.php:1116
+msgid "CM Newsletter - coupons, deals, news"
+msgstr ""
+
+#: package/cminds-free.php:2340
+msgid "day"
+msgstr ""
+
+#: package/cminds-free.php:3098
+msgid "System Information"
+msgstr ""
+
+#: package/cminds-free.php:3105
+msgid ""
+"To copy the system info, click below then press Ctrl + C (PC) or Cmd + C "
+"(Mac)."
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:7
+msgid "Plugin Usage Feedback"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:8
+msgid "Please tell us how can we make this plugin better for you?"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:9
+msgid ""
+"Please share my WordPress system information to help analyze my feedback*"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:10
+msgid "I will be happy to receive support to my email"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:11
+msgid ""
+"regarding the issues I am reporting. (Please include a detailed description)"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:13
+msgid "(*) Your feedback will only be used to improve this plugin"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:14
+msgid "Deactivate"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:15
+msgid "Yes - Deactivate"
+msgstr ""
+
+#: package/views/deactivation_feedback_modal.php:16
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: views/frontend/cmdownload/categories.phtml:4
+#: views/frontend/cmdownload/index.phtml:68
+msgid "All Downloads"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:6
+msgid "Add new"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:11
+msgid "Status"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:12
+#: views/frontend/cmdownload/index.phtml:94
+#: views/frontend/cmdownload/meta/details.phtml:15
+#: views/frontend/cmdownload/meta/menu-item.phtml:2
+msgid "Downloads"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:13
+msgid "Actions"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:18
+msgid "You haven't added any downloads yet"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:30
+msgid "Unpublish"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:34
+msgid "Publish"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:38
+#: views/frontend/cmdownload/meta/edit-link.phtml:1
+msgid "Edit"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:40
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: views/frontend/cmdownload/dashboard.phtml:41
+msgid "Delete"
+msgstr ""
+
+#: views/frontend/cmdownload/index.phtml:26
+msgid "Manage my Downloads"
+msgstr ""
+
+#: views/frontend/cmdownload/index.phtml:64
+msgid "Search Results for"
+msgstr ""
+
+#: views/frontend/cmdownload/index.phtml:84
+#, php-format
+msgid "Showing %d-%d of %d"
+msgstr ""
+
+#: views/frontend/cmdownload/index.phtml:95
+#: views/frontend/cmdownload/meta/download-form.phtml:5
+msgid "Download"
+msgstr ""
+
+#: views/frontend/cmdownload/index.phtml:121
+msgid "No results has been found"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/details.phtml:2
+msgid "Download Info"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/details.phtml:5
+#: views/frontend/cmdownload/thread.phtml:57
+msgid "Author"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/details.phtml:19
+#: views/frontend/cmdownload/meta/support.phtml:8
+msgid "Updated"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/details.phtml:23
+msgid "Recommended"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/download-form.phtml:8
+msgid "Login to download this file."
+msgstr ""
+
+#: views/frontend/cmdownload/meta/menu-item.phtml:1
+msgid "My Downloads"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/rating.phtml:11
+#: views/frontend/cmdownload/meta/rating.phtml:12
+#, php-format
+msgid "%d Stars"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/rating.phtml:35
+msgid "Thanks for rating!"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:8
+#: views/frontend/cmdownload/thread.phtml:29
+msgid "RESOLVED"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:18
+msgid "No topics"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:19
+msgid "would you like to create one?"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:5
+msgid "Topic"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:6
+msgid "Posts"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:7
+msgid "Last Poster"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:39
+msgid "Leave your comment/question"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:42
+#: views/frontend/cmdownload/thread.phtml:77
+msgid "Allow markup"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:46
+msgid "What is your comment about?\""
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:49
+#: views/frontend/cmdownload/thread.phtml:83
+msgid "Notify me of follow"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/support.phtml:51
+#: views/frontend/cmdownload/thread.phtml:88
+msgid "Post"
+msgstr ""
+
+#: views/frontend/cmdownload/single.phtml:18
+#: views/frontend/cmdownload/thread.phtml:11
+msgid "Back to All Downloads"
+msgstr ""
+
+#: views/frontend/cmdownload/single.phtml:58
+msgid "Support"
+msgstr ""
+
+#: views/frontend/cmdownload/thread.phtml:31
+msgid "Back to Support Page"
+msgstr ""
+
+#: views/frontend/cmdownload/thread.phtml:74
+msgid "Leave your comment"
+msgstr ""
+
+#: views/frontend/cmdownload/thread.phtml:80
+msgid "What is your comment about?"
+msgstr ""
+
+#: views/frontend/cmdownload/thread.phtml:86
+msgid "Mark this topic as resolved"
+msgstr ""
+
+#: views/frontend/error.phtml:8
+msgid "Go back to previous page"
+msgstr ""
