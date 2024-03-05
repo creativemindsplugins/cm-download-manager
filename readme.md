@@ -26,10 +26,6 @@ It allows for a collaborative space where multiple users can engage with and pro
 
 Important: Your theme must include a `wp_head()` function call for the JavaScript plugin files to function correctly. If your theme lacks this feature, you’ll need to integrate these files into your theme manually, which is not the preferred method.
 
-### Frequently Asked Questions
-
-> [More FAQ's](https://www.cminds.com/wordpress-plugins-library/downloadsmanager/#faq/)
-
 ### To customize the plugin’s design:
 
 Establish a `CMDM` folder within your theme’s directory. Mimic the structure found in `cm-download-manager/views/frontend/` inside this new folder. Files in the `CMDM` folder will be prioritized over the default plugin files if they exist.
