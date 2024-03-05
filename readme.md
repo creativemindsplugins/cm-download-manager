@@ -87,7 +87,7 @@ It also gives you better tools for creating shortcodes, managing zip files, cont
 
 <details><summary> <b>Expand</b> </summary>
 
-> [Pro Version Detailed Feature List](https://www.cminds.com/wordpress-plugins-library/downloadsmanager/#features) )
+> [Pro Version Detailed Feature List](https://www.cminds.com/wordpress-plugins-library/downloadsmanager/#features)
 
 * **Multiple-File Upload** - Offers the capability to upload several files to a download page, with individual titles for each file. Users have the option to download these files either as a zip or individually.
 * **MicroPayment System** - Enables the allocation or deduction of virtual currency depending on the specific use-case scenario.
