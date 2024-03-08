@@ -32,7 +32,7 @@ Establish a `CMDM` folder within your theme’s directory. Mimic the structure f
 
 ## Easy File Index
 
-The WordPress Download Manager plugin helps you keep files in order by making a page that sorts your downloads the way you like. It’s easy to use, so you can find your files quickly without having to look through lots of folders.
+The WordPress Download Manager plugin helps you create a directory with files classified by categories and tags. The index page is highly customizable, so you can configure it according to your needs.
 
 ## Custom File Categories
 
@@ -44,7 +44,7 @@ The main page also has quick links to all the files you can download, so everyth
 
 If you upgrade to the [premium version of the plugin](https://www.cminds.com/wordpress-plugins-library/downloadsmanager/), you can start taking payments with WooCommerce or Easy Digital Downloads.
 
-It also gives you better tools for creating shortcodes, managing zip files, controlling who can see and download files, sending notifications, and keeping an eye on everything.
+It also gives you better tools - shortcodes support, managing zip files, controlling who can see and download files, sending notifications, and keeping an eye on everything.
 
 ## Use Cases
 
@@ -89,10 +89,10 @@ It also gives you better tools for creating shortcodes, managing zip files, cont
 * **MicroPayment System** - Enables the allocation or deduction of virtual currency depending on the specific use-case scenario.
 * **User Group Access Control** - Allows setting up download permissions based on user groups. Administrators can set overarching permissions, while users can customize access for each download.
 * **Social Media Connectivity** - Provides seamless integration with social media platforms like Facebook and LinkedIn for user registration. [View Image One](http://www.cminds.com/wp-content/uploads/edd/image1.png), [View Image 2](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
-* **Shortcodes/Widgets** - Creates lists for top contributors, recent updates, and usually a list of downloadable items.
+* **Shortcodes/Widgets** - Create lists for top contributors, recent updates, and usually a list of downloadable items.
 * **Viewing Permissions** - Determines for each download if it’s available to users who are not logged in. For downloads restricted to logged-in users, administrators can specify which user roles have viewing access. This setting can be configured by the Admin or users can be allowed to set their own viewing preferences. [View Image](http://static.cminds.com/wp-content/uploads/cmdm/CMDM91.png)
 * **Download Password Security** - Ensures downloads are safeguarded with password protection. [View Image](http://www.cminds.com/wp-content/uploads/edd/22-06-2013-22-33-08.jpg)
-* **Preview Capability** - Enables viewing of downloadable content such as PDF, DOC, and XLS files through an external viewer like Google Docs.
+* **Preview Capability** - Enables viewing of downloadable content such as PDF, DOC, and XLS files through an external viewer Google Docs.
 * **Enhanced Alerts** - Allows for sending personalized email notifications to content creators, alerts users about new uploads, and informs admins of submissions awaiting approval.
 * **Role-Based Upload Control** - Specifies which user roles have the authority to add new downloads. [View Image](http://www.cminds.com/wp-content/uploads/edd/22-06-2013-22-39-35.jpg)
 * **External Linking and Shortcodes** - Enables the addition of an external URL or a Shortcode on the download page as an alternative to file uploads. This feature is handy for linking with other plugins, especially those that handle checkout systems and digital product sales. [View Example of EDD integration](http://www.cminds.com/wp-content/uploads/edd/22-06-2013-22-41-44.jpg) , [View Example of User Selection](http://www.cminds.com/wp-content/uploads/edd/22-06-2013-22-44-14.jpg)
