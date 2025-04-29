@@ -1,0 +1,37 @@
+<?php
+
+?><div class="cm-settings-toggle-wrapper">
+    <div class="cm-settings-collapse-toggle">Toggle all</div>
+    <hr>
+    <input type="submit" class="cm-sticky-submit" value="Save settings"></div><?php
+
+$labelsByCategories = CMDM_Labels::getLabelsByCategories();
+
+foreach ($labelsByCategories as $category => $labels):
+
+	?>
+	<div class="cmdm-settings-section">
+		<h3 class="dashicons-before dashicons-arrow-right cm-settings-collapse-btn">
+			<span><?php echo (empty($category) ? 'Other' : $category); ?></span>
+		</h3>
+		<div class="cm-settings-collapse-container cm-settings-collapse-close">
+			<?php
+	
+			foreach ($labels as $key):
+				
+				if ($default = CMDM_Labels::getDefaultLabel($key)) :
+                    $available = CMDM_Labels::isAvailable($key);
+					?>
+				
+					<div class="cm-settings-row">
+				        <div class="cm-settings-option-name">"<?php echo esc_html($key) ?>" label:</div>
+				        <div class="cm-settings-option-control"><input type="text" size="60" name="label_<?php echo esc_attr($key); ?>" value="<?php echo esc_attr(CMDM_Labels::getLabel($key));
+				        	?>" placeholder="<?php echo esc_attr($default) ?>" <?php echo $available ? '' : 'disabled'; ?>/></div>
+				        <div class="cm-settings-option-desc"><?php echo $available ? CMDM_Labels::getDescription($key) : CMDM_SettingsView::renderOnlyin('Pro'); ; ?></div>
+				    </div>
+				    
+			    <?php endif; ?>
+			<?php endforeach; ?>
+		</div>
+	</div>
+<?php endforeach; ?>

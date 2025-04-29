@@ -1,0 +1,829 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-12-19 14:30+0200\n"
+"PO-Revision-Date: 2020-05-15 17:54+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt_LT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && (n%100<11 || n%100>19) ? 0 : n"
+"%10>=2 && n%10<=9 && (n%100<11 || n%100>19) ? 1 : 2);\n"
+
+#: lib/controllers/BaseController.php:272
+msgid "add"
+msgstr "pridėti"
+
+#: lib/controllers/BaseController.php:273
+msgid "remove"
+msgstr "pašalinti"
+
+#: lib/controllers/BaseController.php:1084
+#: lib/controllers/CmdownloadController.php:1493 lib/helpers/Shortcodes.php:97
+msgid "You have to be logged in to see this page"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1085
+#: lib/controllers/CmdownloadController.php:1494 lib/helpers/Shortcodes.php:98
+msgid "Log in"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1290
+#, php-format
+msgid ""
+"Plugin pages will appear correctly if you choose non-default <a href=\"%s"
+"\">permalink structure</a> in your Wordpress settings and enable URL rewrite "
+"rules."
+msgstr ""
+
+#: lib/controllers/BaseController.php:1435
+msgid "Trash"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1575
+msgid "Category Permissions"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1595
+msgid "Access denied"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1598
+msgid "You do not have sufficient permissions to view this page"
+msgstr ""
+
+#: lib/controllers/BaseController.php:1599
+msgid "Go back to previous page"
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:61
+msgid "CM Download Manager: you have to define at least one category."
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:63
+msgid "Go to Categories"
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:133
+msgid "Cannot create category"
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:139
+msgid "Category has been created."
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:146
+msgid "Category exists."
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:150
+#: lib/controllers/CmdmFollowController.php:31
+msgid "Invalid request."
+msgstr ""
+
+#: lib/controllers/CmdmCategoryController.php:154
+msgid "Method not supported."
+msgstr ""
+
+#: lib/controllers/CmdmFollowController.php:28
+msgid "Category not found."
+msgstr ""
+
+#: lib/controllers/CmdmFollowController.php:34
+msgid "Category following is disabled."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:859
+msgid "An error occurred."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:862
+msgid "Support thread has been created."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1193
+msgid "Tag"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1207
+msgid "Search Results for"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1212
+msgid "Downloads by Author"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1216
+msgid "Top Downloads"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1528
+msgid "View"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1542
+msgid "There was an error while adding new download"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1625
+msgid "There was an error while editing element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:1884
+msgid "You have to provide your name and your email address."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2035
+msgid "Cannot preview this file type."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2120
+msgid "You are not allowed to delete this element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2127
+#, php-format
+msgid "There was an error while deleting \"%s\""
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2162
+#: lib/controllers/CmdownloadController.php:2199
+msgid "You are not allowed to change status of this element"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2237
+#: lib/controllers/CmdownloadController.php:2335
+msgid "Access to this page is forbidden."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2308
+msgid "POST exceeded maximum allowed size."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2470
+msgid ""
+"CM Download Manager: to add an additional protection for your upload "
+"directory you can create the following .htaccess file."
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2471
+msgid "Less"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2472
+msgid "More"
+msgstr ""
+
+#: lib/controllers/CmdownloadController.php:2473
+msgid "Dismiss"
+msgstr ""
+
+#: lib/controllers/UploaderController.php:57
+msgid "Uploader Profile"
+msgstr ""
+
+#: lib/helpers/BuddyPress.php:17
+#: views/frontend/cmdownload/widget/top-downloads.phtml:6
+msgid "Downloads"
+msgstr ""
+
+#: lib/helpers/BuddyPress.php:63
+msgid "category"
+msgstr ""
+
+#: lib/helpers/BuddyPress.php:93
+#, php-format
+msgid "%s asked a new question: %s"
+msgstr ""
+
+#: lib/helpers/BuddyPress.php:125
+#, php-format
+msgid "%s answered the question: %s"
+msgstr ""
+
+#: lib/helpers/Form/Element.php:22
+#, php-format
+msgid "%s is required"
+msgstr ""
+
+#: lib/helpers/Form/Element/DownloadThumbnail.php:10
+msgid "Set as thumbnail"
+msgstr "Nustatyti kaip miniatiūrą"
+
+#: lib/helpers/Form/Element/MyUpload.php:32
+#: lib/helpers/Form/Element/PLUploader.php:31
+#: lib/helpers/Form/Element/PLUploaderScreenshot.php:38
+#: lib/helpers/Form/Element/ScreenshotThickBox.php:36
+#, php-format
+msgid "%s needs to be uploaded"
+msgstr ""
+
+#: lib/helpers/Form/Element/PLUploader.php:68
+msgid "Enter the file title"
+msgstr ""
+
+#: lib/helpers/Form/Element/PasswordSwitchable.php:13
+msgid "Enter password"
+msgstr "Įvesti slaptažodį"
+
+#: lib/helpers/Form/Element/ScreenshotThickBox.php:10
+msgid "Screenshots"
+msgstr ""
+
+#: lib/helpers/Form/Element/UsersList.php:39
+msgid "No members"
+msgstr "Nerasta narių"
+
+#: lib/helpers/Form/Element/UsersList.php:39
+msgid "Show all users"
+msgstr "Rodyti visus vartotojus"
+
+#: lib/helpers/Form/Element/UsersList.php:39
+msgid "Find user"
+msgstr "Rasti vartotoją"
+
+#: lib/helpers/Form/Element/UsersList.php:39
+msgid "Add selected"
+msgstr "Pridėti pasirinktą(-us)"
+
+#: lib/helpers/MicroPayments/MicroPayments.php:100
+msgid ""
+"<strong>CM Download Manager Pro</strong> would not integrate with the "
+"<strong>CM Micropayments</strong> plugin because of the following reasons:"
+msgstr ""
+
+#: lib/helpers/MicroPayments/MicroPayments.php:104
+msgid "CM Micropayments Settings"
+msgstr ""
+
+#: lib/helpers/SettingsViewAbstract.php:169
+#: views/backend/settings/custom_css.phtml:28
+msgid "Add"
+msgstr ""
+
+#: lib/helpers/Widgets/LoginWidget.php:34 lib/helpers/Widgets/TagsWidget.php:35
+msgid "Title:"
+msgstr ""
+
+#: lib/helpers/Widgets/LoginWidget.php:67
+msgid "Login"
+msgstr ""
+
+#: lib/helpers/Widgets/TagsWidget.php:30 lib/helpers/Widgets/TagsWidget.php:76
+msgid "Popular Tags"
+msgstr ""
+
+#: lib/helpers/Widgets/TagsWidget.php:40
+msgid "Count:"
+msgstr ""
+
+#: lib/models/Attachment.php:410
+msgid "Error while getting wp_upload_dir():"
+msgstr ""
+
+#: lib/models/Attachment.php:415
+msgid "Script couldn't create the upload folder:"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:1791
+msgid "New Download"
+msgstr "Naujas parsisiuntimas"
+
+#: lib/models/GroupDownloadPage.php:3418
+msgid "Contributor's page"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:3438 views/backend/logs/table.phtml:21
+msgid "unknown"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:3669
+#: views/frontend/cmdownload/thread.phtml:69
+#: views/frontend/cmdownload/thread_content.phtml:57
+msgid "Author"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:3738
+msgid "ZIP package containing all files"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:3739
+msgid "each file separately"
+msgstr ""
+
+#: lib/models/GroupDownloadPage.php:3740
+msgid "both"
+msgstr ""
+
+#: lib/models/Settings.php:1354
+msgid "If music player is not enabled, this setting will have no effect."
+msgstr ""
+
+#: lib/models/Settings.php:1355
+msgid "Read description of each player:"
+msgstr ""
+
+#: lib/models/Settings.php:1359
+msgid ""
+"WARNING: It's known that jPlayer and core audio player won't work on some "
+"mp3 files."
+msgstr ""
+
+#: lib/models/SupportThread.php:57
+msgid "some time ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:60
+msgid "1 second ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:65
+msgid "1 minute ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:71
+msgid "1 hour ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:77
+msgid "1 day ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:83
+msgid "1 week ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:89
+msgid "1 month ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:95
+msgid "1 year ago"
+msgstr ""
+
+#: lib/models/SupportThread.php:300 lib/models/SupportThread.php:364
+msgid "Content cannot be empty"
+msgstr ""
+
+#: lib/models/SupportThread.php:361
+msgid "Title cannot be empty"
+msgstr ""
+
+#: views/backend/logs.phtml:2
+msgid "Logs records"
+msgstr ""
+
+#: views/backend/logs.phtml:3
+msgid "Show graph"
+msgstr ""
+
+#: views/backend/logs.phtml:4
+msgid "Export as CSV"
+msgstr ""
+
+#: views/backend/logs.phtml:5
+msgid "Erase log"
+msgstr ""
+
+#: views/backend/logs.phtml:36
+msgid "Do you want to delete all logs of the all downloads?"
+msgstr ""
+
+#: views/backend/logs/graph.phtml:2
+msgid "Downloads graph"
+msgstr ""
+
+#: views/backend/logs/graph.phtml:8 views/backend/logs/table.phtml:7
+#: views/backend/logs/table.phtml:19
+msgid "-- all --"
+msgstr ""
+
+#: views/backend/logs/graph.phtml:11
+#, php-format
+msgid "Times downloaded in last %s for file %s"
+msgstr ""
+
+#: views/backend/logs/table.phtml:5
+#: views/frontend/cmdownload/widget/my-logs.phtml:8
+msgid "File"
+msgstr ""
+
+#: views/backend/logs/table.phtml:14
+msgid "Time from"
+msgstr ""
+
+#: views/backend/logs/table.phtml:17
+msgid "User's name"
+msgstr ""
+
+#: views/backend/logs/table.phtml:20
+msgid "known"
+msgstr ""
+
+#: views/backend/logs/table.phtml:24
+msgid "User's email"
+msgstr ""
+
+#: views/backend/logs/table.phtml:25
+#: views/frontend/cmdownload/widget/my-logs.phtml:10
+msgid "IP address"
+msgstr ""
+
+#: views/backend/logs/table.phtml:26
+#: views/frontend/cmdownload/widget/my-logs.phtml:12
+msgid "Country"
+msgstr ""
+
+#: views/backend/logs/table.phtml:33
+msgid "Anonymous"
+msgstr ""
+
+#: views/backend/logs/table.phtml:46
+msgid "Previous page"
+msgstr ""
+
+#: views/backend/logs/table.phtml:47
+msgid "Next page"
+msgstr ""
+
+#: views/backend/logs/table.phtml:57
+#: views/frontend-2016/cmdownload/widget/index.phtml:128
+#: views/frontend/cmdownload/meta/dashboard-table.phtml:54
+#: views/frontend/cmdownload/widget/index.phtml:130
+msgid "Next"
+msgstr ""
+
+#: views/backend/logs/table.phtml:58
+#: views/frontend-2016/cmdownload/widget/index.phtml:113
+#: views/frontend/cmdownload/meta/dashboard-table.phtml:42
+#: views/frontend/cmdownload/widget/index.phtml:115
+msgid "Previous"
+msgstr ""
+
+#: views/backend/meta/category-access-groups.phtml:33
+msgid "Restrict access to chosen users groups"
+msgstr ""
+
+#: views/backend/meta/category-access-groups.phtml:36
+#: views/backend/meta/category-delete-roles.phtml:35
+#: views/backend/meta/category-edit-roles.phtml:35
+#: views/backend/meta/category-notify-groups.phtml:41
+#: views/backend/meta/category-upload-permission-groups.phtml:36
+#: views/backend/meta/category-upload-roles.phtml:35
+msgid "No"
+msgstr ""
+
+#: views/backend/meta/category-access-groups.phtml:38
+#: views/backend/meta/category-delete-roles.phtml:37
+#: views/backend/meta/category-edit-roles.phtml:37
+#: views/backend/meta/category-notify-groups.phtml:43
+#: views/backend/meta/category-upload-permission-groups.phtml:38
+#: views/backend/meta/category-upload-roles.phtml:37
+msgid "Yes"
+msgstr ""
+
+#: views/backend/meta/category-access-groups.phtml:40
+msgid ""
+"Choose the users groups which will have access to this category. If no "
+"groups chosen, then every user can view it."
+msgstr ""
+
+#: views/backend/meta/category-delete-roles.phtml:32
+msgid "Allow chosen roles to delete files in this category"
+msgstr ""
+
+#: views/backend/meta/category-delete-roles.phtml:39
+msgid "Choose roles which is able to delete downloads."
+msgstr ""
+
+#: views/backend/meta/category-edit-roles.phtml:32
+msgid "Allow chosen roles to edit files in this category"
+msgstr ""
+
+#: views/backend/meta/category-edit-roles.phtml:39
+msgid "Choose roles which is able to edit downloads."
+msgstr ""
+
+#: views/backend/meta/category-icon.phtml:23
+msgid "Icon"
+msgstr ""
+
+#: views/backend/meta/category-notify-groups.phtml:38
+msgid "Notify chosen roles or users groups about new downloads"
+msgstr ""
+
+#: views/backend/meta/category-notify-groups.phtml:46
+msgid ""
+"Choose roles or/and users groups which will be notified after the new "
+"download appears in this category."
+msgstr ""
+
+#: views/backend/meta/category-upload-permission-groups.phtml:33
+msgid "Allow uploading to this category only for chosen users groups"
+msgstr ""
+
+#: views/backend/meta/category-upload-permission-groups.phtml:40
+msgid ""
+"Choose the users groups which will be able to upload files to this category. "
+"If no groups chosen, then every user can upload."
+msgstr ""
+
+#: views/backend/meta/category-upload-roles.phtml:32
+msgid "Allow chosen roles to view files in this category"
+msgstr ""
+
+#: views/backend/meta/category-upload-roles.phtml:39
+msgid "Choose roles of users which can see this category."
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:3
+msgid "Place your styles here to override any CSS rule of the plugin."
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:4
+msgid "Custom CSS"
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:9
+msgid "Typical style modifications"
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:10
+msgid ""
+"Click on the red value to change it. Press \"Add\" button to add custom CSS "
+"to the textarea."
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:14
+msgid "Change background"
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:17
+msgid "Change header on downloads pages"
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:20
+msgid "Change header on dashboard pages"
+msgstr ""
+
+#: views/backend/settings/custom_css.phtml:29
+msgid "Edit"
+msgstr ""
+
+#: views/backend/settings/screenshot-default.phtml:3
+msgid "Upload Image"
+msgstr ""
+
+#: views/backend/settings/screenshot-default.phtml:4
+msgid "Enter an URL or upload an image (Size: H: 220px W: 720px)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:5
+msgid "Notice: shortcodes are case-sensitive."
+msgstr ""
+
+#: views/backend/shortcodes.phtml:15
+msgid "ID of the author (default: empty)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:16
+msgid "Slug of a category (default: empty)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:17
+msgid "Slug of a tag (default: empty)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:18
+msgid "Limit results (default: 5)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:19
+msgid "Show all downloads or not (0 or 1)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:23
+msgid "View to show, one of:"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:28
+msgid ""
+"Show the views list to change the current view or not (0 or 1), default: 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:29
+msgid "Show the sorting options or not (0 or 1), default: 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:30
+msgid "Show search input field or not (0 or 1), default: 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:31
+msgid "Show header or not (0 or 1), default: 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:32
+msgid "Show the categories list or not (0 or 1), default: 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:33
+msgid "Sort by: "
+msgstr ""
+
+#: views/backend/shortcodes.phtml:51
+msgid "Term ID or slug of the category (optional)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:52
+msgid "Comma separated list of tags (optional)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:53
+msgid "User's slug or id or multiple comma-separated ids"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:54
+msgid "Search a word in downloads"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:55
+msgid "Limit the results"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:56
+msgid "Show specific page of results"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:57
+msgid "Show empty categories or not (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:61
+msgid "View type (one of: list, categories) - default is list"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:62
+msgid "Show AJAX-based search field (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:63
+msgid ""
+"Show input field that will filter currently visible results or not (0 or 1), "
+"default is 0"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:64
+msgid ""
+"Show category filter type (one of: single or twolevel), default is 0 "
+"(disabled)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:65
+msgid "Show user filter or not (0 or 1), default is 0 (disabled)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:66
+msgid ""
+"Show tags filter (accepted values: checkbox, select) or don't show, default "
+"value is 0 (disabled)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:67
+msgid ""
+"Enable the categories tree toggling if using view=categories (0 or 1), "
+"default is 0 (disabled)"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:68
+msgid "Show user control buttons such as Edit and Delete"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:69
+msgid ""
+"Sort downloads by: post_modified or newest or rating or views or downloads "
+"or post_title or post_title_desc or manual"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:70
+msgid ""
+"Show downloads recursively in the categories when using view=categories or "
+"not (0 or 1), default is 0"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:71
+msgid "Show the upload button or not (0 or 1), default is 0"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:72
+msgid ""
+"The download title can be a link to the download's separate page or not (0 "
+"or 1), default is 0"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:73
+msgid ""
+"Scroll down to the downloads list after used a filter (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:74
+msgid "Show the download's details or not (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:75
+msgid "Show the download's author or not (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:76
+msgid ""
+"(experimental) Enable filtering downloads using the parameters given from "
+"the URL address or not (0 or 1), default is 0"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:77
+msgid "Download files in the new browser's card (0 or 1), default is 1"
+msgstr ""
+
+#: views/backend/shortcodes.phtml:78
+msgid "Number of words from the download's description to show, default is 20"
+msgstr ""
+
+#: views/frontend-2016/cmdownload/meta/dashboard-menu.phtml:52
+#: views/frontend/cmdownload/meta/dashboard-menu.phtml:37
+#: views/frontend/cmdownload/meta/files-list-item.phtml:201
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: views/frontend-2016/cmdownload/meta/rating.phtml:9
+#: views/frontend-2016/cmdownload/meta/rating.phtml:10
+#: views/frontend/cmdownload/meta/rating.phtml:9
+#: views/frontend/cmdownload/meta/rating.phtml:10
+#, php-format
+msgid "%d Stars"
+msgstr ""
+
+#: views/frontend-2016/cmdownload/widget/index-by-category.phtml:90
+#: views/frontend/cmdownload/widget/my-logs.phtml:3
+msgid "No results have been found"
+msgstr ""
+
+#: views/frontend-2016/cmdownload/widget/index-by-category.phtml:96
+msgid "Show more"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/download-form.phtml:81
+#: views/frontend/cmdownload/meta/files-list-item.phtml:278
+msgid "All files (ZIP)"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/files-list-filter-author.phtml:25
+#: views/frontend/cmdownload/meta/files-list-filter-category-two-level.phtml:19
+#: views/frontend/cmdownload/meta/files-list-filter-category.phtml:8
+msgid "all"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/files-list-item.phtml:65
+msgid "Password"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/files-list-item.phtml:83
+msgid "Player/preview"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/files-list-item.phtml:234
+msgid "Show Preview"
+msgstr ""
+
+#: views/frontend/cmdownload/meta/files-list-item.phtml:298
+msgid "Close"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/frequent-contributors.phtml:6
+msgid "Items"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/frequent-contributors.phtml:10
+#: views/frontend/cmdownload/widget/recent-updates.phtml:9
+#: views/frontend/cmdownload/widget/top-downloads.phtml:11
+msgid "See More"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/login.phtml:21
+msgid "Social Login via"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/my-logs.phtml:9
+msgid "Date"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/recent-updates.phtml:5
+msgid "Updated"
+msgstr ""
+
+#: views/frontend/cmdownload/widget/my-logs.phtml:20
+msgid "Users from specific PeepSo group"
+msgstr "Vartotojai iš konkrečios PeepSo grupės"

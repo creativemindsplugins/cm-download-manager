@@ -1,0 +1,6 @@
+<label for="upload_default_screenshot">
+	<input id="upload_default_screenshot" type="text" size="60" name="<?php echo esc_attr($name); ?>" value="<?php echo esc_attr($value); ?>" />
+	<input id="upload_default_screenshot_button" type="button" value="<?php echo esc_attr(CMDM_Settings::__('Upload Image')); ?>" /><br />
+	<?php echo CMDM_Settings::__('Enter an URL or upload an image (Size: H: 220px W: 720px)'); ?><br />
+	<img id="upload_default_screenshot_img" src="<?php echo esc_attr($value); ?>" width="360" height="110" alt="" />
+</label>

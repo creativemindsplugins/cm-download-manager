@@ -1,0 +1,132 @@
+<?php
+
+global $paged;
+
+$currentPage = $query->get('paged');
+if( $currentPage == 0 ) $currentPage = 1;
+$perPage = $query->get('posts_per_page');
+$total = $query->found_posts;
+$showingStart = ($currentPage - 1) * $perPage + 1;
+$showingEnd = min($showingStart + $perPage - 1, $total);
+
+$currentCategory = $query->get_queried_object();
+if (empty($currentCategory) OR empty($currentCategory->term_id)) $currentCategory = null;
+$category = null;
+if (!empty($currentCategory)) $category = CMDM_Category::getInstance($currentCategory);
+$tag = $query->get('tag');
+if (isset($_GET['cmdm_view'])) {
+    $view = sanitize_text_field($_GET['cmdm_view']);
+    $atts['view'] = sanitize_text_field($_GET['cmdm_view']);
+}
+if (empty($view)) {
+    $view = CMDM_CmdownloadController::getCurrentIndexView();
+}
+
+$currentUrl = CMDM_CmdownloadController::getQueryUrl($query, $currentPage, $view);
+
+
+?>
+
+<div class="cmdm-widget cmdm-widget-index<?php if (!empty($allowAJAX)) echo ' ajax';
+?>" data-widget-cache-id="<?php echo esc_attr(isset($widgetCacheId) ? $widgetCacheId : 0); ?>" data-url="<?php echo esc_attr($currentUrl);
+?>" data-category-id="<?php echo ($category ? $category->getId() : 0);
+?>">
+
+    <div class="cmdm-widget-content">
+
+        <?php if ($displayOptions['searchBar']): ?>
+            <?php do_action('CMDM_show_search_form', CMDM_CmdownloadController::getQueryUrl($query, 1, $view)); ?>
+        <?php endif; ?>
+
+        <?php if ($displayOptions['header']): ?>
+            <?php
+
+            $title = CMDM_CmdownloadController::getTitle($query);
+            $title .= sprintf(' <span class="num">(%d)</span>', $total);
+
+            echo CMDM_BaseController::_loadView('cmdownload/meta/header-title', compact('title'));
+
+            ?>
+        <?php endif; ?>
+
+        <?php if (!empty($currentCategory->parent)): ?>
+            <p class="cmdm-level-up"><a href="<?php echo esc_attr(get_term_link(get_term($currentCategory->parent, CMDM_Category::TAXONOMY)));
+                ?>" class="cmdm-category-link"><?php echo CMDM_Labels::getLocalized('index_level_up'); ?></a>
+            </p>
+        <?php endif; ?>
+
+        <?php if ($displayOptions['controls'] == CMDM_Settings::INDEX_CONTROLS_PLACE_TOP) do_action('CMDM_index_controls', $displayOptions, $query, $view); ?>
+
+
+        <?php
+
+        // tiles and list view end ?>
+
+            <?php if ($displayOptions['categories']): ?>
+                <div class="cmdm-index-categories boxGrey724"><?php
+                    do_action('CMDM_show_categories', $currentCategory, $displayOptions);
+                    ?></div>
+                <!--/boxGrey724 -->
+            <?php endif; ?>
+
+            <?php if ($displayOptions['controls'] == CMDM_Settings::INDEX_CONTROLS_PLACE_BELOW_CATEGORIES) do_action('CMDM_index_controls', $displayOptions, $query, $view); ?>
+
+            <div class="cmdm-archive-items <?php echo esc_attr('CMDM-'. $view .'-view'); ?>">
+                <?php if( $query->have_posts() ): ?>
+                    <div class="searchTitle"><?php
+                        printf(CMDM_Labels::getLocalized('index_pagination_showing'), $showingStart, $showingEnd, $total);
+                        ?></div>
+
+                    <?php
+                        echo CMDM_BaseController::_loadView('cmdownload/widget/index-list', compact('tag', 'perPage', 'displayOptions', 'query', 'view'));
+                     ?>
+
+
+                    <?php if (
+                        (
+                            CMDM_Settings::ACCESS_ALL == CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+                            || (
+                                CMDM_Settings::ACCESS_ALL != CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+                                && is_user_logged_in()
+                            )
+                        )
+                        && $query->max_num_pages > 1
+                    ): ?>
+                        <div class="cmdm-pagination cmdm-widget-pagination">
+                            <?php
+
+                            $result_pages = $query->max_num_pages;
+                            $prev_link = $result_pages > 1 && $currentPage > 1 ? CMDM_CmdownloadController::getQueryUrl($query, $currentPage-1, $view) : 'javascript:void(0)';
+                            $next_link = $result_pages > 1 && $currentPage < $result_pages ? CMDM_CmdownloadController::getQueryUrl($query, $currentPage+1, $view) : 'javascript:void(0)';
+
+                            if ($currentPage > 1): ?>
+                                <a href="<?php echo esc_attr($prev_link); ?>" class="prev">&laquo; <?php echo CMDM::__('Previous') ?></a>
+                            <?php endif;
+                            for($i = 1; $i <= $result_pages; $i++)
+                            {
+                                if( ($paged == 0 && $i == 1) || $paged == $i )
+                                {
+                                    echo ' <span>' . $i .'</span>';
+                                }
+                                else
+                                {
+                                    echo ' <a href="' . esc_attr(CMDM_CmdownloadController::getQueryUrl($query, $i, $view)) . '">' . $i . '</a>';
+                                }
+                            }
+                            ?>
+                            <?php if ($currentPage < $result_pages): ?>
+                                <a href="<?php echo esc_attr($next_link); ?>" class="next"><?php echo CMDM::__('Next') ?> &raquo;</a>
+                            <?php endif; ?>
+                        </div>
+                        <!--/paging -->
+                    <?php endif; ?>
+                <?php else: ?>
+                    <div class="searchTitle">
+                        <?php echo CMDM_Labels::getLocalized('index_no_results'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <!--/cmdm-archive-items -->
+
+    </div><!-- /cmdm-widget-content -->
+</div><!-- /cmdm-widget -->

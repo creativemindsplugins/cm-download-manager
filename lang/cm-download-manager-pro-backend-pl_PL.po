@@ -1,0 +1,711 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Download Manager PRO v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 14:19+0100\n"
+"PO-Revision-Date: 2013-06-20 14:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+
+# @ cm-download-manager-pro-backend
+msgid "Show author counters"
+msgstr "Show author counters"
+
+# @ cm-download-manager-pro-backend
+msgid "Decide to display number of uploads, support questions and answers below the author name."
+msgstr "Decide to display number of uploads, support questions and answers below the author name."
+
+# @ cm-download-manager-pro-backend
+msgid "Enable tags"
+msgstr "Enable tags"
+
+# @ cm-download-manager-pro-backend
+msgid "Enable rating"
+msgstr "Enable rating"
+
+# @ cm-download-manager-pro-backend
+msgid "Show author"
+msgstr "Show author"
+
+# @ cm-download-manager-pro-backend
+msgid "If disabled, then no author info will be available."
+msgstr "If disabled, then no author info will be available."
+
+# @ cm-download-manager-pro-backend
+msgid "Allowed file extensions"
+msgstr "Allowed file extensions"
+
+# @ cm-download-manager-pro-backend
+msgid "Separate with comma. Define which file extensions are permitted to upload."
+msgstr "Separate with comma. Define which file extensions are permitted to upload."
+
+# @ cm-download-manager-pro-backend
+msgid "Type of download available for uploaders"
+msgstr "Type of download available for uploaders"
+
+# @ cm-download-manager-pro-backend
+msgid "Define which options should the user have when adding new download."
+msgstr "Define which options should the user have when adding new download."
+
+# @ cm-download-manager-pro-backend
+msgid "File Upload"
+msgstr "File Upload"
+
+# @ cm-download-manager-pro-backend
+msgid "URL"
+msgstr "URL"
+
+# @ cm-download-manager-pro-backend
+msgid "Shortcode"
+msgstr "Shortcode"
+
+# @ cm-download-manager-pro-backend
+msgid "Categories required"
+msgstr "Categories required"
+
+# @ cm-download-manager-pro-backend
+msgid "Max number of categories"
+msgstr "Max number of categories"
+
+# @ cm-download-manager-pro-backend
+msgid "Max number of categories to choose for download."
+msgstr "Max number of categories to choose for download."
+
+# @ cm-download-manager-pro-backend
+msgid "Enable password protection for downloads"
+msgstr "Enable password protection for downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "If disabled, password textbox will not be shown in add/edit forms."
+msgstr "If disabled, password textbox will not be shown in add/edit forms."
+
+# @ cm-download-manager-pro-backend
+msgid "Preview support mode"
+msgstr "Preview support mode"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose whether the download preview should be customizable by the uploader or enabled/disabled for all downloads."
+msgstr "Choose whether the download preview should be customizable by the uploader or enabled/disabled for all downloads."
+
+# @ cm-download-manager-pro-backend
+msgid "disabled for all downloads"
+msgstr "disabled for all downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "enabled for all downloads"
+msgstr "enabled for all downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "customizable for each download"
+msgstr "customizable for each download"
+
+# @ cm-download-manager-pro-backend
+msgid "Player support mode"
+msgstr "Player support mode"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose whether the download player should be customizable by the uploader or enabled/disabled for all downloads."
+msgstr "Choose whether the download player should be customizable by the uploader or enabled/disabled for all downloads."
+
+# @ cm-download-manager-pro-backend
+msgid "Support thread notifications mode"
+msgstr "Support thread notifications mode"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose whether the \"Notify me on new support topics\" option should be customizable by the uploader or enabled/disabled for all downloads."
+msgstr "Choose whether the \"Notify me on new support topics\" option should be customizable by the uploader or enabled/disabled for all downloads."
+
+# @ cm-download-manager-pro-backend
+msgid "Require name and email support mode"
+msgstr "Require name and email support mode"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose whether the \"Require non logged in users to provide name and email\" option should be customizable by the uploader or enabled/disabled for all downloads."
+msgstr "Choose whether the \"Require non logged in users to provide name and email\" option should be customizable by the uploader or enabled/disabled for all downloads."
+
+# @ cm-download-manager-pro-backend
+msgid "Title bar for index page"
+msgstr "Title bar for index page"
+
+# @ cm-download-manager-pro-backend
+msgid "Enter text which appears on the browser's title bar on the index page for better search engines positioning. If blank then default title will be used."
+msgstr "Enter text which appears on the browser's title bar on the index page for better search engines positioning. If blank then default title will be used."
+
+# @ cm-download-manager-pro-backend
+msgid "Meta description for index page"
+msgstr "Meta description for index page"
+
+# @ cm-download-manager-pro-backend
+msgid "Enter the meta description for the index page for better search engines positioning."
+msgstr "Enter the meta description for the index page for better search engines positioning."
+
+# @ cm-download-manager-pro-backend
+msgid "Meta keywords"
+msgstr "Meta keywords"
+
+# @ cm-download-manager-pro-backend
+msgid "Enter the meta keywords for better search engines positioning."
+msgstr "Enter the meta keywords for better search engines positioning."
+
+# @ cm-download-manager-pro-backend
+msgid "Auto-approve new downloads"
+msgstr "Auto-approve new downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "Action on download"
+msgstr "Action on download"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose what action to do when user will download a file."
+msgstr "Choose what action to do when user will download a file."
+
+# @ cm-download-manager-pro-backend
+msgid "disable"
+msgstr "disable"
+
+# @ cm-download-manager-pro-backend
+msgid "grant"
+msgstr "grant"
+
+# @ cm-download-manager-pro-backend
+msgid "charge"
+msgstr "charge"
+
+# @ cm-download-manager-pro-backend
+msgid "set per download"
+msgstr "set per download"
+
+# @ cm-download-manager-pro-backend
+msgid "Number of points to grant/charge on file download"
+msgstr "Number of points to grant/charge on file download"
+
+# @ cm-download-manager-pro-backend
+msgid "Works if not chosen action per download."
+msgstr "Works if not chosen action per download."
+
+# @ cm-download-manager-pro-backend
+msgid "Action on upload"
+msgstr "Action on upload"
+
+# @ cm-download-manager-pro-backend
+msgid "Choose what action to do when user will upload a file."
+msgstr "Choose what action to do when user will upload a file."
+
+# @ cm-download-manager-pro-backend
+msgid "Number of points to grant/charge on file upload"
+msgstr "Number of points to grant/charge on file upload"
+
+# @ cm-download-manager-pro-backend
+msgid "Who can add new downloads"
+msgstr "Who can add new downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "You can specify which users will have access to dashboard."
+msgstr "You can specify which users will have access to dashboard."
+
+# @ cm-download-manager-pro-backend
+msgid "All logged-in users"
+msgstr "All logged-in users"
+
+# @ cm-download-manager-pro-backend
+msgid "Users with \"edit_posts\" capability"
+msgstr "Users with \"edit_posts\" capability"
+
+# @ cm-download-manager-pro-backend
+msgid "Users with \"publish_posts\" capability"
+msgstr "Users with \"publish_posts\" capability"
+
+# @ cm-download-manager-pro-backend
+msgid "Users with \"manage_options\" capability"
+msgstr "Users with \"manage_options\" capability"
+
+# @ cm-download-manager-pro-backend
+msgid "Users from specific user groups"
+msgstr "Users from specific user groups"
+
+# @ cm-download-manager-pro-backend
+msgid "Which groups can add new downloads"
+msgstr "Which groups can add new downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "Who can view downloads"
+msgstr "Who can view downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "You can specify which users will have read-only access to downloads."
+msgstr "You can specify which users will have read-only access to downloads."
+
+# @ cm-download-manager-pro-backend
+msgid "All users (including guests)"
+msgstr "All users (including guests)"
+
+# @ cm-download-manager-pro-backend
+msgid "Let download author decide"
+msgstr "Let download author decide"
+
+# @ cm-download-manager-pro-backend
+msgid "Which groups can view downloads"
+msgstr "Which groups can view downloads"
+
+# @ cm-download-manager-pro-backend
+msgid "Use the custom WP page for the Access Denied view"
+msgstr "Use the custom WP page for the Access Denied view"
+
+# @ cm-download-manager-pro-backend
+msgid "If enabled, users which have no access to the resources will be redirected to the custom Wordpress page \"Access denied\" which you can customize. The page will be created automaticaly."
+msgstr "If enabled, users which have no access to the resources will be redirected to the custom Wordpress page \"Access denied\" which you can customize. The page will be created automaticaly."
+
+# @ cm-download-manager-pro-backend
+msgid "New download notification subject"
+msgstr "New download notification subject"
+
+# @ cm-download-manager-pro-backend
+msgid "Subject for the notification email send after creating new download.<br />You can use the following shortcodes:<br />[blogname] - name of the blog<br />[title] - new download title<br />[link] - link to download page<br />[author] - uploader name"
+msgstr "Subject for the notification email send after creating new download.<br />You can use the following shortcodes:<br />[blogname] - name of the blog<br />[title] - new download title<br />[link] - link to download page<br />[author] - uploader name"
+
+# @ cm-download-manager-pro-backend
+msgid "New download notification body"
+msgstr "New download notification body"
+
+# @ cm-download-manager-pro-backend
+msgid "Body for the notification email send after creating new download.<br />You can use the following shortcodes:<br />[blogname] - name of the blog<br />[title] - new download title<br />[link] - link to download page<br />[author] - uploader name"
+msgstr "Body for the notification email send after creating new download.<br />You can use the following shortcodes:<br />[blogname] - name of the blog<br />[title] - new download title<br />[link] - link to download page<br />[author] - uploader name"
+
+# @ cm-download-manager-pro-backend
+msgid "General"
+msgstr "Ogólne"
+
+# @ cm-download-manager-pro-backend
+msgid "SEO"
+msgstr "SEO"
+
+# @ cm-download-manager-pro-backend
+msgid "Upload"
+msgstr "Upload"
+
+# @ cm-download-manager-pro-backend
+msgid "Index Page"
+msgstr "Strona główna"
+
+# @ cm-download-manager-pro-backend
+msgid "Appearance"
+msgstr "Wygląd"
+
+# @ cm-download-manager-pro-backend
+msgid "Download Page"
+msgstr "Strona pobierania"
+
+# @ cm-download-manager-pro-backend
+msgid "Moderation"
+msgstr "Moderacja"
+
+# @ cm-download-manager-pro-backend
+msgid "Downloads"
+msgstr "Pobrania"
+
+# @ cm-download-manager-pro-backend
+msgid "Support thread"
+msgstr "Wsparcie"
+
+# @ cm-download-manager-pro-backend
+msgid "Access"
+msgstr "Dostęp"
+
+# @ cm-download-manager-pro-backend
+msgid "Other"
+msgstr "Inne"
+
+# @ cm-download-manager-pro-backend
+msgid "Notifications"
+msgstr "Powiadomienia"
+
+# @ cm-download-manager-pro-backend
+msgid "Download"
+msgstr "Pobranie"
+
+# @ cm-download-manager-pro-backend
+msgid "Disclaimer"
+msgstr "Regulamin"
+
+# @ cm-download-manager-pro-backend
+msgid "Labels"
+msgstr "Etykiety"
+
+# @ cm-download-manager-pro-backend
+msgid "Social Login"
+msgstr "Logowanie społecznościowe"
+
+# @ cm-download-manager-pro-backend
+msgid "Sidebar"
+msgstr "Kolumna"
+
+# @ cm-download-manager-pro-backend
+msgid "Referrals"
+msgstr "Polecenia"
+
+# @ cm-download-manager-pro-backend
+msgid "Custom CSS"
+msgstr "Dodatkowy CSS"
+
+# @ cm-download-manager-pro-backend
+msgid "Server Information"
+msgstr "Serwer"
+
+
+# @ cm-answers-pro-backend
+msgid "Downloads graph"
+msgstr "Downloads graph"
+
+# @ cm-answers-pro-backend
+msgid "Times downloaded in last %s for file %s"
+msgstr "Times downloaded in last %s for file %s"
+
+# @ cm-answers-pro-backend
+msgid "week"
+msgstr "week"
+
+# @ cm-answers-pro-backend
+msgid "month"
+msgstr "month"
+
+# @ cm-answers-pro-backend
+msgid "year"
+msgstr "year"
+
+# @ cm-answers-pro-backend
+msgid "-- all --"
+msgstr "-- all --"
+
+# @ cm-answers-pro-backend
+msgid "File"
+msgstr "File"
+
+# @ cm-answers-pro-backend
+msgid "remove"
+msgstr "remove"
+
+# @ cm-answers-pro-backend
+msgid "Time from"
+msgstr "Time from"
+
+# @ cm-answers-pro-backend
+msgid "User's name"
+msgstr "User's name"
+
+# @ cm-answers-pro-backend
+msgid "User's email"
+msgstr "User's email"
+
+# @ cm-answers-pro-backend
+msgid "IP address"
+msgstr "IP address"
+
+# @ cm-answers-pro-backend
+msgid "Country"
+msgstr "Country"
+
+# @ cm-answers-pro-backend
+msgid "unknown"
+msgstr "unknown"
+
+# @ cm-answers-pro-backend
+msgid "known"
+msgstr "known"
+
+# @ cm-answers-pro-backend
+msgid "Anonymous"
+msgstr "Anonymous"
+
+# @ cm-answers-pro-backend
+msgid "Next page"
+msgstr "Next page"
+
+# @ cm-answers-pro-backend
+msgid "Previous page"
+msgstr "Previous page"
+
+# @ cm-answers-pro-backend
+msgid "Previous"
+msgstr "Previous"
+
+# @ cm-answers-pro-backend
+msgid "Next"
+msgstr "Next"
+
+# @ cm-answers-pro-backend
+msgid "Logs records"
+msgstr "Logs records"
+
+# @ cm-answers-pro-backend
+msgid "Show graph"
+msgstr "Show graph"
+
+# @ cm-answers-pro-backend
+msgid "Export as CSV"
+msgstr "Export as CSV"
+
+# @ cm-answers-pro-backend
+msgid "Erase log"
+msgstr "Erase log"
+
+# @ cm-answers-pro-backend
+msgid "Do you want to delete all logs of the all downloads?"
+msgstr "Do you want to delete all logs of the all downloads?"
+
+# @ cm-answers-pro-backend
+msgid "Restrict access to chosen users groups"
+msgstr "Restrict access to chosen users groups"
+
+# @ cm-answers-pro-backend
+msgid "Choose users groups which will have access to the category. If no groups selected, then every user can view it."
+msgstr "Choose users groups which will have access to the category. If no groups selected, then every user can view it."
+
+# @ cm-answers-pro-backend
+msgid "Notify chosen roles or users groups about new downloads"
+msgstr "Notify chosen roles or users groups about new downloads"
+
+# @ cm-answers-pro-backend
+msgid "Choose roles or/and users groups which will be notified after the new download appears in this category."
+msgstr "Choose roles or/and users groups which will be notified after the new download appears in this category."
+
+# @ cm-answers-pro-backend
+msgid "Place your styles here to override any CSS rule of the plugin."
+msgstr "Place your styles here to override any CSS rule of the plugin."
+
+# @ cm-answers-pro-backend
+msgid "Typical style modifications"
+msgstr "Typical style modifications"
+
+# @ cm-answers-pro-backend
+msgid "Click on the red value to change it. Press \"Add\" button to add custom CSS to the textarea."
+msgstr "Click on the red value to change it. Press \"Add\" button to add custom CSS to the textarea."
+
+# @ cm-answers-pro-backend
+msgid "Change background"
+msgstr "Change background"
+
+# @ cm-answers-pro-backend
+msgid "Change header on downloads pages"
+msgstr "Change header on downloads pages"
+
+# @ cm-answers-pro-backend
+msgid "Change header on dashboard pages"
+msgstr "Change header on dashboard pages"
+
+# @ cm-answers-pro-backend
+msgid "Add"
+msgstr "Add"
+
+# @ cm-answers-pro-backend
+msgid "Edit"
+msgstr "Edit"
+
+# @ cm-answers-pro-backend
+msgid "Show disclaimer for first time users"
+msgstr "Show disclaimer for first time users"
+
+# @ cm-answers-pro-backend
+msgid "In case you want disclaimer to appear for new user you need to select yes."
+msgstr "In case you want disclaimer to appear for new user you need to select yes."
+
+# @ cm-answers-pro-backend
+msgid "Disclaimer Text"
+msgstr "Disclaimer Text"
+
+# @ cm-answers-pro-backend
+msgid "Please describe in details the message which will appear in the disclaimer."
+msgstr "Please describe in details the message which will appear in the disclaimer."
+
+# @ cm-answers-pro-backend
+msgid "Disclaimer Accept Button text"
+msgstr "Disclaimer Accept Button text"
+
+# @ cm-answers-pro-backend
+msgid "Please specify what will appear in the disclaimer accept button."
+msgstr "Please specify what will appear in the disclaimer accept button."
+
+# @ cm-answers-pro-backend
+msgid "Please specify what will appear in the disclaimer reject button."
+msgstr "Please specify what will appear in the disclaimer reject button."
+
+# @ cm-answers-pro-backend
+msgid "Disclaimer Reject Button text"
+msgstr "Disclaimer Reject Button text"
+
+# @ cm-answers-pro-backend
+msgid "Yes"
+msgstr "Yes"
+
+# @ cm-answers-pro-backend
+msgid "No"
+msgstr "No"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, all information sections will be displayed one on top of the other."
+msgstr "If disabled, all information sections will be displayed one on top of the other."
+
+# @ cm-answers-pro-backend
+msgid "Use tabs to divide the download page"
+msgstr "Use tabs to divide the download page"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, changelog textbox will not be shown also in add/edit forms."
+msgstr "If disabled, changelog textbox will not be shown also in add/edit forms."
+
+# @ cm-answers-pro-backend
+msgid "Enable changelog panel for downloads"
+msgstr "Enable changelog panel for downloads"
+
+# @ cm-answers-pro-backend
+msgid "Enable installation panel for downloads"
+msgstr "Enable installation panel for downloads"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, installation textbox will not be shown also in add/edit forms."
+msgstr "If disabled, installation textbox will not be shown also in add/edit forms."
+
+# @ cm-answers-pro-backend
+msgid "Enable version parameter for downloads"
+msgstr "Enable version parameter for downloads"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, version textbox will not be shown also in add/edit forms."
+msgstr "If disabled, version textbox will not be shown also in add/edit forms."
+
+# @ cm-answers-pro-backend
+msgid "Show \"Back to All Downloads\" link"
+msgstr "Show \"Back to All Downloads\" link"
+
+# @ cm-answers-pro-backend
+msgid "Choose which audio player should be shown"
+msgstr "Choose which audio player should be shown"
+
+# @ cm-answers-pro-backend
+msgid "If music player is not enabled, this setting will have no effect."
+msgstr "If music player is not enabled, this setting will have no effect."
+
+# @ cm-answers-pro-backend
+msgid "Read description of each player:"
+msgstr "Read description of each player:"
+
+# @ cm-answers-pro-backend
+msgid "WARNING: It's known that jPlayer and core audio player won't work on some mp3 files."
+msgstr "WARNING: It's known that jPlayer and core audio player won't work on some mp3 files."
+
+# @ cm-answers-pro-backend
+msgid "Custom field #1"
+msgstr "Custom field #1"
+
+# @ cm-answers-pro-backend
+msgid "Custom field #2"
+msgstr "Custom field #2"
+
+# @ cm-answers-pro-backend
+msgid "Enter the custom field label."
+msgstr "Enter the custom field label."
+
+# @ cm-answers-pro-backend
+msgid "Enable support tab for downloads"
+msgstr "Enable support tab for downloads"
+
+# @ cm-answers-pro-backend
+msgid "Support tab will be shown in each download page."
+msgstr "Support tab will be shown in each download page."
+
+# @ cm-answers-pro-backend
+msgid "Support comments sorting order"
+msgstr "Support comments sorting order"
+
+# @ cm-answers-pro-backend
+msgid "Sorting by comment time."
+msgstr "Sorting by comment time."
+
+# @ cm-answers-pro-backend
+msgid "If disabled, screenshots won't be displayed on the download page."
+msgstr "If disabled, screenshots won't be displayed on the download page."
+
+# @ cm-answers-pro-backend
+msgid "Enable screenshots"
+msgstr "Enable screenshots"
+
+# @ cm-answers-pro-backend
+msgid "Enable slideshow for download screenshots"
+msgstr "Enable slideshow for download screenshots"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, images on download page will not be displayed."
+msgstr "If disabled, images on download page will not be displayed."
+
+# @ cm-answers-pro-backend
+msgid "Enable slideshow autoplay"
+msgstr "Enable slideshow autoplay"
+
+# @ cm-answers-pro-backend
+msgid "If disabled, images on download page will not automaticly rotate."
+msgstr "If disabled, images on download page will not automaticly rotate."
+
+# @ cm-answers-pro-backend
+msgid "Screenshots"
+msgstr "Screenshots"
+
+# @ cm-answers-pro-backend
+msgid "\"No screenshot\" image"
+msgstr "\"No screenshot\" image"
+
+# @ cm-answers-pro-backend
+msgid "Upload Image"
+msgstr "Upload Image"
+
+# @ cm-answers-pro-backend
+msgid "Enter an URL or upload an image (Size: H: 220px W: 720px)"
+msgstr "Enter an URL or upload an image (Size: H: 220px W: 720px)"
+
+# @ cm-answers-pro-backend
+msgid "Set the default no screenshot image"
+msgstr "Set the default no screenshot image"
+
+# @ cm-answers-pro-backend
+msgid "Navigation"
+msgstr "Navigation"
+
+# @ cm-answers-pro-backend
+msgid "Permalink for downloads index"
+msgstr "Permalink for downloads index"
+
+# @ cm-answers-pro-backend
+msgid "Permalink for dashboard pages"
+msgstr "Permalink for dashboard pages"
+
+# @ cm-answers-pro-backend
+msgid "Must be different from downloads permalink."
+msgstr "Must be different from downloads permalink."
+
+# @ cm-answers-pro-backend
+msgid "Permalink for uploader page"
+msgstr "Permalink for uploader page"
+
+# @ cm-answers-pro-backend
+msgid "Add \"Downloads\" to site menu"
+msgstr "Add \"Downloads\" to site menu"
+
+# @ cm-answers-pro-backend
+msgid "Notice: you need to have \"wp_nav_menu_items\" filter in your theme template."
+msgstr "Notice: you need to have \"wp_nav_menu_items\" filter in your theme template."
+
+# @ cm-answers-pro-backend
+msgid "Add \"My Downloads\" to site menu"
+msgstr "Add \"My Downloads\" to site menu"

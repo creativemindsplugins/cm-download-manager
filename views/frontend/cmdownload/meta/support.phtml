@@ -1,0 +1,61 @@
+<div class="topicTblWrapper">
+    <table class="topicTbl" style="position:relative">
+        <thead>
+            <tr>
+                <th><?php echo CMDM_Labels::getLocalized('support_th_topic'); ?></th>
+                <th><?php echo CMDM_Labels::getLocalized('support_th_posts'); ?></th>
+                <th><?php echo CMDM_Labels::getLocalized('support_th_last_poster'); ?></th>
+                <th><?php echo CMDM_Labels::getLocalized('support_th_updated'); ?></th>
+            </tr>
+        </thead>
+        <tbody id="threadsContainer">
+            <?php
+            do_action('CMDM_show_support_threads_list', $items);
+            ?>
+        </tbody>
+    </table>
+</div>
+<?php
+$perPage = 10;
+$pages = ceil($total / $perPage);
+$currentPage = 1;
+?>
+<div class="cmdm-pagination"><a href="#" class="prev">&laquo;</a>
+    <a href="#" class="currentPage" data-page="1">1</a>
+    <?php for($i = 2; $i <= $pages; $i++): ?>
+        <a href="#" data-page="<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
+    <a href="#" class="next">&raquo;</a></div>
+<!--/paging -->
+<script type="text/javascript">
+</script>
+<?php if( is_user_logged_in() ): ?>
+    <div class="boxWhite694">
+        <form id="addThreadForm" action="<?php echo esc_attr(trailingslashit(get_permalink($downloadId))); ?>topic/add" method="post" style="position:relative">
+            <h2><?php echo CMDM_Labels::getLocalized('support_leave_comment_header'); ?></h2>
+            <ul class="CMDM_error" style="display:none"></ul>
+            <ul class="CMDM_success" style="display:none"></ul>
+            <div class="cmdm_support_wrap">
+                <ul class="notes">
+                    <li><?php echo CMDM_Labels::getLocalized('support_topic_form_allow_markup'); ?>: &lt;strong&gt;, &lt;em&gt;, &lt;a&gt;</li>
+                    <li><?php echo CMDM_Labels::getLocalized('support_topic_form_wrap_code');?> &lt;pre&gt;&lt;/pre&gt;</li>
+                </ul>
+                <div class="cmdm_support_form">
+                    <input type="text" name="thread_title" placeholder="<?php echo esc_attr(CMDM_Labels::getLocalized('support_topic_form_title')); ?>" autocomplete="off"/><br />
+                    <textarea name="thread_comment" cols="" rows="" placeholder="<?php echo esc_attr(CMDM_Labels::getLocalized('support_topic_form_content')); ?>"></textarea>
+                    <label><input name="thread_notify" type="checkbox" value="1"/> <?php echo CMDM_Labels::getLocalized('support_topic_form_notify'); ?></label>
+                    <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cmdm_topic_add')); ?>" />
+                    <button class="butPost cmdm-button"><?php echo CMDM_Labels::getLocalized('support_topic_form_post_btn'); ?></button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+<?php else: ?>
+    <?php echo '<p>'. CMDM_Labels::getLocalized('support_topic_login_call') .'</p>'; ?>
+<?php endif; ?>
+<script type="text/javascript">
+    var totalSupportPages = <?php echo $pages; ?>;
+    var cmdm_supportSuccess = <?php echo json_encode(CMDM_Labels::getLocalized('support_topic_posted_success')); ?>;
+    var cmdm_supportModeration = <?php echo json_encode(CMDM_Labels::getLocalized('support_topic_posted_moderation')); ?>;
+</script>

@@ -1,0 +1,162 @@
+<?php
+
+wp_enqueue_script('cmdm-tiles-js');
+$atts = $atts ?? [];
+
+$currentPage = $paged = $query->get('paged');
+if ($currentPage == 0) $currentPage = 1;
+$perPage = !empty($query->get('posts_per_page')) ? $query->get('posts_per_page') : 10;
+$total = $query->found_posts;
+$showingStart = ($currentPage - 1) * $perPage + 1;
+$showingEnd = min($showingStart + $perPage - 1, $total);
+
+$widgetCacheId = $widgetCacheId ?? 0;
+
+$currentCategory = $query->get_queried_object();
+if (empty($currentCategory) or empty($currentCategory->term_id)) $currentCategory = null;
+$category = null;
+if (!empty($currentCategory)) $category = CMDM_Category::getInstance($currentCategory);
+$tag = $query->get('tag');
+if (isset($_GET['cmdm_view'])) {
+    $view = $_GET['cmdm_view'];
+    $atts['view'] = $_GET['cmdm_view'];
+}
+if (empty($view)) {
+    $view = CMDM_CmdownloadController::getCurrentIndexView(); /* TODO: fix it */
+}
+
+$currentUrl = CMDM_Shortcodes::getQueryUrl($query, $atts);
+
+?>
+
+<div class="cmdm-widget cmdm-widget-index<?php if (!empty($allowAJAX)) echo ' ajax'; ?>"
+     data-widget-cache-id="<?php echo esc_attr($widgetCacheId); ?>"
+     data-url="<?php echo esc_attr($currentUrl); ?>"
+     data-category-id="<?php echo($category ? $category->getId() : 0); ?>">
+
+<div class="cmdm-widget-content">
+
+<?php if ($displayOptions['searchBar']): ?>
+	<?php do_action('CMDM_show_search_form', CMDM_CmdownloadController::getQueryUrl($query, 1, $view)); ?>
+<?php endif; ?>
+
+<?php if ($displayOptions['header']): ?>
+	<?php
+	
+	$title = CMDM_CmdownloadController::getTitle($query);
+	$title .= sprintf(' <span class="num">(%d)</span>', $total);
+
+	echo CMDM_BaseController::_loadView('cmdownload/meta/header-title', compact('title'));
+	
+	?>
+<?php endif; ?>
+
+<?php if (!empty($currentCategory->parent)): ?>
+	<p class="cmdm-level-up"><a href="<?php echo esc_attr(get_term_link(get_term($currentCategory->parent, CMDM_Category::TAXONOMY)));
+		?>" class="cmdm-category-link"><?php echo CMDM_Labels::getLocalized('index_level_up'); ?></a>
+	</p>
+<?php endif; ?>
+
+<?php if ($displayOptions['controls'] == CMDM_Settings::INDEX_CONTROLS_PLACE_TOP) do_action('CMDM_index_controls', $displayOptions, $query, $view); ?>
+
+
+<?php
+
+// tiles and list view end ?>
+
+	<?php if ($displayOptions['categories']): ?>
+		<div class="cmdm-index-categories boxGrey724"><?php
+			do_action('CMDM_show_categories', $currentCategory, $displayOptions);
+		?></div>
+		<!--/boxGrey724 -->
+	<?php endif; ?>
+	
+	<?php if ($displayOptions['controls'] == CMDM_Settings::INDEX_CONTROLS_PLACE_BELOW_CATEGORIES) do_action('CMDM_index_controls', $displayOptions, $query, $view); ?>
+	
+	<div class="cmdm-archive-items <?php echo esc_attr('CMDM-'. $view .'-view'); ?>">
+		<?php if( $query->have_posts() ): ?>
+			<div class="searchTitle"><?php
+				printf(CMDM_Labels::getLocalized('index_pagination_showing'), $showingStart, $showingEnd, $total);
+			?></div>
+			
+			<?php echo CMDM_BaseController::_loadView('cmdownload/widget/index-list', compact( 'tag', 'perPage', 'displayOptions', 'query', 'view')); ?>
+			
+	
+			<?php if (
+                    (
+                            CMDM_Settings::ACCESS_ALL == CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+                            || (
+                                    CMDM_Settings::ACCESS_ALL != CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+                                    && is_user_logged_in()
+                            )
+                    )
+                    && $query->max_num_pages > 1
+            ): ?>
+                <?php
+                $result_pages = (int)$query->max_num_pages;
+                ?>
+            <?php if ($result_pages > 1): ?>
+                <div class="cmdm-pagination cmdm-widget-pagination">
+                    <?php
+                    $prev_link = 'javascript:void(0)';
+                    if ($result_pages > 1 && $currentPage > 1) {
+                        $tmp_atts = $atts;
+                        $tmp_atts['page'] = $currentPage - 1;
+                        $prev_link = CMDM_Shortcodes::getQueryUrl($query, $tmp_atts);
+                    }
+
+                    $next_link = 'javascript:void(0)';
+                    if ($result_pages > 1 && $currentPage < $result_pages) {
+                        $tmp_atts = $atts;
+                        $tmp_atts['page'] = $currentPage + 1;
+                        $next_link = CMDM_Shortcodes::getQueryUrl($query, $tmp_atts);
+                    }
+
+                    if ($currentPage > 1): ?>
+                        <a href="<?php echo esc_attr($prev_link); ?>" class="prev">
+                            &laquo; <?php echo CMDM::__('Previous') ?>
+                        </a>
+                    <?php endif;
+                    for ($page_i = 1; $page_i <= $result_pages; $page_i++) {
+                        if (($paged == 0 && $page_i == 1) || $paged == $page_i) {
+                            echo ' <span>' . $page_i . '</span>';
+                        } else {
+                            $tmp_atts['page'] = $page_i;
+                            $page_url = CMDM_Shortcodes::getQueryUrl($query, $tmp_atts);
+                            echo ' <a href="' . esc_attr($page_url) . '">' . $page_i . '</a>';
+                        }
+                    }
+                    ?>
+                    <?php if ($currentPage < $result_pages): ?>
+                        <a href="<?php echo esc_attr($next_link); ?>" class="next">
+                            <?php echo CMDM::__('Next') ?>&raquo;
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <!--/paging -->
+
+            <?php endif; ?>
+
+            <?php if ($result_pages > 1): ?>
+                <div class="searchTitle"><?php
+                    printf(CMDM_Labels::getLocalized('index_pagination_showing'), $showingStart, $showingEnd, $total);
+                    ?></div>
+            <?php else: ?>
+                <div class="searchTitle">
+                    <?php echo CMDM_Labels::getLocalized('index_no_results'); ?>
+                </div>
+            <?php endif; ?>
+            </div>
+            <!--/cmdm-archive-items -->
+        <?php
+
+        endif;
+        /*
+         *  categories view end
+         */
+
+        ?>
+<?php endif; ?>
+
+</div><!-- /cmdm-widget-content -->
+</div><!-- /cmdm-widget -->

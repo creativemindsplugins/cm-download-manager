@@ -1,0 +1,23 @@
+<div class="CMDM CMDM-add-page CMDM-upload-form">
+    <?php do_action('CMDM_show_dashboard_menu'); ?>
+    <?php do_action('cmdm_frontend_upload_form_above'); ?>
+
+    <div class="CMDM-form-loader" style="display:none"><?php echo CMDM_Labels::getLocalized('upload_please_wait'); ?></div>
+    <div class="CMDM-edit-form"><?php echo $form; ?></div>
+
+    <?php do_action('cmdm_frontend_upload_form_below'); ?>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        if (typeof setUserSetting == "function") {
+            setUserSetting('editor', 'tinymce');
+        }
+    })
+    </script>
+    <?php if (isset($hide_add_new)): ?>
+    <style type="text/css">
+        .controls.cmdm-dashboard-menu .add { display: none; }
+    </style>
+    <?php endif; ?>
+
+</div>

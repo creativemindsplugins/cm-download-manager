@@ -1,0 +1,67 @@
+<?php
+if( !isset($_GET['ajax']) ):
+    if ( wp_is_block_theme() ) {
+        $header = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"header","tagName":"header"} /-->'));
+        $footer = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->'));
+        echo '<div class="wp-site-blocks">';
+        wp_head();
+        echo $header;
+    } else {
+        get_header();
+    }
+endif;
+?><div class="CMDM site-content"><?php
+if( have_posts() ):
+    while(have_posts()):
+        the_post();
+        $download = CMDM_GroupDownloadPage::getInstance(get_the_id());
+        $showTitle = '';
+        ?>
+        <div class="CMDM-app">
+            <div class="main">
+                <h2><?php the_title(); ?></h2>
+                <div class="cmdm-single-top-sidebar cmdm-content-area">
+                    <?php dynamic_sidebar(CMDM_Settings::AREA_SINGLE_TOP); ?>
+                </div>
+
+                <?php
+               echo CMDM_BaseController::_loadView('cmdownload/widget/single-header',compact('download', 'showTitle'));
+                ?>
+
+                <div class="cmdm-single-screenshots-below-sidebar cmdm-content-area">
+                    <?php dynamic_sidebar(CMDM_Settings::AREA_SINGLE_SCREENSHOTS_BELOW); ?>
+                </div>
+
+                <?php echo CMDM_BaseController::_loadView('cmdownload/widget/single-content', compact('download')); ?>
+
+                <div class="cmdm-single-bottom cmdm-content-area">
+                    <?php dynamic_sidebar(CMDM_Settings::AREA_SINGLE_BOTTOM); ?>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <?php if( is_active_sidebar(CMDM_Settings::AREA_SIDEBAR) || CMDM_Settings::getOption(CMDM_Settings::OPTION_DOWNLOAD_BUTTON_WIDGET_AREA) == CMDM_Settings::AREA_SIDEBAR): ?>
+                <div class="aside">
+                    <div class="sideBox">
+                        <?php dynamic_sidebar(CMDM_Settings::AREA_SIDEBAR); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+
+    <?php
+    endwhile;
+endif;
+?>
+    </div>
+<?php
+if ( !isset($_GET['ajax']) ) {
+
+    if ( wp_is_block_theme() ) {
+        echo $footer;
+        echo '</div>';
+        wp_footer();
+    } else {
+        get_footer();
+    }
+}

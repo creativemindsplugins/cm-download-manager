@@ -1,0 +1,60 @@
+<?php
+/**
+ * The template for displaying Archive pages.
+ *
+ * Used to display archive-type pages if nothing more specific matches a query.
+ * For example, puts together date-based pages if no date.php file exists.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Eleven
+ * @since Twenty Eleven 1.0
+ * @deprecated
+ */
+
+global $wp_query;
+$currentCategory = $wp_query->get_queried_object();
+
+if ( wp_is_block_theme() ) {
+    $header = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"header","tagName":"header"} /-->'));
+    $footer = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->'));
+    echo '<div class="wp-site-blocks">';
+    wp_head();
+    echo $header;
+} else {
+    get_header();
+}
+
+?>
+<div class="CMDM site-content">
+    <div class="CMDM-app">
+        <div class="cmdm-main">
+        
+        <?php echo CMDM_BaseController::_loadView('cmdownload/widget/index', array(
+        	'query' => $wp_query,
+        	'displayOptions' => CMDM_Settings::getDisplayOptionsDefaults(),
+        )); ?>
+    	
+        </div>
+        <!--/main -->
+        <?php
+        if( is_active_sidebar(CMDM_Settings::AREA_SIDEBAR) ): ?>
+            <div class="aside">
+                <div class="sideBox">
+                    <?php dynamic_sidebar(CMDM_Settings::AREA_SIDEBAR); ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        <div class="clearfix"></div>
+        <!--/aside -->
+    </div>
+    <div class="clearfix"></div>
+</div>
+<?php if ( wp_is_block_theme() ) {
+    echo $footer;
+    echo '</div>';
+    wp_footer();
+} else {
+    get_footer();
+} ?>

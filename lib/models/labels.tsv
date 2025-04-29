@@ -1,0 +1,296 @@
+Author	Author	Define what will be the label for author.	General
+front_menu_dashboard	My Downloads	The front-end menu item for user's downloads dashboard.	General
+front_menu_downloads	Downloads	The front-end menu item for Downloads main page.	General
+dashboard_menu_all_downloads	All downloads	The All downloads menu link in the dashboard menu.	General
+search_placeholder	Search...	Search input placeholder.	General
+Tags	Tags	Tags label.	General
+category_root	-- top --	Categories tree root.	General
+previous_link	&laquo; Previous	Previous link	General
+next_link	Next &raquo;	Next link	General
+cancel	Cancel	Cancel	General
+
+index_table_title	Title	Download title in table view.	Index page
+index_table_status	Status	Download status in table view.	Index page
+index_table_downloads_num	Downloads	Times downloaded in table view.	Index page
+index_table_actions	Actions	Index table actions.	Index page
+sort_by	Sort by	Sort by label.	Index page
+sort_by_post_title	name ascending	Sort by name ascending.	Index page
+sort_by_post_title_desc	name descending	Sort by name descending.	Index page
+sort_by_post_modified	recently modified	Sort by recently modified.	Index page
+sort_by_newest	newest	Sort by newest.	Index page
+sort_by_rating	rating	Sort by rating.	Index page
+sort_by_downloads	downloads number	Sort by downloads number.	Index page
+sort_by_views	views number	Sort by views number.	Index page
+sort_by_menu_order	manual	Sort by manual order.	Index page
+index_view_tiles	tiles	Index view tiles.	Index page
+index_view_list	list	Index view list.	Index page
+index_view_category	category	Index view category.	Index page
+index_view_table	table	Index view table.	Index page
+index_download_info_link	Details	Index page info link.	Index page
+index_download_details	Details	Details of the download.	Index page
+index_no_results	No results have been found	No results message.	Index page
+index_category_show_more	Show more	Show more link	Index page
+index_level_up	One level up	One level up link.	Index page
+index_layout_switch	Layout:	Change layout.	Index page
+index_pagination_showing	Showing %d-%d of %d	Showing results.	Index page
+index_one_download	1 download	One download.	Index page
+index_d_downloads	%d downloads	Several downloads.	Index page
+index_all_downloads	All downloads	All downloads	Index page
+
+dashboard_table_id	ID	ID column header.	Dashboard
+dashboard_table_title	Title	Title column header.	Dashboard
+dashboard_table_status	Status	Status column header.	Dashboard
+dashboard_date	Download date	Downloads date column.	Dashboard
+dashboard_table_downloads_num	Downloads	Downloads column header.	Dashboard
+dashboard_table_actions	Actions	Actions column header.	Dashboard
+dashboard_no_downloads	You haven't added any downloads yet	No downloads message.	Dashboard
+dashboard_action_unpublish	Unpublish	Unpublish download action.	Dashboard
+dashboard_action_publish	Publish	Publish download action.	Dashboard
+dashboard_action_edit	Edit	Edit download action.	Dashboard
+dashboard_action_delete	Delete	Delete download action.	Dashboard
+dashboard_action_delete_confirm	Are you sure you want to delete?	Confirmation before deleting a download.	Dashboard
+dashboard_no_results	No results have been found	No results message.	Dashboard
+manage_my_downloads	Manage my Downloads	Manage my Downloads link	Dashboard
+
+upload_shortcodes	Shortcodes	Document's shortcode field on the upload page.	Upload
+upload_title_field	Title	Document's title field on the upload page.	Upload
+upload_file_field	File	Document's file field on the upload page.	Upload
+download_updated_view_link_title	View  &raquo;	Link to updated download after save.	Upload
+upload_allowed_extensions	Allowed extensions:	Allowed extensions label.	Upload
+upload_thumb_field	Thumbnail	Document's thumbnail field on the upload page.	Upload
+upload_thumb_field_desc	Thumbnail won't be shown on the screenshots region.	Document's thumbnail field description on the upload page.	Upload
+upload_thumb_click_to_set	Click on a screenshot above to set the main thumbnail.	Document's thumbnail text when no image selected.	Upload
+upload_file_expiration_field	File Expiration	Document's expiration field on the upload page.	Upload
+upload_file_expiration_field_description	Set file expiration date. Users will not be able to see and download file after this date	Document's expiration field description on the upload page.	Upload
+upload_screenshots_field	Screenshots	Document's screenshots field.	Upload
+upload_screenshots_field_description	Choose screenshots to be displayed on the download page.	Screenshot field description.	Upload
+upload_password_field	Protect by password	Document's password field on the upload page.	Upload
+upload_permission_field	Who can download	Document's download permission field.	Upload
+upload_permission_all	All users (including guests)	Document's download permission "all" option.	Upload
+upload_permission_loggedin	All logged-in users	Document's download permission "logged-in users" option.	Upload
+upload_permission_publish_posts	All users with "publish_posts" capability	Document's download permission "publish_posts" option.	Upload
+upload_permission_edit_posts	All users with "edit_posts" capability	Document's download permission "edit_posts" option.	Upload
+upload_permission_manage_options	All users with "manage_options" capability	Document's download permission "manage_options" option.	Upload
+upload_permission_user_groups	Selected CMDM user groups	Document's download permission "user groups" option.	Upload
+upload_permission_users	Selected users	Document's download permission "selected users" option.	Upload
+upload_permission_author	Only author	Document's download permission "author" option.	Upload
+upload_visibility_users_groups	Allowed Users Groups	Allowed Users Groups on the upload form.	Upload
+upload_visibility_allowed_roles	Allowed WP Roles	Allowed WP Roles on the upload form.	Upload
+upload_select_files_btn	Select files	Select files button.	Upload
+upload_select_file_btn	Select file	Select file button.	Upload
+upload_category_add_btn	Add	Category add button.	Upload
+upload_category_add_placeholder	New category	New category name placeholder.	Upload
+upload_form_add_btn	Add	Add form's submit button.	Upload
+upload_form_update_btn	Update	Update form's submit button.	Upload
+upload_please_wait	Please wait, sending data in progress	Please wait text.	Upload
+upload_browse_wp_upload_dir	Browse WP upload dir	Label for button "Browse WP upload dir".	Upload
+upload_menu_add_new	Add new	Add new button.	Upload
+upload_menu_delete	Delete	Delete button.	Upload
+upload_menu_view	View	View button.	Upload
+upload_menu_edit	Edit	Edit button.	Upload
+files_list_upload_btn	Upload	Upload button label on the cmdm-files-list shortcode.	Upload
+upload_category_no_limit_field	Categories	Field label for categories field.	Upload
+upload_category_field	Category (max. %d)	Field label for categories field.	Upload
+upload_cmvl_channel	Video Lessons channel	Field title for Video Lessons channel.	Upload
+upload_cmvl_channel_desc	Associate with the CM Video Lessons channel to display an extra Video tab.	Field description for Video Lessons channel.	Upload
+upload_page_tags	Tags	Tags on the upload page.	Upload
+upload_page_tags_placeholder	Add tag	Placeholder for the tags input field.	Upload
+upload_not_permitted_limit	You have reached the uploads limit. Please try later.	Message displayed instead of the upload form, when user reached the uploads limit.	Upload
+upload_admin_recommended	Admin Recommended	Admin Recommended row.	Upload
+upload_number_of_downloads	Times downloaded	Times downloaded row.	Upload
+upload_allow_single_file_download	Allow single file download	Allow single file download row.	Upload
+upload_allow_single_file_download_desc	For multiple-file package you can allow user to download each file separately.	Allow single file download row description.	Upload
+upload_allow_selecting_specific_files	Allow selection of specific files	Allow selection of specific files row.	Upload
+upload_allow_selecting_specific_files_desc	For multiple-file package you can allow user to select only specific files to download as a ZIP package.	Allow selection of specific files row.	Upload
+upload_find_category	Find category...	Find category field.	Upload
+upload_new_category	New category	New category button.	Upload
+upload_new_category_parent	Parent:	Parent category for new category.	Upload
+upload_agreement	Agreement	row.	Upload
+upload_type_url	URL	URL upload type.	Upload
+upload_type_url_hide_url	Hide URL from users	Hide URL from users.	Upload
+upload_type_url_hide_url_desc	Stream file behind the URL to hide the address from users (may not work on all servers). If disabled, simply redirect browser to the given URL.	Description of the hide URL checkbox.	Upload
+upload_allowed_groups	Allowed CMDM User Groups	Allowed CMDM User Groups.	Upload
+upload_allowed_users	Allowed Wordpress Users	Allowed Wordpress Users	Upload
+upload_allowed_users_list	Allowed Users	Allowed Users list	Upload
+upload_browse_wp_dir	Browse WP home dir	Browse WP home dir	Upload
+upload_type_file	File	Upload type: file	Upload
+upload_type_url	URL	Upload type: URL	Upload
+upload_type_shortcode	Shortcode	Upload type: shortcode	Upload
+upload_version	Version	Version field	Upload
+upload_download_type	Download type	Download type	Upload
+upload_shortcode_field	Shortcode	Shortcode field	Upload
+upload_screenshots_disabled_msg	Screenshots are disabled in the plugin settings and won't be visible on the download's page.	Screenshots are disabled message.	Upload
+youtube_link_title_field	Youtube link	Youtube link field label	Upload
+youtube_link_title_desc	Paste links to video separated by comma	Youtube link title description	Upload
+upload_images	Images	Images	Upload
+upload_enable_preview	Enable Preview	Enable Preview	Upload
+upload_enable_preview_desc	For documents or images you can show Google Docs preview for users.	Enable preview description.	Upload
+upload_enable_player	Enable Media Player	Enable Media Player	Upload
+upload_enable_player_desc	For audio/movie files you can show media player for users.	Enable player description.	Upload
+upload_notify_support	Notify me on new support topics	Notify me on new support topics	Upload
+upload_require_name_email	Require non logged in users to provide name and email	Require name and email.	Upload
+upload_visibility	Visibility	Visibility	Upload
+upload_visibility_all	All users (including guests)	All users	Upload
+upload_visibility_loggedin	All logged-in users	All logged-in users	Upload
+upload_visibility_publish_posts	All users with "publish_posts" capability	All users with "publish_posts" capability	Upload
+upload_visibility_edit_posts	All users with "edit_posts" capability	All users with "edit_posts" capability	Upload
+upload_visibility_manage_options	All users with "manage_options" capability	All users with "manage_options" capability	Upload
+upload_visibility_user_groups	Selected CMDM user groups	Selected CMDM user groups	Upload
+upload_visibility_roles	Selected Wordpress roles	Selected Wordpress roles	Upload
+upload_visibility_users	Selected Wordpress users	Selected Wordpress users	Upload
+upload_visibility_author	Only me	Only me	Upload
+upload_visibility_author_author	author	author	Upload
+upload_added_msg	"%s" has been succesfully added	Upload added message.	Upload
+upload_held_moderation_msg	%s has been held for moderation	Upload held for moderation.	Upload
+upload_updated_msg	"%s" has been succesfully updated	Upload updated message.	Upload
+upload_deleted_msg	"%s" has been succesfully deleted	Upload deleted message.	Upload
+upload_published_msg	"%s" has been succesfully published	Upload published message.	Upload
+upload_unpublished_msg	"%s" has been succesfully unpublished	Upload unpublished message.	Upload
+
+login_to_download	Please login to download.	Login prompt on the restricted download page.	Download
+download_not_permitted	You have no permission to download this file.	Message displayed instead of the download button, when user has permission to view download page, but has no permission to download the file.	Download
+download_see_content_not_permitted	Sorry, You haven't permission to see this content.	Message displayed when user doesn't permission to view content.	Download
+download_not_permitted_limit	You have reached the downloads limit. Please try later.	Message displayed instead of the download button, when user reached the downloads limit.	Download
+download_button_file	Download	Label of the download button for download type "File".	Download
+download_button_url	Download	Label of the download button for download type "URL".	Download
+download_button_open	Open	Label of the open button in the cmdm-files-list shortcode view.	Download
+download_button_more	More...	Label for the More button in the cmdm-files-list shortcode view.	Download
+report_btn	Report	Label for the Report link displayed on the download's page.	Download
+report_reason_placeholder	Enter the reason...	Report reason textarea placeholder.	Download
+report_send_btn	Send report	Label for the Report submit button displayed on the download's page.	Download
+report_file_success_msg	Thank you, the resource has been reported.	Success message after reported the download.	Download
+tab_video_lesson	Video Lesson	Video Lesson tab label.	Download
+views	Views	Views number.	Download
+file_size	File size	File size label.	Download
+tags_list	Tags	Tags list label.	Download
+back_to_all_downloads	Back to All Downloads	Backlink text.	Download
+download_rating	Rating	Download's rating.	Download
+select_specific_files_download	Select specific files to download:	Select specific files to download text on the download form.	Download
+select_file_to_download	Select specific file to download:	Select specific file to download text on the download form.	Download
+download_status_publish	published	Download status published.	Download
+download_status_draft	draft	Download status draft.	Download
+download_waiting_for_moderation	waiting for moderation	Download waiting for moderation.	Download
+download_info_header	Download Info	Header of the download details widget.	Download
+download_version	Version	Download version.	Download
+download_downloads_num	Downloads	Times downloaded.	Download
+download_updated_time	Updated	Download updated time.	Download
+download_admin_recommended	Recommended	Download is recommended by admin.	Download
+download_preview_btn	Show Preview	Download preview button.	Download
+password_label_btn	Password	Password text label.	Download
+download_no_results_label	There are no results	Label for list, if there are no result 	Download
+download_read_more_link	Read More	Read more link label for limited download description 	Download
+download_tab_description	Description	Download tab: Description	Download
+download_tab_excerpt	Excerpt	Download tab: Excerpt	Download
+download_tab_notes	Notes	Download tab: Notes	Download
+download_tab_tags	Tags	Download tab: Tags	Download
+download_tab_installation	Installation	Download tab: Installation	Download
+download_tab_changelog	Changelog	Download tab: Changelog	Download
+download_tab_support	Support	Download tab: Support	Download
+download_tab_view_video	View video	Download tab: View video	Download
+download_info_categories	Categories	Categories list in the download info widget.	Download
+download_user_first_name	First name	User first name in Download Info section.	Download
+download_user_last_name	Last name	User last name in Download Info section.	Download
+download_user_email	Email	User Email in Download Info section.	Download
+download_related_downloads	Related Downloads	Related downloads in sidebar Section.	Download
+
+support_thread_resolved	RESOLVED	Resolved status for the support thread.	Support
+support_no_topics	No topics	No topics text.	Support
+support_create_topic_call	would you like to create one?	Call to create a topic.	Support
+support_th_topic	Topic	Topic column header.	Support
+support_th_posts	Posts	Posts column header.	Support
+support_th_last_poster	Last Poster	Last Poster column header.	Support
+support_th_updated	Updated	Updated column header.	Support
+support_leave_comment_header	Leave your comment/question	Header of the new topic form.	Support
+support_topic_form_title	Title	Title field.	Support
+support_topic_form_content	What is your comment about?	Content textarea placeholder.	Support
+support_topic_form_notify	Notify me of follow	Notify me of follow checkbox.	Support
+support_topic_form_post_btn	Post	Post button.	Support
+support_topic_form_allow_markup	Allow markup	Allow markup	Support
+support_topic_form_wrap_code	Wrap your code using	Wrap your code using	Support
+support_topic_posted_success	Your question has been succesfully added.	Topic posted success message.	Support
+support_topic_posted_moderation	Thank you for your question, it has been held for moderation.	Topic waiting for moderation message.	Support
+support_topic_login_call	Please log in to post questions	Login prompt.	Support
+support_back	&laquo; Back to Support Page	Back to Support Page link	Support
+support_post_answer_header	Leave your comment	Post answers header.	Support
+support_answer_form_content	What is your comment about?	Content textarea placeholder.	Support
+support_topic_mark_resolved	Mark this topic as resolved	Mark this topic as resolved checkbox.	Support
+support_topic_post_answer_btn	Post	Post answer button.	Support
+support_answer_added_msg	Your answer has been succesfully added.	Answer added message.	Support
+support_answer_added_to_moderation_msg	Thank you for your answer, it has been held for moderation.	Answer added to moderation message.	Support
+
+follow_category_button	Follow category	Label for the "Follow category" button.	Following
+unfollow_category_button	Unfollow category	Label for the "Unfollow category" button.	Following
+follow_category_added_msg	You have been added from the category followers.	Label for the message after successfull add as follower.	Following
+follow_category_removed_msg	You have been removed from the category followers.	Label for the message after successfull remove from followers.	Following
+
+filter_input_placeholder	Filter...	Placeholder of the quick JS filter input.	Search
+search_input_placeholder	Search...	Placeholder of the search input.	Search
+search_submit_btn	Search	Search submit button label.	Search
+
+files_list_tags_filter	Tags:	Tag filter in the cmdm-files-list	Shortcodes
+files_list_category_filter_tree	Category:	Category filter (single tree) in the cmdm-files-list	Shortcodes
+files_list_month_filter	Month:	Month filter in the cmdm-files-list	Shortcodes
+files_list_years_filter	Year:	Years filter in the cmdm-files-list	Shortcodes
+files_list_category_filter_two_level	Category:	Category filter (two-level) in the cmdm-files-list	Shortcodes
+files_list_subcategory_filter_two_level	Subcategory:	Subcategory filter (two-level) in the cmdm-files-list	Shortcodes
+files_list_category_filter_author	Author:	Author filter in the cmdm-files-list	Shortcodes
+files_list_category_undefined	Uncategorized downloads	Title of the block with downloads without category in categories view	Shortcodes
+category_is_empty	No downloads.	Text for empty category.	Shortcodes
+
+panel_title_cmdownload_add	Downloads - Add	Downloads - Add	Panel Titles
+panel_title_cmdownload_edit	Downloads - Edit	Downloads - Edit	Panel Titles
+panel_title_cmdownload_del	Downloads - Delete	Downloads - Delete	Panel Titles
+panel_title_cmdownload_empty	Downloads - Empty	Downloads - Empty	Panel Titles
+panel_title_cmdownload_dashboard	Downloads - Dashboard	Downloads - Dashboard	Panel Titles
+panel_title_error_error	Error	Error	Panel Titles
+panel_title_uploader_index	Uploader - Index	Uploader - Index	Panel Titles
+
+login_widget_text	Please sign-in with the following login form.	Login widget text.	Other
+login_widget_header	Login	Login widget header.	Other
+login_widget_logout_btn_lbl	Logout	Logout button label.	Other
+rating_success	Thanks for rating!	Message after user rated a download.	Other
+download_moderation_status_accepted	accepted	Download published status in the moderation email.	Other
+download_moderation_status_rejected	rejected	Download rejected status in the moderation email.	Other
+tags_add_btn	Add	Add tags button.	Other
+questions	questions	Number of questions.	Other
+user_questions_header	Questions	User's questions header.	Other
+answers	answers	Number of answers.	Other
+user_answers_header	Answers	User's answers header.	Other
+expiration	expiration	File expiration date.	Other
+uploads	uploads	Number of uploads.	Other
+user_uploads_header	Uploads	User's uploads header.	Other
+access_denied_go_back	Go back to previous page	Go back link.	Other
+error_go_back	Go back to previous page	Go back link.	Other
+uploader_social_profiles_header	Social Profiles	Social Profiles header	Other
+login_page_link_title	Login	Login link text.	Other
+error_not_permissions_view_page	You do not have sufficient permissions to view this page	Access denied to page text.	Other
+message_wrong_password	Wrong password	Wrong password text.	Other
+date_january	January	Month label.	Date
+date_february	February	Month label.	Date
+date_march	March	Month label.	Date
+date_april	April	Month label.	Date
+date_may	May	Month label.	Date
+date_june	June	Month label.	Date
+date_july	July	Month label.	Date
+date_august	August	Month label.	Date
+date_september	September	Month label.	Date
+date_october	October	Month label.	Date
+date_november	November	Month label.	Date
+date_december	December	Month label.	Date
+dt_download_title	Title	""	Downloads Table
+dt_number_of_screenshots	Screenshots 	""	Downloads Table
+dt_number_of_downloads	Downloads 	""	Downloads Table
+dt_publish_date	Publish date 	""	Downloads Table
+dt_description	Description	""	Downloads Table
+dt_download_action	Download	""	Downloads Table
+dt_author	Author 	""	Downloads Table
+dt_allowed_user	Allowed user 	""	Downloads Table
+dt_expired_date	Expired Date 	""	Downloads Table
+
+filter_search_by_title	Title	Label for search by Title	Filter
+filter_search_by_date_range	Date Range	Label for search by Date range	Filter
+filter_search_by_date_from	Date From	Label for search from date	Filter
+filter_search_by_date_to	Date To	Label for search by Date to	Filter
+filter_search_by_author	Author	Label for search by Author	Filter
+filter_search_by_allow_user	Allowed user	Label for search by Allowed user	Filter
+filter_submit_button	Filter	Label for search Submit button	Filter

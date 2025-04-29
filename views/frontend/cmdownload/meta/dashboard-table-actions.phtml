@@ -1,0 +1,25 @@
+<?php
+
+	
+if ($download->canChangeStatus()):
+	$status = $download->getStatus();
+	if($status == 'publish')
+	{
+	    $action      = 'unpublish';
+	    $actionLabel = CMDM_Labels::getLocalized('dashboard_action_unpublish');
+	}
+	else
+	{
+	    $action      = 'publish';
+	    $actionLabel = CMDM_Labels::getLocalized('dashboard_action_publish');
+	}
+	$url = CMDM_get_url('cmdownload', $action, array('id' => $download->getId()));
+	?>
+	<a href="<?php echo esc_attr(apply_filters('cmdm_dashboard_publish_url', $url, $download)); ?>"><?php echo $actionLabel; ?></a> &bull;
+<?php endif; ?>
+
+<?php if ($download->isEditAllowed()): ?>
+	<a href="<?php echo esc_attr(apply_filters('cmdm_dashboard_edit_url', $download->getEditUrl(), $download)); ?>"><?php echo CMDM_Labels::getLocalized('dashboard_action_edit'); ?></a> &bull;
+	<a href="<?php echo esc_attr(apply_filters('cmdm_dashboard_delete_url', $download->getDeleteUrl(), $download)); ?>" onclick="return confirm(<?php
+	echo esc_attr(json_encode(CMDM_Labels::getLocalized('dashboard_action_delete_confirm'))); ?>)"><?php echo CMDM_Labels::getLocalized('dashboard_action_delete'); ?></a>
+<?php endif; ?>

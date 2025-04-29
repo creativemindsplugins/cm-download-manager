@@ -1,0 +1,55 @@
+<?php if (!ini_get('allow_url_fopen')): ?>
+    <span style="color:red">Your server configuration needs to be changed to allow social login. Please enable allow_url_fopen in your global php.ini file on the server.</span>
+<?php endif; ?>
+
+
+<h3 class="cm-settings-collapse-btn dashicons-before dashicons-arrow-down">Facebook</h3>
+<div class="cm-settings-collapse-container cm-settings-collapse-open">
+    <div class="cm-settings-row">
+        <?php echo CMDM_SettingsView::renderOnlyin('Pro'); ?>
+        <p>Instructions are available here: <a
+                    href="http://creativeminds.helpscoutdocs.com/article/988-cm-answers-cma-social-login-facebook">http://creativeminds.helpscoutdocs.com/article/988-cm-answers-cma-social-login-facebook</a>
+        </p>
+        <p>Redirect URI: <?php echo site_url(); ?>/cmdmauth/facebook/int_callback</p>
+        <table>
+            <tr valign="top">
+                <th scope="row" valign="middle" align="left">App ID:</th>
+                <td><input type="text" size="60" name="fb_app_id" value=""/></td>
+                <td>Facebook App ID</td>
+            </tr>
+            <tr valign="top">
+                <th scope="row" valign="middle" align="left">App Secret:</th>
+                <td><input type="text" size="60" name="fb_app_secret" value=""/>
+                </td>
+                <td>Facebook App Secret</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<h3 class="cm-settings-collapse-btn dashicons-before dashicons-arrow-down">Google</h3>
+<div class="cm-settings-collapse-container cm-settings-collapse-open">
+    <div class="cm-settings-row">
+        <?php echo CMDM_SettingsView::renderOnlyin('Pro'); ?>
+        <p>Instructions are available here: <a
+                    href="http://creativeminds.helpscoutdocs.com/article/990-cm-answers-cma-social-login-google">http://creativeminds.helpscoutdocs.com/article/990-cm-answers-cma-social-login-google</a>
+        </p>
+        <p>Redirect URI: <?php echo site_url(); ?>/cmdmauth/google/oauth2callback</p>
+        <p>Authorized JavaScript origins: <?php echo site_url() ?></p>
+        <table>
+            <tr valign="top">
+                <th scope="row" valign="middle" align="left">Client ID:</th>
+                <td><input type="text" size="60" name="google_client_id"
+                           value=""/></td>
+                <td>Google Client ID</td>
+            </tr>
+            <tr valign="top">
+                <th scope="row" valign="middle" align="left">Client Secret:</th>
+                <td><input type="text" size="60" name="google_client_secret"
+                           value=""/></td>
+                <td>Google Client Secret</td>
+            </tr>
+        </table>
+    </div>
+</div>

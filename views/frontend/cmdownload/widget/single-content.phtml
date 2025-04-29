@@ -1,0 +1,27 @@
+<div class="CMDM cmdm-single-content">
+
+	<div class="cmdm-main">
+        <ul class="cmdm-tab-nav">
+        	<?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_DOWNLOAD_SHOW_DESCRIPTION)): ?>
+            	<li class="on"><a href="#description"><?php echo CMDM_Labels::getLocalized('download_tab_description'); ?></a></li>
+            <?php endif; ?>
+            <?php if( CMDM_Settings::getOption(CMDM_Settings::OPTION_SUPPORT_SHOW) ): ?>
+				<li><a href="#support"><?php echo CMDM_Labels::getLocalized('download_tab_support'); ?></a></li>
+            <?php endif; ?>
+            <?php do_action('cmdm_single_content_tabs', $download); ?>
+        </ul>
+        <div class="boxGrey724">
+        	<?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_DOWNLOAD_SHOW_DESCRIPTION)): ?>
+	            <div class="tabItem"><?php echo $download->getPost()->post_content; ?></div>
+            <?php endif; ?>
+            <?php if( CMDM_Settings::getOption(CMDM_Settings::OPTION_SUPPORT_SHOW) ): ?>
+				<div class="tabItem tabItemSupport"><?php do_action('CMDM_show_support', get_the_id()); ?></div>
+            <?php endif; ?>
+            <?php do_action('cmdm_single_content', $download); ?>
+        </div>
+        <!--/boxGrey724 -->
+
+</div>
+<!--/main -->
+
+</div><!-- /cmdm-single-content-widget -->

@@ -1,0 +1,97 @@
+
+.cmdm-dasboard-search-extended-form {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: flex-end;
+}
+
+.cmdm-dasboard-search-extended-form .fields {
+    display: flex;
+    gap: 20px;
+}
+
+.cmdm-dasboard-search-extended-form .fields .field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cmdm-dasboard-search-extended-form input {
+    border: 1px solid #bbb !important;
+    height: 30px;
+}
+
+.cmdm-dasboard-search-extended-form .date-range-wrapper .field-value {
+    display: flex;
+    gap: 3px;
+}
+
+.cmdm-dasboard-search-extended-form .date-range-wrapper .field-value input {
+    width: 90px;
+}
+
+.cmdm-dasboard-search-extended-form .submit-wrapper {
+    margin-left: inherit;
+    padding: 0px 10px 0px 10px;
+}
+
+button.cmdm-button {
+    height: 30px;
+    font-size: 90%;
+}
+
+.CMDM-form table tr.hidden {
+    display: none;
+}
+
+.cmdm-files-list-widget,
+.cmdm-files-list-items-wrapper {
+    display: flow-root;
+    min-height: 200px;
+}
+
+.cmdm-files-list-widget .cmdm-tags-filter-list {
+    z-index: 1;
+}
+
+.cmdm-files-list-upload-btn {
+    background: #33cc77;
+    color: white;
+    font: bold 16px arial;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-bottom: 20px;
+}
+
+.cmdm-files-list-filter .cmdm-filter {
+    margin-bottom: 15px;
+}
+
+.cmdm-field {
+    padding: 6px !important;
+}
+
+.cmdm-files-list-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: baseline;
+    gap: 14px;
+}
+
+.cmdm-files-list-search-form [type=submit] {
+    margin-left: auto;
+}
+
+.cmrm-files-list-filter-date .cmrm-files-list-month-filter-handler {
+    margin-right: 12px;
+}
+
+.cmrm-files-list-filter-date {
+    min-width: 265px;
+}
+
+#ui-datepicker-div {
+    display: none;
+}

@@ -1,0 +1,73 @@
+<?php global $wpdb; ?>
+
+<?php if (!empty($socialLinks)): ?>
+<h2><?php echo CMDM_Labels::getLocalized('uploader_social_profiles_header'); ?>:</h2>
+<?php
+foreach ($socialLinks as $provider=>$link) {
+    $providerimage = CMDM_RESOURCE_URL.'/imgs/s_'.$provider.'.png';
+    ?>
+    <a href="<?php echo esc_attr($link); ?>" target="_blank" rel="nofollow"><img src="<?php echo esc_attr($providerimage); ?>" alt="" /></a>
+    <?php
+}
+?><br /><?php
+endif; 
+?>
+    <br><br>
+    <h2><?php echo CMDM_Labels::getLocalized('user_uploads_header'); ?>:</h2>
+    <?php
+        $public = true;
+        echo CMDM_BaseController::_loadView('cmdownload/widget/my-uploads',
+                        compact('downloads', 'public'));
+    ?>
+    
+
+<h2><?php echo CMDM_Labels::getLocalized('user_questions_header'); ?>:</h2>
+<?php
+
+$user = get_userdata($user_id);
+
+$questions = $wpdb->get_results($wpdb->prepare("SELECT c.* FROM $wpdb->comments c
+    JOIN $wpdb->posts p ON p.ID = c.comment_post_ID
+    WHERE p.post_type = %s AND c.user_id = %d AND c.comment_parent=0 AND c.comment_approved=1 AND c.comment_type = ''",
+    CMDM_GroupDownloadPage::POST_TYPE,
+    $user_id
+));
+if (!empty($questions)):
+	echo '<ul>';
+	foreach ($questions as $question):
+		printf('<li><a href="%s">%s</a> <small>(%s)</small></li>',
+			esc_attr(get_permalink($question->comment_post_ID) . 'topic/' . $question->comment_ID),
+			get_comment_meta($question->comment_ID, '_thread_title', true),
+			Date('Y-m-d, H:i', strtotime($question->comment_date))
+		);
+	endforeach;
+	echo '</ul>';
+endif;
+
+?>
+
+
+<h2><?php echo CMDM_Labels::getLocalized('user_answers_header'); ?>:</h2>
+<?php
+
+$answers = $wpdb->get_results($wpdb->prepare("SELECT c.* FROM $wpdb->comments c
+    JOIN $wpdb->posts p ON p.ID = c.comment_post_ID
+    WHERE p.post_type = %s AND c.user_id = %d AND c.comment_parent<>0 AND c.comment_approved=1 AND c.comment_type = ''",
+    CMDM_GroupDownloadPage::POST_TYPE,
+    $user_id
+));
+if (!empty($answers)):
+	echo '<ul>';
+	foreach ($answers as $answer):
+		printf('<li><a href="%s">%s</a> <small>(%s)</small>: %s</li>',
+			esc_attr(get_permalink($answer->comment_post_ID) . 'topic/' . $answer->comment_parent),
+			get_comment_meta($answer->comment_parent, '_thread_title', true),
+			Date('Y-m-d, H:i', strtotime($answer->comment_date)),
+			wp_trim_words(strip_tags($answer->comment_content))
+		);
+	endforeach;
+	echo '</ul>';
+endif;
+
+
+?>

@@ -1,0 +1,32 @@
+<div class="cmdm-messages">
+<?php if (!empty($messages[CMDM_BaseController::MESSAGE_SUCCESS])):
+    ?><ul class="CMDM_success"><?php
+    foreach ($messages[CMDM_BaseController::MESSAGE_SUCCESS] as $msg):
+        ?>
+            <li><?php echo $msg; ?></li>
+            <?php
+        endforeach;
+        ?></ul><?php
+endif;
+
+/*
+if (!empty($messages[CMDM_BaseController::MESSAGE_ERROR])):
+        ?><ul class="CMDM_error"><?php
+    foreach ($messages[CMDM_BaseController::MESSAGE_ERROR] as $msg):
+         ?><li><?php echo $msg; ?></li><?php
+    endforeach; ?></ul><?php
+
+endif;
+*/
+
+if (is_array($messages)) foreach ($messages as $key => $msgs) {
+	if ( (strpos($key, 'error') === 0) && ( !empty($msgs) ) ) {
+		echo '<ul class="CMDM_error">';
+		if (!empty($msgs) AND is_array($msgs)) foreach ($msgs as $msg) {
+			echo '<li>' . $msg . '</li>';
+		}
+		echo '</ul>';
+	}
+}
+
+?></div>

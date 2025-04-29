@@ -1,0 +1,1 @@
+Toaster code moved to views/resources/js/upload-helper.js

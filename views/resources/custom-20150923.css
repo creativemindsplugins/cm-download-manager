@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+
+.cmdm-shortcode-toolbar {max-width: 1250px; margin: 0 auto;}
+.cmdm-shortcode-toolbar .cmdm-files-list-content {display: none; min-height: 100px;}
+.cmdm-shortcode-toolbar .cmdm-search {width: 100%;}
+.cmdm-shortcode-toolbar .cmrm-files-list-filter-category {display: none;}
+.cmdm-shortcode-toolbar .cmdm-files-list-filter {margin-right: 50%; padding: 0.2em 0;}
+.cmdm-shortcode-toolbar .cmdm-details-open {display: none !important;}
+.cmdm-shortcode-toolbar .cmdm-files-list-details {display: block !important;}
+.cmdm-shortcode-toolbar .cmdm-details-close {display: none !important;}
+.cmdm-layout-iframe {max-width: 1000px; overflow-x: hidden;}
+.cmdm-layout-iframe .cmdm-dashboard-menu {display: none !important;}
+.cmdm-layout-iframe .CMDM-edit-page .CMDM-form {display: none !important;}
+
+body.single-cmdm_page section.post.cmdm_page .post_info {display: none;}
+body.single-cmdm_page section.post.cmdm_page .infoPost {display: none;}
+body.single-cmdm_page section.post.cmdm_page .sc_section.post_thumb {display: none;}
+body.single-cmdm_page section.post.cmdm_page .post_content {position: relative;}
+body.single-cmdm_page section.post.cmdm_page .cmdm-single-content-widget {margin-top: 70px;}
+body.single-cmdm_page section.post.cmdm_page .entry-title {font-size: 150% !important; line-height: inherit !important;}
+body.single-cmdm_page section.post.cmdm_page .post_title.entry-title, body.single-cmdm_page section.post.cmdm_page .cmdm-rating {position: absolute; top: 236px; z-index: 999;}
+body.single-cmdm_page section.post.cmdm_page .cmdm-rating {right: 0;}
+.cmdm-screenshots {padding: 0 !important;}
+
+body.single-cmdm_page section.author {display: none !important;}
+body.single-cmdm_page section.relatedWrap {display: none !important;}
+.cmdm-download-details label {padding-bottom: 0 !important; height: auto !important;}
+input[type="submit"], input[type="button"] {height: auto !important; line-height: inherit !important;}
+
+/* From custom CSS */
+
+.cmdm-shortcode-toolbar {max-width: 1250px; margin: 0 auto;}
+body.single-cmdm_page section.post.cmdm_page .sc_section.post_thumb {display: none;}
+body.single-cmdm_page section.post.cmdm_page .infoPost {display: none;}
+.cmdm-layout-iframe {max-width: 1000px; overflow-x: hidden;}
+input[type="submit"], input[type="button"] {height: auto !important; line-height: inherit !important;}
+.home .cmdm-files-list-upload-btn {font-size: 200%;}
+.home .cmdm-search {font-size: 200%; padding: 0.2em 0.5em; height: auto; width: 80% !important;}
+.cmdm-shortcode-toolbar .cmdm-files-list-filter {margin-right: 200px !important;}
+.cmdm-files-list-search-form input {display: inline-block;}
+.cmdm-files-list-search-form input[type=submit] {background: #cc9900 !important; font: bold 200% arial; text-transform: none; padding: 0.5em 1em; vertical-align: baseline; color: white;}
+.home .cmdm-file-name {font-size: 200%;}
+.home .cmdm-file-description {font-size: 150% !important;}
+.home .cmdm-file-rating li:before {font-size: 20px;}
+.home .cmdm-files-list-details input[type=submit] {text-transform: none; padding: 0.5em 1em; display: inline-block; font: bold 200% arial; height: auto !important; margin-top: -25px;}
+.home .cmdm-thumb {max-height: 150px !important; max-width: 150px !important;}
+
+tr.CMDM_AddDownloadForm_admin_supported, tr.CMDM_AddDownloadForm_numberOfDownloads {display: none;}

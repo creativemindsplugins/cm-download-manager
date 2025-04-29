@@ -1,0 +1,827 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Download Manager PRO v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 14:19+0100\n"
+"PO-Revision-Date: 2016-10-18 11:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ cm-download-manager-pro
+#: lib/controllers/BaseController.php:464
+msgid "You have to be logged in to see this page"
+msgstr "Musisz być zalogowany, aby zobaczyć tę stronę"
+
+#: lib/controllers/BaseController.php:464
+msgid "Log in"
+msgstr "Zaloguj się"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:297
+#: views/frontend/cmdownload/thread.phtml:130
+msgid "Your answer has been succesfully added."
+msgstr "Twoja odpowiedź została dodana."
+
+#: lib/controllers/CmdownloadController.php:302
+#: views/frontend/cmdownload/thread.phtml:132
+msgid "Thank you for your answer, it has been held for moderation."
+msgstr "Dziękujemy za odpowiedź, czeka obecnie w kolejce do moderacji."
+
+#: lib/controllers/CmdownloadController.php:375
+#: lib/controllers/CmdownloadController.php:568
+#: lib/controllers/CmdownloadController.php:604
+#: lib/controllers/CmdownloadController.php:670
+#: lib/controllers/CmdownloadController.php:716
+#: lib/controllers/CmdownloadController.php:753
+#: lib/controllers/CmdownloadController.php:784
+msgid "You do not have sufficient permissions to view this page"
+msgstr "Nie posiadasz wystarczających uprawnień, aby zobaczyć tę stronę."
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:577
+#, php-format
+msgid "\"%s\" has been succesfully added"
+msgstr "\"%s\" zostało dodane"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:579
+msgid "View"
+msgstr "Pokaż"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:583
+msgid "There was an error while adding new element"
+msgstr "Podczas dodawania wystąpił błąd"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:624
+#, php-format
+msgid "\"%s\" has been succesfully updated"
+msgstr "\"%s\" zostało zaktualizowane"
+
+#: lib/controllers/CmdownloadController.php:700
+msgid "Wrong password"
+msgstr "Błędne hasło"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:727
+msgid "You are not allowed to delete this element"
+msgstr "Nie masz uprawnień do usunięcia tego elementu"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:734
+#, php-format
+msgid "\"%s\" has been succesfully deleted"
+msgstr "\"%s\" zostało usunięte"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:739
+#, php-format
+msgid "There was an error while deleting \"%s\""
+msgstr "Wystąpił błąd podczas usuwania \"%s\""
+
+#: lib/controllers/CmdownloadController.php:765
+#: lib/controllers/CmdownloadController.php:796
+msgid "You are not allowed to change status of this element"
+msgstr "Nie masz uprawnień by zmienić status tego elementu"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:771
+#, php-format
+msgid "\"%s\" has been succesfully published"
+msgstr "\"%s\" zostało opublikowane"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:802
+#, php-format
+msgid "\"%s\" has been succesfully unpublished"
+msgstr "\"%s\" zostało odpublikowane"
+
+#: lib/controllers/CmdownloadController.php:848
+msgid "POST exceeded maximum allowed size."
+msgstr "POST przekroczyło maksymalny dopuszczalny rozmiar"
+
+#: lib/controllers/CmdownloadController.php:863
+msgid "There is no error, the file uploaded with success"
+msgstr "Nie wystąpił błąd, plik dodany pomyślnie"
+
+#: lib/controllers/CmdownloadController.php:865
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Plik przekracza rozmiar dyrektywy upload_max_filesize z php.ini"
+
+#: lib/controllers/CmdownloadController.php:867
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "Plik przekracza dyrektywę MAX_FILE_SIZE podaną w formularzu"
+
+#: lib/controllers/CmdownloadController.php:869
+msgid "The uploaded file was only partially uploaded"
+msgstr "Plik został przesłany tylko częściowo"
+
+#: lib/controllers/CmdownloadController.php:871
+msgid "No file was uploaded"
+msgstr "Plik nie został przesłany"
+
+#: lib/controllers/CmdownloadController.php:872
+msgid "Missing a temporary folder"
+msgstr "Folder tymczasowy niedostępny"
+
+#: lib/controllers/CmdownloadController.php:894
+msgid "File exceeds the maximum allowed size"
+msgstr "Plik przekracza maksymalny dopuszczalny rozmiar"
+
+#: lib/controllers/CmdownloadController.php:910
+msgid "Invalid file name"
+msgstr "Błędna nazwa pliku"
+
+#: lib/controllers/CmdownloadController.php:918
+msgid "File with this name already exists"
+msgstr "Plik o tej nazwie już istnieje"
+
+#: lib/controllers/CmdownloadController.php:934
+msgid "Invalid file extension"
+msgstr "Błędne rozszerzenie pliku"
+
+#: lib/controllers/UploaderController.php:48
+msgid "Uploader Profile"
+msgstr "Profil uploadera"
+
+#: lib/helpers/Form/Element.php:22
+#, php-format
+msgid "%s is required"
+msgstr "%s to pole wymagane"
+
+#: lib/helpers/Form/Element/SWFUploader.php:39
+#, php-format
+msgid "%s needs to be uploaded"
+msgstr "%s musi zostać przesłany"
+
+#: lib/helpers/Form/Element/SWFUploader.php:128
+msgid "Completed"
+msgstr "Zakończone"
+
+#: lib/helpers/Form/Element/SWFUploader.php:131
+msgid "Upload failed"
+msgstr "Przesyłanie zakończone błędem"
+
+#: lib/helpers/Form/Element/SWFUploader.php:177
+msgid "Upload"
+msgstr "Prześlij"
+
+#: lib/models/GroupDownloadPage.php:223
+msgid "not published"
+msgstr "nieopublikowane"
+
+#: lib/models/GroupDownloadPage.php:225
+msgid "published"
+msgstr "opublikowane"
+
+#: lib/models/SupportThread.php:81
+msgid "some time ago"
+msgstr "jakiś czas temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:84
+#, php-format
+msgid "1 second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "sekundę temu"
+msgstr[1] "%d sekundy temu"
+msgstr[2] "%d sekund temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:90
+#, php-format
+msgid "1 minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "minutę temu"
+msgstr[1] "%d minuty temu"
+msgstr[2] "%d minut temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:96
+#, php-format
+msgid "1 hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "godzinę temu"
+msgstr[1] "%d godziny temu"
+msgstr[2] "%d godzin temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:102
+#, php-format
+msgid "1 day ago"
+msgid_plural "%d days ago"
+msgstr[0] "wczoraj"
+msgstr[1] "%d dni temu"
+msgstr[2] "%d dni temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:108
+#, php-format
+msgid "1 week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "tydzień temu"
+msgstr[1] "%d tygodnie temu"
+msgstr[2] "%d tygodni temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:115
+#, php-format
+msgid "1 month ago"
+msgid_plural "%d months ago"
+msgstr[0] "miesiąc temu"
+msgstr[1] "%d miesiące temu"
+msgstr[2] "%d miesięcy temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:122
+#, php-format
+msgid "1 year ago"
+msgid_plural "%d years ago"
+msgstr[0] "rok temu"
+msgstr[1] "%d lata temu"
+msgstr[2] "%d lat temu"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:312 lib/models/SupportThread.php:376
+msgid "Content cannot be empty"
+msgstr "Treść nie może być pusta"
+
+# @ cm-download-manager-pro
+#: lib/models/SupportThread.php:373
+msgid "Title cannot be empty"
+msgstr "Tytuł nie może być pusty"
+
+#: lib/models/forms/AddDownloadForm.php:19
+#: lib/models/forms/AddDownloadForm.php:47
+msgid "File"
+msgstr "Plik"
+
+#: lib/models/forms/AddDownloadForm.php:20
+#: lib/models/forms/AddDownloadForm.php:59
+msgid "URL"
+msgstr "URL"
+
+#: lib/models/forms/AddDownloadForm.php:21
+#: lib/models/forms/AddDownloadForm.php:64
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: lib/models/forms/AddDownloadForm.php:31
+#: views/frontend/cmdownload/dashboard.phtml:10
+#: views/frontend/cmdownload/meta/support.phtml:42
+msgid "Title"
+msgstr "Tytuł"
+
+#: lib/models/forms/AddDownloadForm.php:36
+#: views/frontend/cmdownload/meta/details.phtml:6
+msgid "Version"
+msgstr "Wersja"
+
+#: lib/models/forms/AddDownloadForm.php:41
+msgid "Download type"
+msgstr "Typ pliku"
+
+# @ cm-download-manager-pro
+#: lib/models/forms/AddDownloadForm.php:48
+msgid "Allowed extensions"
+msgstr "Dozwolone rozszerzenia"
+
+#: lib/models/forms/AddDownloadForm.php:68
+msgid "Category (max. 3)"
+msgstr "Kategoria (max. 3)"
+
+# @ cm-download-manager-pro
+#: lib/models/forms/AddDownloadForm.php:75
+#: views/frontend/cmdownload/single.phtml:53
+msgid "Description"
+msgstr "Opis"
+
+#: lib/models/forms/AddDownloadForm.php:81
+#: views/frontend/cmdownload/single.phtml:54
+msgid "Installation"
+msgstr "Instalacja"
+
+#: lib/models/forms/AddDownloadForm.php:86
+#: views/frontend/cmdownload/single.phtml:55
+msgid "Changelog"
+msgstr "Log zmian"
+
+#: lib/models/forms/AddDownloadForm.php:91
+msgid "Screenshots"
+msgstr "Zrzuty ekranu"
+
+#: lib/models/forms/AddDownloadForm.php:92
+#, php-format
+msgid "(Max. %d, Size: H: %dpx W: %dpx)"
+msgstr "(Max. %d, Rozmiar: Wys: %dpx Szer: %dpx)"
+
+#: lib/models/forms/AddDownloadForm.php:100
+msgid "Images"
+msgstr "Obrazki"
+
+#: lib/models/forms/AddDownloadForm.php:107
+msgid "Protect by password"
+msgstr "Zabezpiecz hasłem"
+
+#: lib/models/forms/AddDownloadForm.php:116
+msgid "Visibility"
+msgstr "Widoczność"
+
+#: lib/models/forms/AddDownloadForm.php:130
+msgid "Admin Recommended"
+msgstr "Rekomendowane przez admina"
+
+#: lib/models/forms/AddDownloadForm.php:136
+msgid "Notify me on new support topics"
+msgstr "Powiadom mnie o nowych tematach w dziale wsparcia"
+
+#: lib/models/forms/AddDownloadForm.php:141
+msgid "Update"
+msgstr "Zaktualizuj"
+
+#: lib/models/forms/AddDownloadForm.php:142
+msgid "Add"
+msgstr "Dodaj"
+
+# @ cm-download-manager-pro
+#: views/frontend/error.phtml:8 views/frontend/permissions.phtml:10
+msgid "Go back to previous page"
+msgstr "Wróć do poprzedniej odpowiedzi"
+
+#: views/frontend/cmdownload/categories.phtml:4
+#: views/frontend/cmdownload/index.phtml:62
+msgid "All Downloads"
+msgstr "Wszystkie Pliki"
+
+#: views/frontend/cmdownload/dashboard.phtml:6
+msgid "Add new"
+msgstr "Dodaj nowy"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/dashboard.phtml:11
+msgid "Status"
+msgstr "Status"
+
+#: views/frontend/cmdownload/dashboard.phtml:12
+#: views/frontend/cmdownload/meta/details.phtml:10
+#: views/frontend/cmdownload/meta/menu-item.phtml:2
+msgid "Downloads"
+msgstr "Pliki"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/dashboard.phtml:13
+msgid "Actions"
+msgstr "Akcje"
+
+#: views/frontend/cmdownload/dashboard.phtml:18
+msgid "You haven't added any downloads yet"
+msgstr "Nie dodałeś jeszcze żadnych plików"
+
+#: views/frontend/cmdownload/dashboard.phtml:30
+msgid "Unpublish"
+msgstr "Odpublikuj"
+
+#: views/frontend/cmdownload/dashboard.phtml:34
+msgid "Publish"
+msgstr "Opublikuj"
+
+#: views/frontend/cmdownload/dashboard.phtml:38
+#: views/frontend/cmdownload/meta/edit-link.phtml:1
+msgid "Edit"
+msgstr "Edytuj"
+
+#: views/frontend/cmdownload/dashboard.phtml:39
+msgid "Are you sure you want to delete?"
+msgstr "Czy jesteś pewny, że chcesz usunąć?"
+
+#: views/frontend/cmdownload/dashboard.phtml:39
+msgid "Delete"
+msgstr "Usuń"
+
+#: views/frontend/cmdownload/index.phtml:22
+msgid "Manage my Downloads"
+msgstr "Zarządzaj moimi plikami"
+
+#: views/frontend/cmdownload/index.phtml:55
+msgid "Search Results for"
+msgstr "Wyniki wyszukiwania dla"
+
+#: views/frontend/cmdownload/index.phtml:58
+msgid "Downloads by Author"
+msgstr "Pliki wg autora"
+
+#: views/frontend/cmdownload/index.phtml:60
+msgid "Top Downloads"
+msgstr "Najlepsze downloady"
+
+#: views/frontend/cmdownload/index.phtml:78
+#, php-format
+msgid "Showing %d-%d of %d"
+msgstr "Wyświetlanie %d-%d z %d"
+
+#: views/frontend/cmdownload/index.phtml:82
+#: views/frontend/cmdownload/meta/details.phtml:11
+#: views/frontend/cmdownload/widget/my-uploads.phtml:8
+#, php-format
+msgid "1 Download"
+msgid_plural "%d Downloads"
+msgstr[0] "1 ściągnięcie"
+msgstr[1] "%d ściągnięcia"
+msgstr[2] "%d ściągnięć"
+
+#: views/frontend/cmdownload/index.phtml:82
+#: views/frontend/cmdownload/widget/my-uploads.phtml:9
+msgid "Info"
+msgstr "Informacje"
+
+#: views/frontend/cmdownload/index.phtml:104
+#: views/frontend/cmdownload/widget/my-uploads.phtml:15
+msgid "No results have been found"
+msgstr "Nie znaleziono wyników"
+
+#: views/frontend/cmdownload/single.phtml:13
+#: views/frontend/cmdownload/thread.phtml:11
+msgid "Back to All Downloads"
+msgstr "Powróć do wszystkich plików"
+
+#: views/frontend/cmdownload/single.phtml:56
+msgid "Support"
+msgstr "Wsparcie"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:31
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:7
+msgid "RESOLVED"
+msgstr "ROZWIĄZANE"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:32
+msgid "Back to Support Page"
+msgstr "Wróć do strony wsparcia"
+
+#: views/frontend/cmdownload/thread.phtml:60
+#: views/frontend/cmdownload/meta/details.phtml:4
+msgid "Author"
+msgstr "Autor"
+
+#: views/frontend/cmdownload/thread.phtml:77
+msgid "Leave your comment"
+msgstr "Dodaj komentarz"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:81
+#: views/frontend/cmdownload/meta/support.phtml:39
+msgid "Allow markup"
+msgstr "Dopuszczalne tagi"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:82
+#: views/frontend/cmdownload/meta/support.phtml:40
+msgid "Wrap your code using"
+msgstr "Otocz kod używając"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:84
+msgid "What is your comment about?"
+msgstr "O czym jest Twoje pytanie?"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:87
+#: views/frontend/cmdownload/meta/support.phtml:46
+msgid "Notify me of follow"
+msgstr "Powiadom mnie o odpowiedzi"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/thread.phtml:90
+msgid "Mark this topic as resolved"
+msgstr "Oznacz jako rozwiązane"
+
+#: views/frontend/cmdownload/thread.phtml:91
+#: views/frontend/cmdownload/meta/support.phtml:47
+msgid "Post"
+msgstr "Wyślij"
+
+#: views/frontend/cmdownload/meta/details.phtml:2
+msgid "Download Info"
+msgstr "Informacje"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/details.phtml:8
+msgid "Views"
+msgstr "Wyświetlenia"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/details.phtml:9
+#, php-format
+msgid "1 View"
+msgid_plural "%d Views"
+msgstr[0] "1 wyświetlenie"
+msgstr[1] "%d wyświetlenia"
+msgstr[2] "%d wyświetleń"
+
+#: views/frontend/cmdownload/meta/details.phtml:12
+#: views/frontend/cmdownload/meta/support.phtml:8
+msgid "Updated"
+msgstr "Zaktualizowano"
+
+#: views/frontend/cmdownload/meta/details.phtml:17
+msgid "Recommended"
+msgstr "Rekomendowane"
+
+#: views/frontend/cmdownload/meta/download-form.phtml:23
+msgid "Download"
+msgstr "Ściągnij"
+
+#: views/frontend/cmdownload/meta/menu-item.phtml:1
+msgid "My Downloads"
+msgstr "Moje pliki"
+
+#: views/frontend/cmdownload/meta/rating.phtml:8
+#, php-format
+msgid "%d Stars"
+msgstr "%d gwiazdek"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/rating.phtml:30
+msgid "Thanks for rating!"
+msgstr "Dziękujemy za ocenę!"
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:17
+msgid "No topics"
+msgstr "Brak tematów"
+
+#: views/frontend/cmdownload/meta/support-thread-list.phtml:18
+msgid "would you like to create one?"
+msgstr "chciałbyś jakiś utworzyć?"
+
+#: views/frontend/cmdownload/meta/support.phtml:5
+msgid "Topic"
+msgstr "Temat"
+
+#: views/frontend/cmdownload/meta/support.phtml:6
+msgid "Posts"
+msgstr "Wpisy"
+
+#: views/frontend/cmdownload/meta/support.phtml:7
+msgid "Last Poster"
+msgstr "Ostatni poster"
+
+#: views/frontend/cmdownload/meta/support.phtml:35
+msgid "Leave your comment/question"
+msgstr "Dodaj swój komentarz/pytanie"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/support.phtml:43
+msgid "What is your comment about?\""
+msgstr "O czym jest Twoje pytanie?"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/support.phtml:107
+msgid "Your question has been succesfully added."
+msgstr "Twoje pytanie zostało dodane."
+
+#: views/frontend/cmdownload/meta/support.phtml:109
+msgid "Thank you for your question, it has been held for moderation."
+msgstr "Dziękujemy za pytanie, czeka obecnie w kolejce do moderacji."
+
+#: views/frontend/cmdownload/widget/login.phtml:2
+msgid "Please log in to post questions"
+msgstr "Zaloguj się, aby zadać pytanie"
+
+#: views/frontend/cmdownload/widget/login.phtml:17
+msgid "Social Login via"
+msgstr "Zaloguj się za pomocą"
+
+#: views/frontend/uploader/index.phtml:5
+msgid "Social Profiles"
+msgstr "Profile społecznościowe"
+
+#: views/frontend/uploader/index.phtml:16
+msgid "Uploads"
+msgstr "Dodane pliki"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/index.phtml:79
+msgid "One level up"
+msgstr "Do góry"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/download-form.phtml:26
+msgid "First name"
+msgstr "Imię"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/download-form.phtml:27
+msgid "Last name"
+msgstr "Nazwisko"
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/meta/download-form.phtml:28
+msgid "Email"
+msgstr "Email"
+
+# @ cm-download-manager-pro
+#: lib/controllers/CmdownloadController.php:1326
+msgid "You have to provide your name and your email address."
+msgstr "Musisz podać swoje imię, nazwisko i adres email."
+
+# @ cm-download-manager-pro
+#: views/frontend/cmdownload/widget/login.phtml:9
+msgid "Go to WP login page"
+msgstr "Przejdź do logowania WP"
+
+# @ cm-answers-pro
+msgid "See More"
+msgstr "Więcej"
+
+# @ cm-answers-pro
+msgid "Items"
+msgstr "Pozycji"
+
+# @ cm-download-manager-pro
+msgid "Search..."
+msgstr "Szukaj..."
+
+# @ cm-download-manager-pro
+msgid "Please login to download."
+msgstr "W celu pobrania pliku proszę się zalogować."
+
+# @ cm-download-manager-pro
+msgid "You have no permission to download this file."
+msgstr "Nie masz uprawień do ściągnięcia tego pliku."
+
+# @ cm-download-manager-pro
+msgid "Open"
+msgstr "Otwórz"
+
+# @ cm-download-manager-pro
+msgid "Follow category"
+msgstr "Subskrybuj tą kategorię"
+
+# @ cm-download-manager-pro
+msgid "Unfollow category"
+msgstr "Nie subskrybuj tej kategorii"
+
+# @ cm-download-manager-pro
+msgid "You have been added from the category followers."
+msgstr "Zostałeś dodany do listy subskrybentów tej kategorii."
+
+# @ cm-download-manager-pro
+msgid "You have been removed from the category followers."
+msgstr "Zostałeś wypisany z listy subskrybentów tej kategorii."
+
+# @ cm-download-manager-pro
+msgid "Filter..."
+msgstr "Filtr..."
+
+# @ cm-download-manager-pro
+msgid "category"
+msgstr "kategoria"
+
+# @ cm-download-manager-pro
+msgid "categories"
+msgstr "kategorie"
+
+# @ cm-download-manager-pro
+msgid "all"
+msgstr "wszystkie"
+
+# @ cm-download-manager-pro
+msgid "All files (ZIP)"
+msgstr "Wszystkie pliki (ZIP)"
+
+# @ cm-download-manager-pro
+msgid "Sort by"
+msgstr "Sortowanie"
+
+# @ cm-download-manager-pro
+msgid "All downloads"
+msgstr "Wszystkie pliki"
+
+# @ cm-download-manager-pro
+msgid "Search"
+msgstr "Szukaj"
+
+# @ cm-download-manager-pro
+msgid "Files"
+msgstr "Pliki"
+
+# @ cm-download-manager-pro
+msgid "Allow single file download"
+msgstr "Zezwól na ściągnięcie pojedynczego pliku"
+
+# @ cm-download-manager-pro
+msgid "For multiple-file package you can allow user to download each file separately."
+msgstr "Jeżeli załadowano wiele plików będą serwowane jako paczka ZIP, ale możesz pozwolić swoim użytkownikom na pobranie każdego pliku z osobna."
+
+# @ cm-download-manager-pro
+msgid "Select files"
+msgstr "Wybierz pliki"
+
+# @ cm-download-manager-pro
+msgid "Browse WP upload dir"
+msgstr "Przeglądaj katalog WP upload"
+
+# @ cm-download-manager-pro
+msgid "Enable Preview"
+msgstr "Włącz Podgląd"
+
+# @ cm-download-manager-pro
+msgid "For documents or images you can show Google Docs preview for users."
+msgstr "Dla dokumentów lub obrazów możesz wyświetlić dla swoich użytkowników funkcję podglądu w Google Docs."
+
+# @ cm-download-manager-pro
+msgid "Enable Media Player"
+msgstr "Włącz Odtwarzacz Mediów"
+
+# @ cm-download-manager-pro
+msgid "For audio/movie files you can show media player for users."
+msgstr "Dla plików audio/movie możesz wyświetlić dla swoich użytkowników odtwarzacz mediów."
+
+# @ cm-download-manager-pro
+msgid "Category (max. %d)"
+msgstr "Kategorie (max. %d)"
+
+# @ cm-download-manager-pro
+msgid "Screenshots are disabled in the plugin settings and won't be visible on the download's page."
+msgstr "Obrazy są wyłączone w ustawieniach pluginu i nie będą wyświetlane na stronie tego pliku."
+
+# @ cm-download-manager-pro
+msgid "Thumbnail"
+msgstr "Miniaturka"
+
+# @ cm-download-manager-pro
+msgid "Thumbnail won't be shown on the screenshots region."
+msgstr "Miniaturka nie zostanie wyświetlona w sekcji obrazów."
+
+# @ cm-download-manager-pro
+msgid "Click on a screenshot above to set the main thumbnail."
+msgstr "Kliknij na jeden z powyższych obrazów aby ustawić główną miniaturkę."
+
+# @ cm-download-manager-pro
+msgid "Require non logged in users to provide name and email"
+msgstr "Wymagaj od niezalogowanych użytkowników podania swojego imienia i adresu email"
+
+# @ cm-download-manager-pro
+msgid "Please wait, sending data in progress"
+msgstr "Proszę czekać, trwa przesyłanie danych"
+
+# @ cm-download-manager-pro
+msgid "Times downloaded"
+msgstr "Liczba pobrań"
+
+# @ cm-download-manager-pro
+msgid "File size"
+msgstr "Rozmiar pliku"
+
+# @ cm-download-manager-pro
+msgid "Tags"
+msgstr "Tagi"
+
+# @ cm-answers-pro
+msgid "name ascending"
+msgstr "nazwa rosnąco"
+
+# @ cm-answers-pro
+msgid "name descending"
+msgstr "nazwa malejąco"
+
+# @ cm-answers-pro
+msgid "recently modified"
+msgstr "ostatnio zmodyfikowano"
+
+# @ cm-answers-pro
+msgid "newest"
+msgstr "najnowsze"
+
+# @ cm-answers-pro
+msgid "rating"
+msgstr "ocena"
+
+# @ cm-answers-pro
+msgid "downloads number"
+msgstr "liczba pobrań"
+
+# @ cm-answers-pro
+msgid "views number"
+msgstr "liczba odsłon"
+
+# @ cm-answers-pro
+msgid "manual"
+msgstr "ręcznie"

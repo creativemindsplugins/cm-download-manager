@@ -1,0 +1,76 @@
+<div class="CMDM cmdm-single-header">
+	
+	<?php if (!empty($showTitle)):
+		echo CMDM_BaseController::_loadView('cmdownload/meta/header-title', array(
+			'title' => get_the_title(),
+		));
+	endif; ?>
+	
+	
+	<div class="cmdm-main">
+	
+		<?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_DOWNLOAD_PAGE_BACKLINK)): ?>
+			<div class="cmdm-backtolib"><a href="<?php echo esc_attr($download->getBacklinkUrl());
+				?>">&laquo;&nbsp;<?php echo CMDM_Labels::getLocalized('back_to_all_downloads'); ?></a></div>
+		<?php endif; ?>
+		<?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_ENABLE_RATING)): ?>
+			<div class="cmdm-rating"><?php do_action('CMDM_show_rating', get_the_id()); ?></div>
+		<?php endif; ?>
+	
+	    <?php
+	    if( CMDM_Settings::getOption(CMDM_Settings::OPTION_ALLOW_SCREENSHOTS))
+	    {
+			$screenshots = CMDM_get_screenshots();
+	        ?>
+	        <div class="cmdm-screenshots">
+	            <div class="cmdm-screenshots-scrollable">
+	
+					<?php
+					if( !empty($screenshots) ):
+					    if(count($screenshots) == 1):
+					        ?>
+					        <img src="<?php $screenshot = reset($screenshots);
+					        echo $screenshot->getUrl('large'); ?>" height="220" />
+					        <?php
+					    else:
+					        ?>
+
+					        <div class="items">
+					            <?php
+                                foreach($screenshots as $i => $screenshot): ?>
+                                    <div class="cmdm-scrreenshot-image" style="background-image:url('<?php echo esc_attr($screenshot->getUrl('large')); ?>');" data-i="<?php echo $i; ?>">
+                                        <!-- img src="<?php echo $screenshot->getUrl('large'); ?>" height="220" / -->
+                                    </div>
+                                <?php endforeach;
+                                ?>
+					        </div>
+					    <?php
+					    endif;
+					else:
+					    ?>
+					    <div> <img src="<?php echo esc_attr(CMDM_get_default_screenshot()); ?>" alt="" height="220" width="720" /> </div>
+					<?php
+					endif;
+					?>
+			
+	            </div>
+	            <!--/scrollable -->
+	            <?php if( count($screenshots) > 1 ): ?>
+					<div class="cmdm-screenshots-paging">
+						<span class="prev browse left">&laquo;</span>
+					    <span class="next browse right">&raquo;</span>
+					</div>
+	            <?php endif; ?>
+	            <!--/paging -->
+	        </div>
+	        <!--/cmdm-screenshots -->
+	    <script type="text/javascript">
+	        			var slideshow_autoplay = <?php echo json_encode( true ); ?>
+	    </script>
+	    <?php
+			}
+		?>
+	    
+    </div>
+
+</div>

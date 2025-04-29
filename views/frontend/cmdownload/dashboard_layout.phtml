@@ -1,0 +1,35 @@
+<?php
+if ( wp_is_block_theme() ) {
+    $header = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"header","tagName":"header"} /-->'));
+    $footer = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->'));
+    echo '<div class="wp-site-blocks">';
+    wp_head();
+    echo $header;
+} else {
+    get_header();
+}
+?>
+
+<div class="CMDM content-area cmdm-content-dashboard CMDM-app">
+        <div id="content" role="main" class="site-content">
+        	<article class="page">
+			<?php while ( have_posts() ) : the_post();?>
+        		<header class="entry-header">
+        			<h1 class="entry-title"><?php the_title(); ?></h1>
+        		</header>
+        		<div class="entry-content">
+            		<?php the_content(); ?>
+            	</div>
+			<?php endwhile; ?>
+            </article>
+        </div>
+</div>
+
+<?php if ( wp_is_block_theme() ) {
+    echo $footer;
+    echo '</div>';
+    wp_footer();
+} else {
+    get_footer();
+}
+?>

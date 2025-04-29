@@ -1,0 +1,99 @@
+<?php
+
+?>
+<div class="cmdm_category_pro_fields_container" style="display: none">
+    <div class="cm-pro-only-label">Available in pro version</div>
+    <div class="cm-pro-only">
+        <div class="form-field">
+            <label for="cmdm-category-password">Password for downloads in this category:</label>
+            <div class="cmdm-category-password">
+                <input type="password" disabled="disabled" name="<?php echo esc_attr($fieldName); ?>"
+                       value="<?php echo esc_attr($value); ?>" autocomplete="off">
+                <p class="desc">If set, all downloads in this category (without child categories) will be protected by
+                    this password.
+                    If a download has been protected by the individual password then it will have a higher priority than
+                    the category password.</p>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_users_groups">Restrict view access to chosen CMDM groups</label>
+            <fieldset class="cmdm_users_groups">
+                <label><input type="radio" name="cmdm_users_groups" value="0" checked="checked" disabled="disabled"> No</label>
+                <label><input type="radio" name="cmdm_users_groups" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_upload_users_groups">Allow uploading to this category only for chosen CMDM groups</label>
+            <fieldset class="cmdm_upload_users_groups">
+                <label><input type="radio" name="cmdm_upload_users_groups" value="0" checked="checked"
+                              disabled="disabled"> No</label>
+                <label><input type="radio" name="cmdm_upload_users_groups" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_notify_groups">Notify chosen roles or users groups about new downloads</label>
+            <fieldset class="cmdm_notify_groups">
+                <label><input type="radio" name="cmdm_notify_groups" value="0" checked="checked" disabled="disabled"> No</label>
+                <label><input type="radio" name="cmdm_notify_groups" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_users_view_roles">Allow chosen roles to view files in this category</label>
+            <fieldset class="cmdm_users_view_roles">
+                <label><input type="radio" name="cmdm_users_view_roles" value="0" checked="checked" disabled="disabled">
+                    No</label>
+                <label><input type="radio" name="cmdm_users_view_roles" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_users_edit_roles">Allow chosen roles to edit files in this category</label>
+            <fieldset class="cmdm_users_edit_roles">
+                <label><input type="radio" name="cmdm_users_edit_roles" value="0" checked="checked" disabled="disabled">
+                    No</label>
+                <label><input type="radio" name="cmdm_users_edit_roles" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_users_delete_roles">Allow chosen roles to delete files in this category</label>
+            <fieldset class="cmdm_users_delete_roles">
+                <label><input type="radio" name="cmdm_users_delete_roles" value="0" checked="checked"
+                              disabled="disabled"> No</label>
+                <label><input type="radio" name="cmdm_users_delete_roles" value="1" disabled="disabled"> Yes</label>
+            </fieldset>
+        </div>
+
+        <div class="form-field">
+            <label for="cmdm_category_icon">Icon</label>
+            <div class="cmdm-category-icon"
+                 style="vertical-align: middle; width: 50px; height: 50px; background: #cccccc; border: 1px solid #999999; display: inline-block; margin-right: 1em;"></div>
+            <input type="url" name="cmdm_category_icon" placeholder="Icon URL"
+                   style="vertical-align: middle; width: auto;"/>
+            <input type="button" value="Choose icon" class="cmdm-category-icon-choose-btn"
+                   style="vertical-align: middle;"/>
+        </div>
+    </div>
+</div>
+<style>.cm-pro-only{ border: 3px solid purple; padding: 0 10px; margin-bottom: 10px; }
+    .cm-pro-only *{ opacity: 0.9; }
+    .cm-pro-only-label{
+        color: purple;
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+    }</style>
+<script>
+    jQuery(document).ready(function($) {
+        if($('.cmdm_category_pro_fields_container').length > 0) {
+            var customContent = $('.cmdm_category_pro_fields_container').html();
+            $('.cmdm_category_pro_fields_container').remove();
+            $('form#addtag').after(customContent);
+            $('.cmdm_category_pro_fields_container').show();
+        }
+    });
+</script>

@@ -1,0 +1,21 @@
+<div class="CMDM CMDM-edit-page CMDM-upload-form">
+
+<?php do_action('CMDM_show_dashboard_menu'); ?>
+
+<div class="CMDM-form-loader" style="display:none"><?php echo CMDM_Labels::getLocalized('upload_please_wait'); ?></div>
+<div class="CMDM-edit-form">
+<?php
+
+echo $form ?? '';
+
+?>
+
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	if (typeof setUserSetting == "function") {
+    	setUserSetting('editor', 'tinymce');
+	}
+})
+</script>
+</div>

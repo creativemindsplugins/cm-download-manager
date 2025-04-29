@@ -1,0 +1,40 @@
+<table class="cmdm-categories-table">
+        <tr>
+        	<?php if (!empty($displayOptions['allDownloads'])): ?>
+	            <td>
+	                <a href="<?php echo esc_attr(CMDM_get_url('cmdownloads', '')); ?>" class="cmdm-category-link"><?php
+	                	echo CMDM_Labels::getLocalized('index_all_downloads'); ?> <span class="num">(<?php
+                            echo CMDM_GroupDownloadPage::getTotalCount(); ?>)</span></a>
+	            </td>
+            <?php endif; ?>
+            <?php
+            
+            $categories = CMDM_Category::getLevel(isset($currentCategory->term_id) ? $currentCategory->term_id : null);
+            
+//             ob_start();
+			
+            $i = (empty($displayOptions['allDownloads']) ? 0 : 1);
+            foreach($categories as $cat)
+            {
+            	$i++;
+            	if (!$cat->isVisible()) continue;
+                if( $i % 3 == 1 ) echo '<tr>';
+                printf('<td><a href="%s" class="cmdm-category-link">%s <span class="num">(%d)</span></a></td>',
+                	esc_attr($cat->getPermalink()),
+                	esc_html($cat->getName()),
+                	$cat->getPostsCount($onlyVisible = true, $recursive = true)
+                );
+                if( $i % 3 == 0 ) echo '</tr>';
+                
+            }
+
+            if( $i % 3 > 0 )
+            {
+                while ($i%3 > 0) {
+					$i++;
+                    echo '<td><!-- '. $i .' --></td>';
+                }
+                echo '</tr>';
+            }
+            ?>
+    </table>

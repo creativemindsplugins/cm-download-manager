@@ -1,0 +1,11 @@
+<?php
+
+$currentPage = $query->get('paged');
+if( $currentPage == 0 ) $currentPage = 1;
+
+?>
+
+<?php if ($displayOptions['dashboardLinks']): ?>
+	<?php do_action('CMDM_show_dashboard_menu'); ?>
+	<?php //echo CMDM_BaseController::_loadView('cmdownload/meta/dashboard-menu'); ?>
+<?php endif; ?>

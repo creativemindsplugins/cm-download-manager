@@ -1,0 +1,75 @@
+<?php
+if (
+	(
+		CMDM_Settings::ACCESS_ALL == CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+		|| (
+			CMDM_Settings::ACCESS_ALL != CMDM_Settings::getOption(CMDM_Settings::OPTION_VIEWING_PERMISSIONS)
+			&& is_user_logged_in()
+		)
+	)
+	&& $total_pages > 1): ?>
+	<ul class="cmdm-pagination"><?php
+
+		$writeItem = function($pageNumber, $label = null, $class = '', $disabled = false) use ($total_pages, $page, $base_url, $pageParam) {
+			if (is_scalar($class)) {
+				$class = array_filter(array($class));
+			}
+			if (is_null($label)) $label = $pageNumber;
+			if ($pageNumber == $page) {
+				$class[] = 'cmdm-pagination-current';
+			}
+			if ($disabled) {
+				$class[] = 'cmdm-pagination-disabled';
+				$template = '<li%s>%s</li>';
+			} else {
+				if ($pageNumber == 1) {
+					$url = remove_query_arg($pageParam, $base_url);
+					$query_args = $_GET;
+					unset($query_args[$pageParam]);
+					$url = add_query_arg($query_args, $url);
+				} else {
+					$query_args = array_merge($_GET, [$pageParam => $pageNumber]);
+					$url = add_query_arg($query_args, $base_url);
+				}
+				if ($pageNumber == $page) {
+					$template = '<li%s><span data-page="'. $pageNumber .'">%s</span></li>';
+				} else {
+					$template = '<li%s><a href="'. esc_attr($url) .'" data-page="'. $pageNumber .'" rel="nofollow">%s</a></li>';
+				}
+			}
+			if (!empty($class)) {
+				$classStr = ' class="'. trim(implode(' ', $class)) .'"';
+			} else {
+				$classStr = '';
+			}
+			printf($template, $classStr, $label);
+		};
+
+		$writeItem($page-1, '&laquo;', 'cmdm-pagination-prev', $page == 1);
+
+		if ($total_pages < 6): // show all pages
+			for ($i=1; $i<=$total_pages; $i++):
+				$writeItem($i);
+			endfor;
+		else: // show only neighbors
+			$writeItem(1);
+			if ($page > 2) {
+				if ($page > 3) {
+					$writeItem('', '...', '', true);
+				}
+				$writeItem($page-1);
+			}
+			if ($page > 1 AND $page < $total_pages) $writeItem($page);
+			if ($page < $total_pages-1) {
+				$writeItem($page+1);
+				if ($page < $total_pages-2) {
+					$writeItem('', '...', '', true);
+				}
+			}
+			$writeItem($total_pages);
+		endif;
+
+		$writeItem($page+1, '&raquo;', 'cmdm-pagination-next', $page == $total_pages);
+
+		?></ul>
+<?php endif;?>

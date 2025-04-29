@@ -1,0 +1,48 @@
+<?php
+
+$download = CMDM_GroupDownloadPage::getInstance($download_id);
+if ($download->getPackageType() == 'file') {
+	$attachments = $download->getAttachments();
+}
+
+$button_class = "cmdm-button";
+$single_download_button_class = 'cmdm-button cmdm-button-primary cmdm-button-large';
+
+?>
+<div class="cmdm-download" data-id="<?php echo $download_id; ?>">
+	<div class="inner">
+	<form method="post" class="CMDM-downloadForm" action="<?php echo esc_attr($action_url); ?>">
+		<?php
+
+	    if(!empty($errors))
+	    {
+	        echo '<ul class="CMDM_error">';
+	        foreach($errors as $error)
+	        {
+	            echo '<li>' . $error . '</li>';
+	        }
+	        echo '</ul>';
+	    }
+	    ?>
+        <?php do_action('CMDM_player', $download_id); ?>
+	    <?php if ($download->canDownload()): ?>
+	        <input type="hidden" name="cmdm_nonce" value="<?php echo esc_attr($nonce); ?>" />
+	        <input type="hidden" name="id" value="<?php echo esc_attr($download_id); ?>" />
+	        <?php if (!empty($shortcodeId)): ?>
+	        	<input type="hidden" name="shortcodeId" value="<?php echo esc_attr($shortcodeId) ?>" />
+	        	<input type="hidden" name="backurl" value="<?php echo esc_attr($_SERVER['REQUEST_URI'] . '#cmdm-shortcode-'. $shortcodeId) ?>" />
+	        <?php endif; ?>
+	        <?php do_action('cmdm_download_form_extra_fields', $download_id); ?>
+		 	<div class="field">
+	        <a href="#" class="downloadBut cmdm-download-button <?php echo $single_download_button_class; ?>
+				"><?php echo $download_label; ?></a>
+	        <input type="submit" value="<?php echo esc_attr($download_label); ?>"  style="display:none" />
+	    </div>
+	    <?php else: ?>
+	        <p class="cmdm-download-not-permitted">
+                <?php echo apply_filters('cmdm_download_form_not_permitted_text', CMDM_Labels::getLocalized('download_not_permitted'), $download); ?>
+            </p>
+	    <?php endif; ?>
+        <?php do_action('cmdm_frontend_download_form_bottom', $download); ?>
+    </form>
+</div></div>

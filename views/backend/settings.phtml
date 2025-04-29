@@ -1,0 +1,38 @@
+<?php
+
+require_once CMDM_PATH . '/lib/helpers/SettingsView.php';
+$settingsView = new CMDM_SettingsView();
+
+$tabs = apply_filters('cmdm_settings_pages', CMDM_Settings::$categories);
+
+?>
+
+<p class="clear">
+<?php do_action('CMDM_show_messages'); ?>
+<?php if( !empty($messages) ):
+	foreach($messages as $message):
+    	?><div class="updated"><p><?php echo $message; ?></p></div><?php
+    endforeach;
+endif; ?>
+<?php require('settings/top.phtml'); ?>
+<form method="post" enctype="multipart/form-data" id="cm-downloads-settings-form">
+	
+	<input id="cmdm_settings_search" placeholder="Search in settings..."><span id="cmdm_settings_search_clear">&times;</span>
+	
+	<div id="tabs">
+        <ul id="cmdm-tab-menu"><?php foreach ($tabs as $id => $name ): ?>
+            <li><a href="#tab_<?php echo $id; ?>"><?php echo CMDM_Settings::__($name); ?></a></li>
+        <?php endforeach; ?></ul>
+
+
+        <?php foreach ($tabs as $id => $name): ?>
+        	<div id="tab_<?php echo $id; ?>" class="cmdm-tab-content"><?php
+        		$path = dirname(__FILE__) . '/settings/'. $id .'.phtml';
+        		if (file_exists($path)) require($path);
+        		else echo $settingsView->renderCategory($id);
+        	?></div>
+        <?php endforeach; ?>
+    </div>
+    <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce(CMDM_BaseController::ADMIN_SETTINGS)); ?>" />
+    <input type="submit" class="button button-primary" value="Save settings" />
+</form>

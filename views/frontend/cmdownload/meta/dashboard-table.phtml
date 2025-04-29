@@ -1,0 +1,73 @@
+<?php
+$isAdministrator = false;
+$cuser = wp_get_current_user();
+if (in_array('administrator', $cuser->roles)) {
+    $isAdministrator = true;
+}
+?>
+
+<?php require_once CMDM_PATH . '/views/components/downloads-filter.php'; ?>
+
+<table class="CMDM-dashboard">
+    <thead>
+    <tr>
+        <th class="num"><?php echo CMDM_Labels::getLocalized('dashboard_table_id'); ?></th>
+        <th><?php echo CMDM_Labels::getLocalized('dashboard_table_title'); ?></th>
+        <th class="status"><?php echo CMDM_Labels::getLocalized('dashboard_table_status'); ?></th>
+        <th class="downloads"><?php echo CMDM_Labels::getLocalized('dashboard_table_downloads_num'); ?></th>
+        <th class="date"><?php echo CMDM_Labels::getLocalized('dashboard_date'); ?></th>
+        <th class="actions"><?php echo CMDM_Labels::getLocalized('dashboard_table_actions'); ?></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if (empty($myDownloads)): ?>
+        <tr>
+            <td colspan="5"
+                style="padding:1em; text-align:center;"><?php echo CMDM_Labels::getLocalized('dashboard_no_downloads'); ?></td>
+        </tr>
+    <?php
+    else:
+        foreach ($myDownloads as $download):
+            ?>
+            <tr>
+                <td class="num"><?php echo $download->getId() ?></td>
+                <td>
+                    <a href="<?php echo esc_attr(get_permalink($download->getId())); ?>"><?php echo $download->getTitle(); ?></a>
+                </td>
+                <td class="status"><?php echo ucfirst($download->getStatusLabel()); ?></td>
+                <td class="num"><?php echo $download->getNumberOfDownloads(); ?></td>
+                <td class="date"><?php echo $download->getCreatedDate(); ?></td>
+                <td class="actions">
+                    <?php echo CMDM_BaseController::_loadView('cmdownload/meta/dashboard-table-actions', compact('download')); ?>
+                </td>
+            </tr>
+        <?php
+        endforeach;
+    endif;
+    ?>
+    </tbody>
+</table>
+
+
+<?php if ($pagination['lastPage'] > 1): ?>
+    <ul class="cmdm-pagination">
+        <?php if ($pagination['page'] > 1): ?>
+            <li>
+                <a href="<?php echo esc_attr($pagination['prevPageUrl']); ?>">&laquo; <?php echo CMDM::__('Previous'); ?></a>
+            </li>
+        <?php endif; ?>
+        <?php for ($i = 1; $i <= $pagination['lastPage']; $i++) : ?>
+            <li<?php if ($i == $pagination['page']) echo ' class="current"'; ?>>
+                <?php if ($i == $pagination['page']): ?>
+                    <span><?php echo $i; ?></span>
+                <?php else: ?>
+                    <a href="<?php echo esc_attr(add_query_arg(CMDM_MyDownloadsShortcode::PARAM_PAGE, $i, $pagination['baseUrl'])); ?>"><?php echo $i; ?></a>
+                <?php endif; ?>
+            </li>
+        <?php endfor; ?>
+        <?php if ($pagination['page'] < $pagination['lastPage']): ?>
+            <li><a href="<?php echo esc_attr($pagination['nextPageUrl']); ?>"><?php echo CMDM::__('Next'); ?>
+                    &raquo;</a></li>
+        <?php endif; ?>
+    </ul>
+<?php endif; ?>

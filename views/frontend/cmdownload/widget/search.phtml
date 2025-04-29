@@ -1,0 +1,6 @@
+<form role="search" method="get" class="cmdm-search-form" action="<?php echo esc_attr($searchAction); ?>" >
+	<input name="CMDsearch" type="text" value="<?php echo esc_attr($searchQuery); ?>" placeholder="<?php echo esc_attr($placeholder); ?>" />
+	<?php if ( isset($searchSubmit) && $searchSubmit ): ?>
+	<input type="submit" value="&#128269;">
+	<?php endif; ?>
+</form>

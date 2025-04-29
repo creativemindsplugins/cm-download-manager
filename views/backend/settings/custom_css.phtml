@@ -1,0 +1,91 @@
+<?php echo preg_replace('/<\/div>\s*<\/div>\s*$/', '',$settingsView->renderSubcategory('custom_css', 'css')); ?>
+<div class="cm-settings-row">
+    <?php echo CMDM_SettingsView::renderOnlyin('Pro'); ?>
+    <p><?php echo CMDM_Settings::__('Place your styles here to override any CSS rule of the plugin.'); ?></p>
+    <textarea disabled name="custom_css" class="cmdm-custom-css" rows=10 cols=60
+              placeholder="<?php echo CMDM_Settings::__('Custom CSS');
+              ?>"></textarea>
+</div>
+
+<h3 class="onlyinpro"><?php echo CMDM_Settings::__('Typical style modifications'); ?></h3>
+
+<div class="cm-settings-row onlyinpro" style="opacity: 0.8">
+    <p><?php echo CMDM_Settings::__('Click on the red value to change it. Press "Add" button to add custom CSS to the textarea.'); ?></p>
+
+    <div id="custom-css-editor">
+
+        <h4><?php echo CMDM_Settings::__('Change background'); ?></h4>
+        <pre><code>.CMDM.site-content {background: <span>#999999</span> !important;}</code></pre>
+
+        <h4><?php echo CMDM_Settings::__('Change header on downloads pages'); ?></h4>
+        <pre><code>.CMDM-app .main h2 {font-size: <span>30px</span> !important;}</code></pre>
+
+        <h4><?php echo CMDM_Settings::__('Change header on dashboard pages'); ?></h4>
+        <pre><code>.cmdm-content-dashboard .entry-title {font-size: <span>12px</span> !important;}</code></pre>
+
+    </div>
+
+
+    <script type="text/javascript">
+      jQuery(function ($) {
+        var addLabel = <?php echo json_encode(CMDM_Settings::__('Add')); ?>;
+        var editLabel = <?php echo json_encode(CMDM_Settings::__('Edit')); ?>;
+        $('#custom-css-editor code').after('<button class="dashicons-before dashicons-plus" disabled>' + addLabel + '</button>')
+        $('#custom-css-editor code span').attr('title', editLabel).click(function () {
+          var obj = $(this)
+          if (obj.find('input').length) return
+          var value = obj.text()
+          var input = document.createElement('input')
+          input.setAttribute('value', value)
+          input.style.width = value.length + 'em'
+          obj.html(input)
+          input.select()
+          $(input).blur(function () {
+            obj.text($(this).val().length > 0 ? $(this).val() : value)
+          })
+
+        })
+        $('#custom-css-editor button').click(function () {
+          var code = this.parentNode
+          code.removeChild(this)
+          var textarea = $('textarea[name=custom_css]')
+          textarea.val(textarea.val() + '\n' + $(code).text())
+          code.appendChild(this)
+          return false
+        })
+      })
+    </script>
+
+
+    <style type="text/css">
+        #custom-css-editor {
+            margin-left: 20px;
+        }
+
+        #custom-css-editor code {
+            padding: 10px;
+            margin-left: 20px;
+            display: inline-block;
+            width: 80%;
+            background: #f0f0f0;
+        }
+
+        #custom-css-editor button {
+            margin-left: 20px;
+            padding: 3px 15px 0 10px;
+            border-radius: 17px;
+            min-height: 34px;
+            border: 2px solid #a7aaad;
+            background-color: #fff;
+            color: #a7aaad;
+            cursor: default;
+        }
+
+        #custom-css-editor span {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</div>
+</div>
+</div>

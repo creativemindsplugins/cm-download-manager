@@ -1,0 +1,201 @@
+<?php
+
+global $post;
+
+if ( wp_is_block_theme() ) {
+    $header = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"header","tagName":"header"} /-->'));
+    $footer = do_shortcode(do_blocks('<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->'));
+    echo '<div class="wp-site-blocks">';
+    wp_head();
+    echo $header;
+} else {
+    get_header();
+}
+
+?><div class="CMDM site-content">
+
+<?php
+if(have_posts()):
+    while(have_posts()):
+        the_post();
+        $download = CMDM_GroupDownloadPage::getInstance(get_the_id());
+        ?>
+            <div class="CMDM-app">
+                <div class="cmdm-main">
+                    <h2><?php the_title(); ?></h2>
+                    <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_ENABLE_RATING)): ?>
+                        <div class="cmdm-rating"><?php do_action('CMDM_show_rating', get_the_id()); ?></div>
+                    <?php endif; ?>
+                    <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_DOWNLOAD_PAGE_BACKLINK)):
+                        $backlink = esc_attr(home_url('/' . CMDM_GroupDownloadPage::$rewriteSlug)); ?>
+                        <div class="cmdm-backtolib">
+                            <a href="<?php echo $backlink; ?>">&laquo;&nbsp;
+                                <?php echo CMDM_Labels::getLocalized('back_to_all_downloads'); ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                    <?php do_action('CMDM_show_messages'); ?>
+                    <div class="boxGrey724 cmdm-support-topic" data-topic-id="<?php echo $post->ID ?>">
+                        <div class="tabItem" style="display:block">
+                            <div class="topicTblWrapper">
+                                <table class="topicTbl" id="threadTable" style="position:relative">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" class="CMDM_thread_title"><?php if($thread['resolved']): ?>[<?php echo CMDM_Labels::getLocalized('support_thread_resolved'); ?>] <?php endif; ?>
+                                                <a class="CMDM_back_to_support" href="<?php echo esc_attr(get_permalink($post->ID)); ?>#support">&laquo; <?php
+                                                	echo CMDM_Labels::getLocalized('support_back'); ?></a><br><?php echo $thread['title']; ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="threadTableContainer">
+                                        <tr class="CMDM_comment CMDM_comment_main" id="comment-<?php echo $thread['thread_id']; ?>">
+                                            <td class="CMDM_comment_meta" align="left" valign="top">
+                                                <div class="CMDM_comment_author"><?php
+                                                    echo '<span class="CMDM_author_color">' . $thread['author'] . '</span>';
+                                                    ?></div>
+                                                <div class="CMDM_comment_date"><?php echo ($thread['date']);
+                                                    ?> <a href="#comment-<?php echo $thread['thread_id']; ?>">#</a></div>
+                                            </td>
+                                            <td class="CMDM_comment_content" align="left" valign="top">
+                                                <?php echo nl2br($thread['question']); ?>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table></div>
+                            <div class="topicTblWrapper">
+                                <table class="topicTbl" id="threadTable" style="position:relative">
+                                    <tbody id="threadTableContainerComments">
+                                        <?php foreach($thread['comments'] as $comment): ?>
+                                            <tr class="CMDM_comment" id="comment-<?php echo $comment->comment_ID; ?>">
+                                                <td class="CMDM_comment_meta" align="left" valign="top">
+                                                    <div class="CMDM_comment_author">
+                                                        <?php
+                                                        if(get_comment_author($comment->comment_ID) == $thread['author']) echo '<span class="CMDM_author_color">' . get_comment_author($comment->comment_ID) . '</span>';
+                                                        elseif(get_comment_author($comment->comment_ID) == $author) echo get_comment_author($comment->comment_ID) . ' (' . __('Author', 'cm-download-manager') . ')';
+                                                        else echo get_comment_author($comment->comment_ID);
+                                                        ?>
+                                                    </div>
+                                                    <div class="CMDM_comment_date"><?php echo (get_comment_date('Y-m-d H:i', $comment->comment_ID));
+                                                        ?> <a href="#comment-<?php echo $comment->comment_ID; ?>">#</a></div>
+                                                </td>
+                                                <td class="CMDM_comment_content" align="left" valign="top">
+                                                    <?php echo nl2br($comment->comment_content); ?>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="boxWhite694">
+                        <?php if( is_user_logged_in() ): ?>
+                            <form id="addCommentForm" action="<?php the_permalink($post->ID); ?>topic/<?php echo $thread['thread_id']; ?>/add" method="post" style="position:relative">
+                                <h5><?php echo CMDM_Labels::getLocalized('support_post_answer_header'); ?></h5>
+                                <ul class="CMDM_error" style="display:none"></ul>
+                                <ul class="CMDM_success" style="display:none"></ul>
+                                <ul class="notes">
+                                    <li><?php echo CMDM_Labels::getLocalized('support_topic_form_allow_markup'); ?>: &lt;strong&gt;, &lt;em&gt;, &lt;a&gt;</li>
+                                    <li><?php echo CMDM_Labels::getLocalized('support_topic_form_wrap_code'); ?> &lt;pre&gt;&lt;/pre&gt;</li>
+                                </ul>
+                                <textarea name="thread_comment" cols="" rows="" placeholder="<?php echo esc_attr(CMDM_Labels::getLocalized('support_answer_form_content')); ?>"></textarea>
+                                <label>
+                                    <input name="thread_notify" type="checkbox" value="1"/>
+                                    <?php echo CMDM_Labels::getLocalized('support_topic_form_notify'); ?></label>
+                                <?php if(!$thread['resolved']): ?><label>
+                                        <input name="thread_resolved" type="checkbox" value="1"/>
+                                        <?php echo CMDM_Labels::getLocalized('support_topic_mark_resolved'); ?></label><?php endif; ?>
+                                <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cmdm_topic_comment')); ?>" />
+                                <button class="cmdm-button"><?php echo CMDM_Labels::getLocalized('support_topic_post_answer_btn'); ?></button>
+                            </form>
+                            <?php else: ?>
+                                <?php  echo '<p>'. CMDM_Labels::getLocalized('support_topic_login_call') .'</p>'; ?>
+                            <?php endif; ?>
+                            <script type="text/javascript">
+                                function showNewComment(commentData){
+                                    var row = document.createElement('tr');
+                                    row.setAttribute('class', 'CMDM_comment');
+                                    row.setAttribute('id', 'comment-' + commentData.id);
+                                    var meta = document.createElement('td');
+                                    meta.setAttribute('class', 'CMDM_comment_meta');
+                                    var author = document.createElement('div');
+                                    author.setAttribute('class', 'CMDM_comment_author');
+                                    author.innerHTML = commentData.author;
+                                    meta.appendChild(author);
+                                    var date = document.createElement('div');
+                                    date.setAttribute('class', 'CMDM_comment_date');
+                                    date.innerHTML = commentData.date + ' <a href="#comment-' + commentData.id + '">#</a>';
+                                    meta.appendChild(date);
+                                    row.appendChild(meta);
+                                    var content = document.createElement('td');
+                                    content.setAttribute('class', 'CMDM_comment_content');
+                                    content.innerHTML = commentData.content;
+                                    row.appendChild(content);
+                                    jQuery('#threadTableContainerComments').<?php echo 'prepend';?>
+                                    (row);
+                                    window.location = '#comment-' + commentData.id;
+
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <!--/boxGrey724 -->
+                </div>
+                <!--/main -->
+                <?php if( is_active_sidebar(CMDM_Settings::AREA_SIDEBAR) || CMDM_Settings::getOption(CMDM_Settings::OPTION_DOWNLOAD_BUTTON_WIDGET_AREA) == CMDM_Settings::AREA_SIDEBAR): ?>
+                <div class="aside">
+                    <?php $atts['id'] = $post->ID;
+                    $showTitle = true;
+
+                    if (!empty($atts['id']) AND $download = CMDM_GroupDownloadPage::getInstance($atts['id']) AND $download->isVisible()) {
+                        $post = $download->getPost();
+
+                        $downloadId = $download->getId();
+                        $version = $download->getVersion();
+                        $updated = $download->getUpdated();
+                        $adminSupported = $download->isRecommended();
+                        CMDM_BaseController::loadScripts();
+                        echo CMDM_BaseController::_loadView('cmdownload/meta/details',
+                            compact('download', 'version', 'updated', 'adminSupported', 'downloadId', 'showTitle'));
+
+                    }?>
+                    <!--/sideBox -->
+                    <?php
+                    $atts['label'] = CMDM_Labels::getLocalized('download_button_file');
+                    $post = $download->getPost();
+
+                    $id = get_the_id();
+                    $nonce = wp_create_nonce(CMDM_CmdownloadController::DOWNLOAD_NONCE);
+                    $url = $download->getDownloadFormUrl();
+
+                    CMDM_BaseController::loadScripts();
+
+                    $args = array(
+                        'action_url'        => ($download->canDownload() ? $url : null),
+                        'nonce'             => $nonce,
+                        'download_id'       => $id,
+                        'errors'            => CMDM_BaseController::popMessages(CMDM_CmdownloadController::MESSAGE_ERROR ),
+                        'download_label'    => $atts['label'],
+                    );
+
+                    echo CMDM_BaseController::_loadView('cmdownload/meta/download-form', $args); ?>
+                    <!--/sideBox -->
+                    <?php if(is_active_sidebar(CMDM_Settings::AREA_SIDEBAR)): ?>
+                        <?php dynamic_sidebar(CMDM_Settings::AREA_SIDEBAR); ?>
+                    <?php endif; ?>
+                </div>
+                <?php endif; ?>
+                <!--/aside -->
+            </div>
+            <?php
+        endwhile;
+    endif;
+    ?></div>
+<?php
+if ( wp_is_block_theme() ) {
+    echo $footer;
+    echo '</div>';
+    wp_footer();
+} else {
+    get_footer();
+}
+?>

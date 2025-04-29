@@ -1,0 +1,327 @@
+@CHARSET "UTF-8";
+
+#tabs {clear: both; padding: 0;}
+.cmdm-tab-content {position: relative;}
+#cm-downloads-settings-form caption, #cm-downloads-settings-form h3 {
+    color: #222;
+    font-family: "Segoe UI", "PT Sans", "Open Sans", "Droid Sans", sans-serif;
+    margin: 0;
+    text-align: left;
+    line-height: 2em;
+}
+
+.cm-settings-row {padding:10px; border-bottom: solid 1px #f0f0f0; font-family: "Segoe UI", sans-serif;}
+.cm-settings-row:last-child {border-bottom: none}
+
+.cm-settings-row > div {display: inline-block;}
+/*.cm-settings-option-name {line-height: 1.8em; padding-right: 1em; display: inline;}*/
+.cm-settings-row input[type=text] {
+	min-width: 100px;
+	max-width: 300px;
+	background-color: #fff;
+    height: 2.3em;
+    padding: 0 10px;
+    font-family: Segoe UI;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    color: #666;
+    width: 90%;
+    box-shadow: none;
+}
+.cm-settings-row textarea {width: 90%; font-size: 16px;}
+
+#cm-downloads-settings-form .tg-table-plain td, #cm-downloads-settings-form .tg-table-plain th { border: 1px #555 solid; padding: 5px;border-collapse: collapse;text-align: center;vertical-align: middle; }
+
+#cm-downloads-settings-form .cmdm-tab-content ul {list-style: circle; margin: 1em 0 1em 30px;}
+h4 {font-weight: bold; margin: 2em 0 0.3em 0;}
+#authorsAutoApprovedResults {list-style: none;
+    margin: 0 0 0 100px !important;
+    border:solid 1px #ccc; padding:5px !important; width:190px; display: none;}
+#authorsAutoApprovedResults li {list-style: none !important; margin: 0; padding: 0;}
+#authorsAutoApprovedSearch {width: 200px;}
+.cmdm-warning {border: 1px solid #dddddd; border-left: 4px solid #ff9900; padding: 1em; font-size: 90%; margin: 1em 0;}
+
+#cm-downloads-settings-form label {
+    margin: 6px 10px 0 0;
+}
+
+#cm-downloads-settings-form .multiline label {
+    display: block;
+    float: left;
+}
+
+/*.cm-licensing-box {margin-top:-20px;}*/
+#cmdm_settings_search {width: 100%; font-size: 150%; margin: 0 0 1em 0; padding: 0.5em;}
+#cmdm_settings_search_clear {margin-left: -1em; cursor: pointer; display: none; font-size: 200%;}
+.cmdm-hl {background: yellow;}
+#cmdm-tab-menu {
+font-size: 1.1em;
+    font-family: "Segoe UI", "PT Sans", "Open Sans", "Droid Sans", sans-serif;
+    text-align: center;
+    margin: 6px 0;
+    padding: 0;
+    border: solid #ddd;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 0 !important;
+    background: #fff;
+    position: sticky;
+    top: 32px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+textarea.cmdm-custom-css {min-width: 300px; max-width: 840px; width: 70%; height: 200px;}
+
+
+.cm-settings-collapse-close {display: none; width: 100%}
+.cm-settings-collapse-btn {cursor: pointer; color: #666 !important;}
+.cm-settings-collapse-btn:hover {color: black !important;}
+.cm-settings-collapse-open tbody {display: table-row-group !important;}
+
+.cm-settings-toggle-wrapper {
+    cursor: pointer;
+    color: #666 !important;
+    position: sticky;
+    background: #cfcfcf60;
+    width: 120px;
+    top: 100px;
+    float: right;
+    z-index: 2;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccd;
+    margin: 20px 20px 0 0;
+    border-radius: 3px;
+}
+.cm-sticky-submit {
+    cursor: pointer;
+    background: rgb(0, 133, 186);
+    text-align: center;
+    border: 1px solid;
+    border-color: #0073aa #006799 #006799;
+    color: #fff !important;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 #006799;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+.cmdm-shortcode-desc {margin: 2em 0;}
+.cmdm-shortcode-desc header {background: #f0f0f0; padding: 0.5em; display: flex;}
+.cmdm-shortcode-desc header h4 {font-size: 150%; flex: 0 0 1; margin: 0; padding: 0;}
+.cmdm-shortcode-desc span {flex: 1; text-align: right;}
+.cmdm-shortcode-desc-inner {margin: 0 2em;}
+.cmdm-shortcode-desc-inner h5 {font-size: 150%; font-weight: normal; border-bottom: 1px dashed #c0c0c0; padding-bottom: 0.2em; margin: 1em 0;}
+.cmdm-shortcode-desc-inner ul li {margin-left: 2em; list-style-type: disc;}
+.cmdm-shortcode-desc-inner p {margin: 1em 0;}
+
+
+#cm-downloads-settings-form .button-primary {
+    font-size: 1.2em;
+    padding: 0.3em 1.5em;
+    height: auto;
+    margin-top: 1em;
+    font-weight: bold !important;
+}
+
+.cmdm-loader-bar {background: url(../imgs/ajax-loader-bar.gif) no-repeat left top; width: 43px; height: 11px; display: inline-block;}
+.cmdm-debug-email-response {margin-top: 0.5em; font-weight: bold;}
+.cmdm-debug-email .cmdm-loader-bar {margin-left: 1em;}
+
+.cm .box {display: block !important;}
+.cmdm-hl {background: yellow;}
+
+.column-cmdm_id {width: 2em; white-space: nowrap;}
+
+.cm-settings-option-desc {
+    color: #777;
+    padding: 5px 5px 5px 0;
+    font-size: 12px;
+    display: inline;
+}
+.cm-settings-collapse-container {
+    width: 100%;
+}
+#cm-downloads-settings-form h3 {
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    background: #eee;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0 10px 0 0;
+    font-weight: 400;
+    font-size: 18px;
+    position: sticky;
+    top: 90px;
+    z-index: 1;
+}
+
+.cm-settings-row > div {
+    font-family: "Segoe UI", "PT Sans", "Open Sans", "Droid Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.cm-settings-collapse-btn.dashicons-before::before {
+    font-size: 1.6em;
+    margin: .2em 10px 0 0;
+}
+
+.cm-settings-row > .cm-settings-option-control {
+    display: inline-block;
+    /*width: 50%;*/
+}
+.cm-settings-row > .cm-settings-option-control .cmdm-option-multicheckbox,
+.cm-settings-row > .cm-settings-option-control .multiline {
+    line-height: 1.9em;
+    width: 100%;
+}
+.cm-settings-row > .cm-settings-option-name {
+    float: left;
+    font-size: 16px;
+    text-align: justify;
+    width: 30%;
+	margin-right: 15px;
+    padding-right: 5px;
+}
+.cm-settings-row > .cm-settings-option-desc {
+    font-size: 14px;
+    text-align: justify;
+    display: block;
+    padding-top: 20px;
+    width: 100%;
+}
+.cmdm-option-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.cmdm-option-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cmdm-option-switch > .cmdm-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	height: 22px;
+    border-radius: 22px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.cmdm-option-switch > .cmdm-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 1px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.cmdm-option-switch > input:checked + .cmdm-slider {
+    background-color: #69f;/*#2196F3;*/
+}
+
+.cmdm-option-switch > input:focus + .cmdm-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.cmdm-option-switch > input:checked + .cmdm-slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+.cmdm-option-switch:has(input[disabled]) + span , .cmdm-option-switch:has(input[disabled]) .cmdm-slider {
+    opacity: 0.7;
+}
+
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li {
+    margin: 0 !important;
+    padding: 2px 0 4px 0 !important;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+}
+
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-hover,
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-active,
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-focus {
+    border: 0 transparent !important;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-active,
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-focus {
+    background-color: #69f;
+}
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-hover:not([class*="ui-state-active"]) {
+    background-color: #eee;
+}
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-active a,
+#cm-downloads-settings-form .ui-tabs .ui-tabs-nav li.ui-state-focus a {
+    box-shadow: none !important;
+    background-color: transparent;
+	color: #fff;
+}
+#cm-downloads-settings-form .ui-tabs .ui-tabs-panel {
+    padding: 0 !important;
+}
+#cm-downloads-settings-form .ui-widget-content .cm-settings-row a {
+    color: #69f;
+}
+.cm-settings-option-control .cmdm-settings-select-el select {
+	background-color: #fff;
+    height: 2.3em;
+    padding: 0 10px;
+    font-family: Segoe UI;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    color: #474747;
+    width: 100%;
+    box-shadow: none;
+}
+.cm-settings-option-control .cmdm-settings-select-el select option:disabled{
+    color: #959595;
+}
+#cmdm-logs-table .files_list {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 200px;
+}
+#cmdm-logs-table .files_list ul {
+	list-style: none;
+}
+#cmdm_log_files_filter {
+	width: 170px;
+    line-height: 1.5em;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 5px;
+    display: inline-block;
+}
+
+.cmseparator { display:block; margin:8px 12px 8px 12px; padding:0; height:1px; line-height:1px; background:#cccccc; }

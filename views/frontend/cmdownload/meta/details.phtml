@@ -1,0 +1,63 @@
+<div class="cmdm-single-details">
+	<?php if ($thumbUrl = $download->getThumbnailUrl()): ?>
+		<img src="<?php echo esc_attr($thumbUrl); ?>" alt="Thumb" class="cmdm-thumb" />
+	<?php endif; ?>
+
+    <h3><?php echo CMDM_Labels::getLocalized('download_info_header'); ?></h3>
+    
+	<ul>
+    
+    	<?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_AUTHOR)): ?>
+    		<li>
+	        	<strong><?php echo CMDM_Labels::getLocalized('Author'); ?>:</strong>
+	        	<span><?php echo $download->getAuthorBlock(); ?></span>
+        	</li>
+	    <?php endif; ?>
+	    
+        <?php if( CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_VERSION) ): ?>
+        	<li>
+            	<strong><?php echo CMDM_Labels::getLocalized('download_version'); ?>:</strong>
+            	<span><?php echo $version; ?></span>
+            </li>
+        <?php endif; ?>
+
+        <?php if( CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_DOWNLOADS_NUMBER) ): ?>
+        	<li>
+		        <strong><?php echo CMDM_Labels::getLocalized('download_downloads_num'); ?>:</strong>
+		        <span><?php
+		            echo CMDM_number_of_downloads();
+		        ?></span>
+            </li>
+		<?php endif; ?>
+
+        <li>
+	        <strong><?php echo CMDM_Labels::getLocalized('download_updated_time'); ?>:</strong>
+			<span><?php echo $updated; ?></span>
+		</li>
+		
+    	<li class="cmdm-download-categories">
+    		<strong><?php echo CMDM_Labels::getLocalized('download_info_categories'); ?>:</strong>
+	        <?php
+	        $categories = $download->getCategories();
+	        if (!empty($categories)) {
+				echo '<ul class="cmdm-tags-list">';
+				foreach ($categories as $category) {
+					if ($category->isVisible()) {
+						printf('<li><a href="%s">%s</a></li>', esc_attr($category->getPermalink()), esc_html($category->getName()));
+					}
+				}
+				echo '</ul>';
+			}
+	        ?>
+        </li>
+		
+		<?php if( $adminSupported ): ?>
+		    <li class="supported">
+				<strong><?php echo CMDM_Labels::getLocalized('download_admin_recommended'); ?></strong>
+		    </li>
+	    <?php endif; ?>
+    
+    </ul>
+    
+    <div class="clear"></div>
+</div>

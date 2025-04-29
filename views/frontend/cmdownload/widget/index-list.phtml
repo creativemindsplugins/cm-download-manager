@@ -1,0 +1,80 @@
+<?php
+
+?>
+<ul><?php
+/* 	while($query->have_posts()):
+		$query->the_post();
+		$post = get_post();
+		$download = CMDM_GroupDownloadPage::getInstance($post->ID);
+		if (!$download->isVisible()) continue;
+
+		?>
+		<li>
+            <span>
+                <a href="<?php echo esc_attr(get_permalink($post->ID)); ?>">*/
+    $query->get_posts();
+	while($query->have_posts()):
+		$query->the_post();
+		$download = CMDM_GroupDownloadPage::getInstance(get_the_id());
+		if (!$download->isVisible()) continue;
+
+		?>
+		<li>
+            <span>
+                <a href="<?php echo esc_attr(get_permalink(get_the_id())); ?>">
+				<?php if ($thumbUrl = $download->getThumbnailUrl()): ?>
+                        <img src="<?php echo esc_attr($thumbUrl); ?>" alt="Thumb" class="cmdm-thumb" />
+                    <?php endif; ?>
+                    <span class="cmdm-list-item-title"><?php echo esc_html($download->getTitle()); ?></span>
+                </a>
+				<div class="cmdm-list-item-desc">
+                    <?php
+                        if(str_word_count($download->getDescription()) > 20){
+                            $split_string_arr = CMDM_WPHelper::splitDescriptionByWordsCount($download->getDescription(),20);
+
+                            $visible_string = $split_string_arr[0];
+                            $hidden_string = (!empty($split_string_arr[1]) ? $split_string_arr[1] : '');
+                            $content = wp_strip_all_tags($visible_string).'
+					<span class="cmdm_readmore_content" style="display:none;"> '.wp_strip_all_tags($hidden_string).'</span>&nbsp;&nbsp;
+					<a style="" class="cmdm_read_more_btn">'.CMDM_Labels::getLocalized('download_read_more_link').'</a>';
+
+                            echo $content;
+                        }else{
+                            echo wp_strip_all_tags($download->getDescription());
+                        }
+                    ?>
+                </div>
+                <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_ENABLE_RATING)): ?>
+                    <ul class="cmdm-file-rating" data-rating="<?php echo $download->getRatingInteger(); ?>" title="<?php echo esc_attr(CMDM_Labels::getLocalized('download_rating')); ?>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+                <?php endif; ?>
+            </span>
+
+            <span>
+                <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_AUTHOR)) echo $download->getAuthorBlock(); ?>
+            </span>
+
+            <span>
+                <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_DOWNLOADS_NUMBER)): ?>
+                    <cite><?php
+                        $counter = $download->getNumberOfDownloads();
+                        printf(CMDM_Labels::getLocalized($counter == 1 ? 'index_one_download' : 'index_d_downloads'), $counter);
+                        ?>
+				</cite>
+                <?php endif; ?>
+            </span>
+
+			<span>
+            </span>
+
+			<span>
+                    <?php echo CMDM_BaseController::_loadView('cmdownload/meta/list-item-link', array('permalink' => get_permalink(get_the_id()))); ?>
+            </span>
+		</li>
+	<?php endwhile; ?>
+</ul>

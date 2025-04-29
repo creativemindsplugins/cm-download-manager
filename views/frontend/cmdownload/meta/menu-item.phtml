@@ -1,0 +1,2 @@
+<?php if (!empty($dashboardUrl) AND is_user_logged_in()): ?><li class="home"><a href="<?php echo esc_attr($dashboardUrl); ?>"><?php echo CMDM_Labels::getLocalized('front_menu_dashboard'); ?></a></li><?php endif; ?>
+<?php if (!empty($categoriesUrl)): ?><li class="home"><a href="<?php echo esc_attr($categoriesUrl); ?>"><?php echo CMDM_Labels::getLocalized('front_menu_downloads'); ?></a></li><?php endif; ?>

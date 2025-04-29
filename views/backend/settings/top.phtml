@@ -1,0 +1,55 @@
+<?php echo do_shortcode('[cminds_free_activation id=cmdm]'); ?>
+
+<br/>Supported Shortcodes: <a href="javascript:void(0)" onclick="jQuery(this).next().slideToggle()">Show/Hide</a>
+<ul style="display:none;list-style-type:disc;margin-left:20px;">
+	<?php do_action('cmdm_display_supported_shortcodes'); ?>
+</ul>
+
+<div style="display:grid; grid-template-columns: 80% 20%;">
+    <div>
+        <p>Link to downloads frontend list:
+            <?php if ( !CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_DISABLED) ) : ?>
+                <a href="<?php echo esc_attr(home_url('/' . CMDM_GroupDownloadPage::$rewriteSlug . '/')); ?>"
+                   target="new"><?php
+                    echo esc_html(home_url('/' . CMDM_GroupDownloadPage::$rewriteSlug . '/')); ?>
+                </a>
+            <?php elseif ( CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_DISABLED) && CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID) != 0 ) : ?>
+                <a href="<?php echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID))); ?>"
+                   target="new"><?php
+                    echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID))); ?>
+                </a></p>
+            <?php endif; ?>
+            <?php if ( !CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_DISABLED) ): ?>
+                <p>Link to downloads dashboard: <a
+                        href="<?php echo esc_attr(CMDM_BaseController::getUrl('cmdownload', 'dashboard')); ?>"
+                        target="new"><?php
+                    echo esc_html(CMDM_BaseController::getUrl('cmdownload', 'dashboard')); ?></a>
+            <?php elseif ( CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_DISABLED) && CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_CUSTOM_ID) != 0 ) : ?>
+                <p>Link to downloads dashboard: <a
+                        href="<?php echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_CUSTOM_ID))); ?>"
+                        target="new">
+                    <?php echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_CUSTOM_ID))); ?></a>
+            <?php endif; ?>
+        </p>
+    </div>
+    <div style="align-content: end;">
+            <div style="float:right; margin-bottom: 15px;">
+                <input onclick="jQuery('.cm-settings-row:has(.onlyinpro), .onlyinpro').toggleClass('hide'); return false;"
+                       type="submit" name="cmdm_toggleProOptions" value="Show/hide Pro options"
+                       style="background:lightgreen;" class="button cmdm-cleanup-button"/>
+            </div>
+    </div>
+</div>
+
+    
+<script type="text/javascript">
+    jQuery(function ($) {
+        jQuery('#tabs').tabs();
+        jQuery('#cmdm-tab-menu a').click(function() {
+			location.hash = this.href.substr(this.href.lastIndexOf('#')+1, this.href.length).replace(/_/g, '-');
+			this.blur();
+        });
+        jQuery('#cmdm-tab-menu a[href="'+ location.hash.replace(/\-/g, '_') +'"]').click();
+
+    });
+</script>

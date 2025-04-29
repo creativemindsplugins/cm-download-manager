@@ -1,0 +1,21 @@
+<div class="CMDM CMDM-no-sidebar">
+
+<div class="cmdm-archive-items">
+    <?php if (!empty($downloads)): ?>
+        <ul>
+            <?php foreach ($downloads as $download): ?>
+                <li><a href="<?php echo esc_attr($download->getPermalink()); ?>"><?php echo esc_html($download->getTitle()); ?></a>
+                <?php if (CMDM_Settings::getOption(CMDM_Settings::OPTION_SHOW_DOWNLOADS_NUMBER)) : ?>
+	                <cite><?php $counter = CMDM_number_of_downloads($download->getId());
+	                	printf(CMDM_Labels::getLocalized($counter == 1 ? 'index_one_download' : 'index_d_downloads'), $counter);?></cite>
+                <?php endif; ?>
+                <a href="<?php echo esc_attr($download->getPermalink()); ?>" class="download"><?php
+                	echo CMDM_Labels::getLocalized('index_download_info_link'); ?></a></li>
+        <?php endforeach; ?>
+        </ul>
+
+<?php else: ?>
+        <div class="searchTitle"><?php echo CMDM_Labels::getLocalized('dashboard_no_results'); ?></div>
+<?php endif; ?>
+</div>
+</div>

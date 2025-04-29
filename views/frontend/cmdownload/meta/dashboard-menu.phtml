@@ -1,0 +1,49 @@
+<?php
+
+if (!isset($canShowDashboard)) {
+	$canShowDashboard = CMDM_GroupDownloadPage::canShowDashboard();
+}
+if (!isset($canUpload)) {
+	$canUpload = CMDM_GroupDownloadPage::canUpload();
+}
+
+$custom_index_page_id = CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID);
+?>
+
+<ul class="controls cmdm-dashboard-menu">
+	<?php if (!CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_DISABLED)): ?>
+		<li class="index"><a href="<?php echo esc_attr($indexUrl);
+			?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('dashboard_menu_all_downloads'); ?></a></li><?php
+    elseif (CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_DISABLED) && CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID) != 0):?>
+        <li class="index"><a href="<?php echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_INDEX_PAGE_CUSTOM_PAGE_ID)));
+            ?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('dashboard_menu_all_downloads'); ?></a></li>
+    <?php endif;
+
+	if ($canShowDashboard): ?>
+		<?php if (!CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_DISABLED)): ?>
+			<li class="dashboard"><a href="<?php echo esc_attr($dashboardUrl);
+				?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('front_menu_dashboard'); ?></a></li>
+        <?php elseif (CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_DISABLED) && CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_CUSTOM_ID) != 0): ?>
+            <li class="dashboard"><a href="<?php echo esc_attr(get_permalink(CMDM_Settings::getOption(CMDM_Settings::OPTION_DASHBOARD_PAGE_CUSTOM_ID)));
+                ?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('front_menu_dashboard'); ?></a></li>
+        <?php endif; ?>
+	<?php endif; ?>
+	<?php if ($canUpload): ?>
+		<li class="add"><a href="<?php echo esc_attr($addUrl);
+			?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('upload_menu_add_new'); ?></a></li>
+	<?php endif; ?>
+	<?php
+    if ($canShowDashboard):
+		if (!empty($viewPermalink)):
+			?><li class="view"><a href="<?php echo esc_attr($viewPermalink); ?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('upload_menu_view'); ?></a></li><?php
+		endif;
+		if (!empty($editPermalink)):
+			?><li class="edit"><a href="<?php echo esc_attr($editPermalink); ?>" target="_top" class="cmdm-button"><?php echo CMDM_Labels::getLocalized('upload_menu_edit'); ?></a>jjj</li><?php
+		endif;
+		if (!empty($deletePermalink)):
+			?><li class="delete"><a href="<?php echo esc_attr($deletePermalink); ?>" target="_top" class="cmdm-button" onclick="return confirm('<?php
+				echo esc_attr(json_encode(CMDM::__('Are you sure you want to delete?'))); ?>')"><?php echo CMDM_Labels::getLocalized('upload_menu_delete'); ?></a></li><?php
+		endif;
+	endif;
+	
+?></ul>
